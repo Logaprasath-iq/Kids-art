@@ -24,6 +24,18 @@
       </a>
 
       <nav class="nav-menu" id="nav-menu">
+        <!-- Mobile Drawer Header: Logo & Name + Close Button -->
+        <div class="mobile-nav-header">
+          <a href="index.html" class="brand-logo" aria-label="Little Canvas Homepage">
+            <div class="brand-icon">
+              <i data-lucide="palette"></i>
+            </div>
+            <span>Little<span class="text-gradient-pink">Canvas</span></span>
+          </a>
+          <button class="mobile-menu-close" aria-label="Close Menu">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
         <div class="nav-dropdown-wrapper">
           <a href="#" class="nav-link nav-dropdown-toggle">
             Home <i data-lucide="chevron-down" class="dropdown-arrow"></i>
@@ -48,12 +60,13 @@
         <a href="pricing.html" class="nav-link active">Pricing</a>
         <a href="contact.html" class="nav-link">Contact</a>
       
-        <div class="mobile-nav-cta" style="display: none; flex-direction: column; gap: 0.75rem; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 2px dashed var(--border-light);">
-          <div style="display: flex; gap: 0.5rem; width: 100%;">
-            <a href="auth/login.html" class="btn-toy btn-white btn-sm" style="flex: 1; text-align: center;">Login</a>
-            <a href="auth/register.html" class="btn-toy btn-yellow btn-sm" style="flex: 1; text-align: center;">Sign Up</a>
+                <!-- Mobile Drawer CTA Buttons: LOGIN, SIGN UP, FREE TRIAL -->
+        <div class="mobile-nav-cta">
+          <div class="mobile-nav-cta-buttons">
+            <a href="auth/login.html" class="btn-toy btn-dark mobile-cta-btn">LOGIN</a>
+            <a href="auth/register.html" class="btn-toy btn-yellow mobile-cta-btn">SIGN UP</a>
+            <a href="contact.html" class="btn-toy btn-pink mobile-cta-btn">FREE TRIAL</a>
           </div>
-          <a href="contact.html" class="btn-toy btn-pink btn-sm" style="width: 100%; text-align: center;">Free Trial</a>
         </div>
       </nav>
 

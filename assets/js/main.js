@@ -63,6 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Close button inside mobile drawer
+    const mobileCloseBtn = navMenu.querySelector('.mobile-menu-close');
+    if (mobileCloseBtn) {
+      mobileCloseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeMobileMenu();
+      });
+    }
+
     // Close mobile menu when clicking nav links
     navMenu.querySelectorAll('.nav-link:not(.nav-dropdown-toggle), .dropdown-item-card, .mobile-nav-cta a').forEach(link => {
       link.addEventListener('click', () => {
