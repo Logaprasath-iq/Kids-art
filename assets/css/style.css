@@ -2120,60 +2120,13 @@ body.theme-cyber-lab[data-theme="dark"] {
   color: #FFFFFF !important;
 }
 
-/* --- 24. CUSTOM CURSOR (DESKTOP) --- */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--primary);
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
-}
-
+/* --- 24. CUSTOM CURSOR (DISABLED) --- */
+.custom-cursor,
 .cursor-follower {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid var(--primary);
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s ease-out, width 0.2s, height 0.2s, border-color 0.2s, background-color 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.65rem;
-  color: #FFFFFF;
-}
-
-.cursor-hover-btn {
-  width: 32px;
-  height: 32px;
-  background: rgba(255, 92, 138, 0.4);
-}
-
-.cursor-hover-artwork {
-  width: 72px;
-  height: 72px;
-  background: var(--primary);
-  border-color: var(--border);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-@media (pointer: coarse) {
-  .custom-cursor, .cursor-follower {
-    display: none !important;
-  }
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* --- 25. ADMIN DASHBOARD SPECIFIC STYLES --- */

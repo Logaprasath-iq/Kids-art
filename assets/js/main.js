@@ -115,58 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Custom Playground Cursor (Desktop Only)
-  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (!isTouchDevice && !prefersReducedMotion) {
-    const cursorDot = document.createElement('div');
-    cursorDot.className = 'custom-cursor';
-    const cursorFollower = document.createElement('div');
-    cursorFollower.className = 'cursor-follower';
-    document.body.appendChild(cursorDot);
-    document.body.appendChild(cursorFollower);
-
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let followerX = mouseX;
-    let followerY = mouseY;
-
-    window.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursorDot.style.left = `${mouseX}px`;
-      cursorDot.style.top = `${mouseY}px`;
-    });
-
-    const renderFollower = () => {
-      followerX += (mouseX - followerX) * 0.15;
-      followerY += (mouseY - followerY) * 0.15;
-      cursorFollower.style.left = `${followerX}px`;
-      cursorFollower.style.top = `${followerY}px`;
-      requestAnimationFrame(renderFollower);
-    };
-    renderFollower();
-
-    // Hover states
-    const interactiveLinks = document.querySelectorAll('a, button, .btn-toy, .filter-btn');
-    interactiveLinks.forEach(el => {
-      el.addEventListener('mouseenter', () => cursorFollower.classList.add('cursor-hover-btn'));
-      el.addEventListener('mouseleave', () => cursorFollower.classList.remove('cursor-hover-btn'));
-    });
-
-    const artworkCards = document.querySelectorAll('.artwork-paper-card');
-    artworkCards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        cursorFollower.classList.add('cursor-hover-artwork');
-        cursorFollower.textContent = 'EXPLORE';
-      });
-      card.addEventListener('mouseleave', () => {
-        cursorFollower.classList.remove('cursor-hover-artwork');
-        cursorFollower.textContent = '';
-      });
-    });
-  }
+  // 5. Custom cursor removed per user request
 
   // 6. Pricing Monthly / Yearly Switch
   const pricingSwitch = document.querySelector('.pricing-switch');
