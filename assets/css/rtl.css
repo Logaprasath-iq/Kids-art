@@ -91,14 +91,15 @@
 @media (max-width: 991px) {
   [dir="rtl"] .nav-menu {
     right: auto;
-    left: -100%;
+    left: 0;
+    transform: translateX(-100%);
     border-left: none;
     border-right: 3px solid var(--border);
-    transition: left 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.35s ease;
   }
 
   [dir="rtl"] .nav-menu.open {
-    left: 0;
+    transform: translateX(0);
   }
 
   [dir="rtl"] .admin-sidebar {

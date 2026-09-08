@@ -40,17 +40,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const homeToggleLink = document.querySelector('.nav-dropdown-toggle');
 
   if (mobileToggle && navMenu) {
+    const closeMobileMenu = () => {
+      navMenu.classList.remove('open');
+      mobileToggle.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      if (homeDropdownWrapper) homeDropdownWrapper.classList.remove('open');
+    };
+
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      navMenu.classList.toggle('open');
-      const isExpanded = navMenu.classList.contains('open');
-      mobileToggle.setAttribute('aria-expanded', isExpanded);
+      const willOpen = !navMenu.classList.contains('open');
+      navMenu.classList.toggle('open', willOpen);
+      mobileToggle.classList.toggle('active', willOpen);
+      mobileToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      document.body.style.overflow = willOpen ? 'hidden' : '';
     });
 
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('open');
-        if (homeDropdownWrapper) homeDropdownWrapper.classList.remove('open');
+        closeMobileMenu();
+      }
+    });
+
+    // Close mobile menu when clicking nav links
+    navMenu.querySelectorAll('.nav-link:not(.nav-dropdown-toggle), .dropdown-item-card, .mobile-nav-cta a').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+
+    // Reset when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991 && navMenu.classList.contains('open')) {
+        closeMobileMenu();
       }
     });
   }
@@ -60,14 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     homeToggleLink.addEventListener('click', (e) => {
       e.preventDefault();
       homeDropdownWrapper.classList.toggle('open');
-    });
-
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        homeDropdownWrapper.classList.remove('open');
-        if (navMenu) navMenu.classList.remove('open');
-      }
     });
   }
 
