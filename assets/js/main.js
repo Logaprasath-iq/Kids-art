@@ -4,16 +4,33 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Sticky Header
+  // 1. Sticky Header with smooth hysteresis & RAF throttling
   const header = document.querySelector('.header-main');
   if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 30) {
-        header.classList.add('is-scrolled');
-      } else {
-        header.classList.remove('is-scrolled');
+    let ticking = false;
+    const updateHeaderScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      if (scrollY > 40) {
+        if (!header.classList.contains('is-scrolled')) {
+          header.classList.add('is-scrolled');
+        }
+      } else if (scrollY < 10) {
+        if (header.classList.contains('is-scrolled')) {
+          header.classList.remove('is-scrolled');
+        }
       }
-    });
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Initial check on load
+    updateHeaderScroll();
   }
 
   // 2. Mobile Menu & Home Dropdown Navigation
