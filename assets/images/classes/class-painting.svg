@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-paint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE4EC"/>
+      <stop offset="100%" stop-color="#FFCCD9"/>
+    </linearGradient>
+    <linearGradient id="canvas-art" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38B6FF"/>
+      <stop offset="60%" stop-color="#FFD93D"/>
+      <stop offset="100%" stop-color="#FF5C8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-bleed background -->
+  <rect width="400" height="240" fill="url(#bg-paint)"/>
+  <circle cx="50" cy="50" r="70" fill="#FFB3C6" opacity="0.4"/>
+  <circle cx="360" cy="80" r="90" fill="#FFB3C6" opacity="0.3"/>
+
+  <!-- Studio Table Floor -->
+  <rect y="195" width="400" height="45" fill="#EAD5C3"/>
+  <line x1="0" y1="195" x2="400" y2="195" stroke="#242044" stroke-width="4"/>
+
+  <!-- Wooden Studio Easel Legs -->
+  <path d="M120 220 L185 45 L200 45 L265 220" stroke="#B47242" stroke-width="8" stroke-linecap="round"/>
+  <line x1="192" y1="45" x2="192" y2="215" stroke="#8D5024" stroke-width="6"/>
+  <!-- Easel Crossbar -->
+  <rect x="110" y="165" width="165" height="12" rx="3" fill="#D28C56" stroke="#242044" stroke-width="3"/>
+
+  <!-- Stretched White Canvas on Easel -->
+  <g transform="rotate(-2 190 115)">
+    <rect x="120" y="48" width="145" height="115" rx="8" fill="#FFFFFF" stroke="#242044" stroke-width="4"/>
+    <!-- Artwork on Canvas: Landscape & Rainbow Sun -->
+    <rect x="128" y="56" width="129" height="99" rx="4" fill="url(#canvas-art)"/>
+    <!-- Sun -->
+    <circle cx="192" cy="95" r="22" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="192" cy="95" r="16" fill="#FFD93D"/>
+    <!-- Mountains -->
+    <polygon points="128,155 165,110 195,155" fill="#6C63FF"/>
+    <polygon points="175,155 215,95 257,155" fill="#242044" opacity="0.85"/>
+    <polygon points="150,155 190,125 230,155" fill="#48D597"/>
+    <!-- Clouds -->
+    <ellipse cx="148" cy="72" rx="14" ry="7" fill="#FFFFFF" opacity="0.8"/>
+    <ellipse cx="232" cy="76" rx="16" ry="8" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- Glass Brush Jar (Left) -->
+  <g transform="translate(45, 130)">
+    <rect x="12" y="32" width="40" height="42" rx="6" fill="#D6F0FF" stroke="#242044" stroke-width="3.5" opacity="0.85"/>
+    <!-- Water level -->
+    <rect x="15" y="48" width="34" height="23" rx="3" fill="#38B6FF" opacity="0.5"/>
+    <!-- Brushes in jar -->
+    <path d="M22 35 L8 -5" stroke="#B47242" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="8,-5 5,-18 11,-18" fill="#FF5C8A"/>
+    <path d="M30 35 L32 -10" stroke="#8D5024" stroke-width="4.5" stroke-linecap="round"/>
+    <polygon points="32,-10 28,-22 36,-22" fill="#48D597"/>
+    <path d="M38 35 L52 -2" stroke="#B47242" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="52,-2 56,-14 62,-10" fill="#FFD93D"/>
+  </g>
+
+  <!-- Artist Palette (Right) -->
+  <g transform="translate(265, 140) rotate(-6)">
+    <!-- Wooden Palette -->
+    <path d="M20 35 C 20 5, 85 5, 105 25 C 120 40, 115 75, 95 80 C 80 84, 75 70, 60 70 C 45 70, 40 85, 25 80 C 12 75, 20 50, 20 35 Z" fill="#FAD1AC" stroke="#242044" stroke-width="4"/>
+    <!-- Thumb hole -->
+    <ellipse cx="85" cy="55" rx="8" ry="11" fill="#EAD5C3" stroke="#242044" stroke-width="3"/>
+    <!-- Paint dollops -->
+    <circle cx="35" cy="30" r="8" fill="#FF5C8A"/>
+    <circle cx="55" cy="22" r="8" fill="#FFD93D"/>
+    <circle cx="75" cy="25" r="8" fill="#38B6FF"/>
+    <circle cx="95" cy="38" r="8" fill="#48D597"/>
+    <circle cx="45" cy="55" r="7.5" fill="#A855F7"/>
+  </g>
+
+  <!-- Joyful Paint Splatters -->
+  <circle cx="105" cy="40" r="5" fill="#FF5C8A"/>
+  <circle cx="98" cy="48" r="2.5" fill="#FF5C8A"/>
+  <circle cx="280" cy="55" r="6" fill="#38B6FF"/>
+  <circle cx="292" cy="62" r="3" fill="#38B6FF"/>
+  <circle cx="330" cy="115" r="5" fill="#FFD93D"/>
+</svg>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes & Workshops — Little Canvas | Creative Learning Studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description" content="Explore kids painting, watercolor, digital illustration, ceramics, and craft classes for ages 4-14. Filter by creative medium.">
+  <link rel="canonical" href="https://littlecanvas.example.com/classes.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header-main" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"><i data-lucide="palette"></i></div>
+        <span>Little<span class="text-gradient-pink">Canvas</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <div class="nav-dropdown-wrapper">
+          <a href="#" class="nav-link nav-dropdown-toggle">
+            Home <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+          </a>
+          <div class="dropdown-menu-custom">
+            <div class="dropdown-preview-grid">
+              <a href="index.html" class="dropdown-item-card">
+                <div class="dropdown-thumbnail"><img src="assets/images/preview-home-1.svg" alt="Home 1"></div>
+                <div class="dropdown-info"><h4>Home 1</h4><p>Creative Art School</p></div>
+              </a>
+              <a href="home-2.html" class="dropdown-item-card">
+                <div class="dropdown-thumbnail"><img src="assets/images/preview-home-2.svg" alt="Home 2"></div>
+                <div class="dropdown-info"><h4>Home 2</h4><p>Digital Art Academy</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="classes.html" class="nav-link active">Classes</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      
+        <div class="mobile-nav-cta" style="display: none; flex-direction: column; gap: 0.75rem; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 2px dashed var(--border-light);">
+          <div style="display: flex; gap: 0.5rem; width: 100%;">
+            <a href="auth/login.html" class="btn-toy btn-white btn-sm" style="flex: 1; text-align: center;">Login</a>
+            <a href="auth/register.html" class="btn-toy btn-yellow btn-sm" style="flex: 1; text-align: center;">Sign Up</a>
+          </div>
+          <a href="contact.html" class="btn-toy btn-pink btn-sm" style="width: 100%; text-align: center;">Free Trial</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
+        <button class="rtl-toggle-btn" aria-label="Toggle Right-To-Left Layout" title="Toggle RTL">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+      </button>
+        <a href="auth/login.html" class="btn-toy btn-white btn-sm nav-auth-btn">Login</a>
+        <a href="auth/register.html" class="btn-toy btn-yellow btn-sm nav-auth-btn">Sign Up</a>
+        <a href="contact.html" class="btn-toy btn-pink btn-sm d-none d-md-flex">Free Trial</a>
+        <button class="mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <div class="hamburger-box">
+            <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Background Illustration -->
+  <section class="page-hero page-hero-classes">
+    <div class="page-hero-bg" style="background-image: url('assets/images/class-hero.jpg');"></div>
+    <!-- Ambient Blobs -->
+    <div class="blob blob-yellow" style="top: -60px; left: -80px; width: 320px; height: 320px;"></div>
+    <div class="blob blob-pink" style="top: 20%; right: -60px; width: 280px; height: 280px;"></div>
+    <div class="blob blob-blue" style="bottom: -50px; left: 40%; width: 260px; height: 260px;"></div>
+
+    <div class="container">
+      <div class="page-hero-breadcrumb">
+        <a href="index.html">Home</a>
+        <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+        <span>Creative Classes</span>
+      </div>
+      <div style="margin-bottom: 1.25rem;">
+        <span class="badge-sticker badge-yellow">
+          <i data-lucide="palette" style="width: 14px; height: 14px;"></i> Creative Curriculum
+        </span>
+      </div>
+      <h1 class="page-hero-title">
+        Discover Their Next <br><span class="text-gradient-rainbow">Creative Spark</span>
+      </h1>
+      <p class="page-hero-desc">
+        Explore playful courses designed for ages 3–14. From tactile finger painting and ceramics to Procreate digital character animation, every class includes all professional materials.
+      </p>
+      <div class="page-hero-badges">
+        <span class="badge-sticker badge-pink"><i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> All Supplies Included</span>
+        <span class="badge-sticker badge-blue"><i data-lucide="users" style="width: 14px; height: 14px;"></i> Small Groups (8:1)</span>
+        <span class="badge-sticker badge-green"><i data-lucide="check-circle" style="width: 14px; height: 14px;"></i> Free Trial Session</span>
+      </div>
+
+      <!-- Category Filter Buttons -->
+      <div class="filter-btn-group" style="margin-top: 2.5rem;">
+        <button class="filter-btn class-filter-btn active" data-filter="all">All Programs</button>
+        <button class="filter-btn class-filter-btn" data-filter="painting">Painting</button>
+        <button class="filter-btn class-filter-btn" data-filter="drawing">Drawing</button>
+        <button class="filter-btn class-filter-btn" data-filter="crafts">Crafts</button>
+        <button class="filter-btn class-filter-btn" data-filter="digital">Digital Art</button>
+        <button class="filter-btn class-filter-btn" data-filter="play">Creative Play</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes Grid -->
+  <section class="section-py" style="background: var(--white); min-height: 600px;">
+    <div class="container">
+      <div class="grid grid-3" id="classes-grid-container">
+
+        <!-- Card 1: Painting -->
+        <div class="class-card filterable-class-card card-theme-pink" data-category="painting">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-pink class-category-badge">Painting</span>
+            <a href="class-details.html?id=1" onclick="localStorage.setItem('selected_class','1');">
+              <img src="assets/images/class1.jpg" alt="Acrylic & Canvas">
+            </a>
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 5–8</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 60 Mins</span>
+              <span><i data-lucide="sparkles" style="width: 14px;"></i> Beginner</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=1" onclick="localStorage.setItem('selected_class','1');">Creative Acrylic & Canvas</a></h3>
+            <p class="class-card-desc">Kids explore primary pigment mixing, brush handling, canvas texture, and joyful expressive techniques.</p>
+            <div class="class-card-footer">
+              <span class="class-fee">$45<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=1" onclick="localStorage.setItem('selected_class','1');" class="class-card-arrow" aria-label="Class details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Drawing -->
+        <div class="class-card filterable-class-card card-theme-yellow" data-category="drawing">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-yellow class-category-badge">Drawing</span>
+            <a href="class-details.html?id=2" onclick="localStorage.setItem('selected_class','2');">
+              <img src="assets/images/class2.jpg" alt="Storybook Sketch">
+            </a>
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 6–10</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 75 Mins</span>
+              <span><i data-lucide="sparkles" style="width: 14px;"></i> All Levels</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=2" onclick="localStorage.setItem('selected_class','2');">Storybook Sketch & Form</a></h3>
+            <p class="class-card-desc">Learn fundamental proportions, character expressions, cross-hatching, and draft comic strips.</p>
+            <div class="class-card-footer">
+              <span class="class-fee">$40<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=2" onclick="localStorage.setItem('selected_class','2');" class="class-card-arrow" aria-label="Class details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Painting (Watercolor) -->
+        <div class="class-card filterable-class-card card-theme-blue" data-category="painting">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-blue class-category-badge">Watercolor</span>
+            <a href="class-details.html?id=3" onclick="localStorage.setItem('selected_class','3');">
+              <img src="assets/images/class3.jpg" alt="Watercolor Magic">
+            </a>
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 7–12</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 60 Mins</span>
+              <span><i data-lucide="sparkles" style="width: 14px;"></i> Intermediate</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=3" onclick="localStorage.setItem('selected_class','3');">Watercolor Splash & Flow</a></h3>
+            <p class="class-card-desc">Master wet-on-wet washes, salt bleeding, botanical landscapes, and delicate gradient bleeding.</p>
+            <div class="class-card-footer">
+              <span class="class-fee">$48<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=3" onclick="localStorage.setItem('selected_class','3');" class="class-card-arrow" aria-label="Class details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Crafts -->
+        <div class="class-card filterable-class-card card-theme-green" data-category="crafts">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-green class-category-badge">Crafts</span>
+            <a href="class-details.html?id=4" onclick="localStorage.setItem('selected_class','4');">
+              <img src="assets/images/class4.jpg" alt="Paper Crafts">
+            </a>
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 4–7</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 50 Mins</span>
+              <span><i data-lucide="sparkles" style="width: 14px;"></i> Beginner</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=4" onclick="localStorage.setItem('selected_class','4');">Paper Craft & Collage Studio</a></h3>
+            <p class="class-card-desc">Tearing, folding origami, 3D paper sculpture, and mixed-media collages that build tactile coordination.</p>
+            <div class="class-card-footer">
+              <span class="class-fee">$38<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=4" onclick="localStorage.setItem('selected_class','4');" class="class-card-arrow" aria-label="Class details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Digital -->
+        <div class="class-card filterable-class-card card-theme-purple" data-category="digital">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-purple class-category-badge">Digital</span>
+            <a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');">
+              <img src="assets/images/class5.jpg" alt="Digital Illustration">
+            </a>
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 9–14</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 90 Mins</span>
+              <span><i data-lucide="sparkles" style="width: 14px;"></i> All Levels</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');">Digital Illustration & Procreate</a></h3>
+            <p class="class-card-desc">Step onto iPad tablets with stylus brushes, digital layering, color theory, and animated sticker creation.</p>
+            <div class="class-card-footer">
+              <span class="class-fee">$55<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');" class="class-card-arrow" aria-label="Class details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Creative Play -->
+        <div class="class-card filterable-class-card card-theme-orange" data-category="play">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-yellow class-category-badge">Play</span>
+            <a href="class-details.html?id=6" onclick="localStorage.setItem('selected_class','6');">
+              <img src="assets/images/class6.jpg" alt="Sensory Art Play">
+            </a>
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 3–5</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 45 Mins</span>
+              <span><i data-lucide="sparkles" style="width: 14px;"></i> Sensory</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=6" onclick="localStorage.setItem('selected_class','6');">Sensory Art & Color Play</a></h3>
+            <p class="class-card-desc">Finger paints, sponge stamping, shaving cream marbling, and joyful sensory exploration for tiny tots.</p>
+            <div class="class-card-footer">
+              <span class="class-fee">$35<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=6" onclick="localStorage.setItem('selected_class','6');" class="class-card-arrow" aria-label="Class details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-py">
+    <div class="container">
+      <div class="cta-banner-wrap">
+        <h2>Unsure Which Class Suits Your Child?</h2>
+        <p>Book a free 20-minute creative assessment with one of our mentors to find their perfect medium.</p>
+        <a href="contact.html" class="btn-toy btn-white">Book Free Assessment <i data-lucide="sparkles"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: #fff; margin-bottom: 1.25rem;">
+            <div class="brand-icon"><i data-lucide="palette"></i></div>
+            <span>LittleCanvas</span>
+          </a>
+          <p style="color: #D1CCEC; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            A premier creative learning playground empowering kids aged 4-14 through tactile painting, drawing, sculpture, and digital storytelling.
+          </p>
+          <div class="footer-social-links" style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#FFFFFF" style="width: 18px; height: 18px; display: block;">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/15557892278" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M16.7 14.8c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5C9.4 8.7 8.8 7.3 8.5 6.7c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9 0 1.7 1.2 3.4 1.4 3.6.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.6-.4z" fill="#FFFFFF" stroke="none"/>
+                <path d="M12 21.8a9.8 9.8 0 0 1-5-1.4L2 22l1.6-4.9A9.8 9.8 0 1 1 12 21.8z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#FFFFFF" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Programs -->
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">Acrylic Painting</a></li>
+            <li><a href="classes.html">Watercolor Magic</a></li>
+            <li><a href="classes.html">Sketch & Comics</a></li>
+            <li><a href="classes.html">Digital Art Academy</a></li>
+            <li><a href="classes.html">Clay & Pottery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#instructors">Meet Faculty</a></li>
+            <li><a href="events.html">Art Exhibitions</a></li>
+            <li><a href="pricing.html">Tuition Plans</a></li>
+            <li><a href="contact.html">Studio Tours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Parenting & Art</a></li>
+            <li><a href="coming-soon.html">Summer Camps</a></li>
+            <li><a href="auth/login.html">Parent Portal</a></li>
+            <li><a href="admin/dashboard.html">Educator SaaS</a></li>
+            <li><a href="documentation/index.html">Documentation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div class="footer-col">
+          <h4>Creative Dispatch</h4>
+          <p style="color: #D1CCEC; font-size: 0.9rem; margin-bottom: 1rem;">Get monthly art prompts, coloring printables, and exhibition announcements.</p>
+          <form onsubmit="event.preventDefault(); this.reset(); window.showToast('Subscribed! Welcome to Little Canvas Club 🎨', 'success');" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email address" required style="padding: 0.7rem 1rem; border-radius: var(--radius-pill); border: 2px solid var(--border); font-size: 0.9rem; width: 100%;">
+            <button type="submit" class="btn-toy btn-pink btn-sm" style="flex-shrink: 0;">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Little Canvas Studio. All rights reserved. Crafted for ThemeForest.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/validation.js"></script>
+</body>
+</html>

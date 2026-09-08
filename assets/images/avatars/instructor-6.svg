@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <clipPath id="avatar-clip-6">
+      <circle cx="80" cy="80" r="74"/>
+    </clipPath>
+    <linearGradient id="bg-grad-6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0E6"/>
+      <stop offset="100%" stop-color="#FFD6BA"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#avatar-clip-6)">
+    <!-- Background -->
+    <rect width="160" height="160" fill="url(#bg-grad-6)"/>
+    <circle cx="25" cy="40" r="16" fill="#FFAA7A" opacity="0.4"/>
+    <circle cx="135" cy="115" r="22" fill="#FFAA7A" opacity="0.3"/>
+
+    <!-- Torso / Paint-Splattered Tee -->
+    <path d="M28 160 Q32 125 55 116 L105 116 Q128 125 132 160 Z" fill="#0EA5E9"/>
+    <!-- Paint Splatters on Tee (Toddler sensory art fun) -->
+    <circle cx="58" cy="138" r="4" fill="#FF5C8A"/>
+    <circle cx="98" cy="142" r="5" fill="#FFD93D"/>
+    <circle cx="75" cy="150" r="3.5" fill="#48D597"/>
+    <circle cx="88" cy="132" r="2.5" fill="#A855F7"/>
+
+    <!-- Neck -->
+    <rect x="71" y="96" width="18" height="22" rx="8" fill="#FBD5B5"/>
+
+    <!-- Head -->
+    <ellipse cx="80" cy="74" rx="28" ry="32" fill="#FDE2C8"/>
+    <!-- Ears -->
+    <ellipse cx="50" cy="75" rx="5" ry="7.5" fill="#FDE2C8"/>
+    <ellipse cx="110" cy="75" rx="5" ry="7.5" fill="#FDE2C8"/>
+
+    <!-- Bouncy Curly Hair (Back & Top) -->
+    <circle cx="58" cy="48" r="12" fill="#78350F"/>
+    <circle cx="72" cy="40" r="14" fill="#78350F"/>
+    <circle cx="88" cy="38" r="14" fill="#78350F"/>
+    <circle cx="102" cy="46" r="12" fill="#78350F"/>
+    <circle cx="50" cy="60" r="10" fill="#78350F"/>
+    <circle cx="110" cy="60" r="10" fill="#78350F"/>
+
+    <!-- Face Details -->
+    <!-- Playful Eyebrows -->
+    <path d="M60 62 Q66 58 72 62" stroke="#78350F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M88 62 Q94 58 100 62" stroke="#78350F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Big joyful smiling eyes -->
+    <ellipse cx="66" cy="69" rx="4" ry="4.5" fill="#242044"/>
+    <ellipse cx="94" cy="69" rx="4" ry="4.5" fill="#242044"/>
+    <circle cx="67.5" cy="67.5" r="1.5" fill="#FFFFFF"/>
+    <circle cx="95.5" cy="67.5" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Freckles & Rosy Cheeks -->
+    <ellipse cx="58" cy="78" rx="6" ry="3.5" fill="#FF8BA7" opacity="0.5"/>
+    <ellipse cx="102" cy="78" rx="6" ry="3.5" fill="#FF8BA7" opacity="0.5"/>
+    <circle cx="62" cy="77" r="1" fill="#B45309" opacity="0.6"/>
+    <circle cx="65" cy="79" r="1" fill="#B45309" opacity="0.6"/>
+    <circle cx="95" cy="79" r="1" fill="#B45309" opacity="0.6"/>
+    <circle cx="98" cy="77" r="1" fill="#B45309" opacity="0.6"/>
+
+    <!-- Cute button nose -->
+    <ellipse cx="80" cy="76" rx="3.5" ry="2.5" fill="#E0A376"/>
+
+    <!-- Big joyful open-mouth laugh -->
+    <path d="M70 83 Q80 96 90 83 Z" fill="#242044"/>
+    <path d="M73 84 Q80 87 87 84" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <ellipse cx="80" cy="91" rx="5" ry="3" fill="#F43F5E"/>
+
+    <!-- Curly front bangs -->
+    <circle cx="64" cy="54" r="8" fill="#78350F"/>
+    <circle cx="78" cy="50" r="9" fill="#78350F"/>
+    <circle cx="94" cy="52" r="8" fill="#78350F"/>
+  </g>
+
+  <!-- Outer Outline Circle -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="#242044" stroke-width="5"/>
+</svg>

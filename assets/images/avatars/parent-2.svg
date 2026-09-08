@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <clipPath id="parent-clip-2"><circle cx="60" cy="60" r="54"/></clipPath>
+  </defs>
+  <g clip-path="url(#parent-clip-2)">
+    <rect width="120" height="120" fill="#FFEDD5"/>
+    <path d="M20 120 Q24 95 42 88 L78 88 Q96 95 100 120 Z" fill="#D97706"/>
+    <rect x="53" y="74" width="14" height="18" rx="6" fill="#FED7AA"/>
+    <ellipse cx="60" cy="58" rx="22" ry="25" fill="#FFEDD5"/>
+    <!-- Hair & Beard -->
+    <path d="M38 52 Q38 30 60 28 Q82 30 82 52 Z" fill="#451A03"/>
+    <path d="M42 64 Q40 82 60 84 Q80 82 78 64 Q74 74 60 76 Q46 74 42 64 Z" fill="#451A03"/>
+    <circle cx="49" cy="54" r="3" fill="#242044"/>
+    <circle cx="71" cy="54" r="3" fill="#242044"/>
+    <path d="M54 66 Q60 71 66 66" stroke="#242044" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+  <circle cx="60" cy="60" r="54" fill="none" stroke="#242044" stroke-width="4"/>
+</svg>

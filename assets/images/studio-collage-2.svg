@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="table-wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3E3"/>
+      <stop offset="100%" stop-color="#FFE4CA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wooden Tabletop Surface -->
+  <rect width="400" height="300" fill="url(#table-wood)"/>
+
+  <!-- Big Artist Palette with Vivid Paint Blobs -->
+  <g transform="translate(60, 40) rotate(-8)">
+    <path d="M40 70 C 40 20, 160 10, 210 50 C 245 80, 230 150, 190 160 C 160 168, 150 140, 120 140 C 90 140, 80 170, 50 160 C 20 150, 40 100, 40 70 Z" fill="#FDE2C8" stroke="#242044" stroke-width="5"/>
+    <ellipse cx="170" cy="110" rx="15" ry="20" fill="#FFE4CA" stroke="#242044" stroke-width="4"/>
+    <!-- Paint dollops -->
+    <circle cx="70" cy="65" r="15" fill="#FF5C8A"/>
+    <circle cx="110" cy="45" r="15" fill="#FFD93D"/>
+    <circle cx="150" cy="50" r="15" fill="#38B6FF"/>
+    <circle cx="190" cy="75" r="15" fill="#48D597"/>
+    <circle cx="90" cy="115" r="14" fill="#A855F7"/>
+    <circle cx="130" cy="125" r="14" fill="#FF8A3D"/>
+  </g>
+
+  <!-- Ceramic Glazed Water Mug with Brushes (Top Right) -->
+  <g transform="translate(280, 50)">
+    <rect x="20" y="45" width="60" height="65" rx="10" fill="#38B6FF" stroke="#242044" stroke-width="4"/>
+    <path d="M80 60 C 105 60, 105 95, 80 95" stroke="#242044" stroke-width="4" fill="none"/>
+    <!-- Water -->
+    <rect x="25" y="65" width="50" height="40" rx="5" fill="#93C5FD" opacity="0.6"/>
+    <!-- Brushes -->
+    <path d="M35 48 L15 -10" stroke="#8D5024" stroke-width="7" stroke-linecap="round"/>
+    <polygon points="15,-10 9,-26 19,-26" fill="#FF5C8A"/>
+    <path d="M50 48 L55 -18" stroke="#B47242" stroke-width="6.5" stroke-linecap="round"/>
+    <polygon points="55,-18 50,-34 60,-34" fill="#FFD93D"/>
+    <path d="M62 48 L80 -8" stroke="#8D5024" stroke-width="6.5" stroke-linecap="round"/>
+    <polygon points="80,-8 86,-24 94,-18" fill="#48D597"/>
+  </g>
+
+  <!-- Colorful Art Apron Folded on Table (Bottom Left) -->
+  <g transform="translate(40, 190) rotate(5)">
+    <rect x="0" y="0" width="130" height="85" rx="12" fill="#FF5C8A" stroke="#242044" stroke-width="4"/>
+    <path d="M25 0 L25 85" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 4"/>
+    <path d="M65 25 Q65 15 75 15 Q85 15 85 25 Q85 35 75 40 Q65 35 65 25 Z" fill="#FFD93D"/>
+  </g>
+
+  <!-- Ceramic Clay Bowl with Clay Balls (Bottom Right) -->
+  <g transform="translate(240, 185)">
+    <ellipse cx="60" cy="55" rx="55" ry="24" fill="#D97706" stroke="#242044" stroke-width="4"/>
+    <ellipse cx="60" cy="48" rx="45" ry="16" fill="#B45309"/>
+    <circle cx="45" cy="42" r="10" fill="#F59E0B"/>
+    <circle cx="65" cy="40" r="11" fill="#FCD34D"/>
+    <circle cx="80" cy="44" r="9" fill="#F59E0B"/>
+  </g>
+
+  <!-- Paint Splatters on Table -->
+  <circle cx="160" cy="220" r="7" fill="#FF5C8A"/>
+  <circle cx="175" cy="235" r="4" fill="#FF5C8A"/>
+  <circle cx="210" cy="120" r="6" fill="#38B6FF"/>
+</svg>

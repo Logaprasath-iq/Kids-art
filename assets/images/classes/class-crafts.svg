@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-craft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E2FAF0"/>
+      <stop offset="100%" stop-color="#BAF2D8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-bleed background -->
+  <rect width="400" height="240" fill="url(#bg-craft)"/>
+  <!-- Cutting mat grid -->
+  <line x1="0" y1="60" x2="400" y2="60" stroke="#79E2B6" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <line x1="0" y1="120" x2="400" y2="120" stroke="#79E2B6" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <line x1="0" y1="180" x2="400" y2="180" stroke="#79E2B6" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <line x1="80" y1="0" x2="80" y2="240" stroke="#79E2B6" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <line x1="160" y1="0" x2="160" y2="240" stroke="#79E2B6" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <line x1="240" y1="0" x2="240" y2="240" stroke="#79E2B6" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <line x1="320" y1="0" x2="320" y2="240" stroke="#79E2B6" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+  <!-- Layered Craft Paper Sheets fanned out (Center) -->
+  <g transform="translate(130, 45)">
+    <!-- Yellow Sheet -->
+    <rect x="-10" y="20" width="130" height="110" rx="8" fill="#FFD93D" stroke="#242044" stroke-width="3" transform="rotate(-12)"/>
+    <!-- Blue Sheet -->
+    <rect x="15" y="10" width="130" height="110" rx="8" fill="#38B6FF" stroke="#242044" stroke-width="3" transform="rotate(6)"/>
+    <!-- Pink Pattern Sheet with white polka dots -->
+    <rect x="0" y="15" width="130" height="110" rx="8" fill="#FF5C8A" stroke="#242044" stroke-width="3"/>
+    <circle cx="25" cy="40" r="5" fill="#FFFFFF"/>
+    <circle cx="55" cy="40" r="5" fill="#FFFFFF"/>
+    <circle cx="85" cy="40" r="5" fill="#FFFFFF"/>
+    <circle cx="115" cy="40" r="5" fill="#FFFFFF"/>
+    <circle cx="40" cy="65" r="5" fill="#FFFFFF"/>
+    <circle cx="70" cy="65" r="5" fill="#FFFFFF"/>
+    <circle cx="100" cy="65" r="5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Big 3D Origami Crane in Foreground -->
+  <g transform="translate(170, 75)">
+    <!-- Shadow -->
+    <polygon points="20,70 65,85 105,70 65,95" fill="#242044" opacity="0.2"/>
+    <!-- Crane Facets -->
+    <polygon points="65,10 20,60 65,70" fill="#F43F5E" stroke="#242044" stroke-width="3"/>
+    <polygon points="65,10 110,60 65,70" fill="#FB7185" stroke="#242044" stroke-width="3"/>
+    <polygon points="65,70 10,40 30,65" fill="#E11D48" stroke="#242044" stroke-width="2.5"/>
+    <polygon points="65,70 120,40 100,65" fill="#FDA4AF" stroke="#242044" stroke-width="2.5"/>
+    <!-- Neck & Head -->
+    <polygon points="30,65 15,25 25,60" fill="#BE123C" stroke="#242044" stroke-width="2.5"/>
+    <polygon points="15,25 6,30 18,35" fill="#9F1239" stroke="#242044" stroke-width="2"/>
+    <!-- Tail -->
+    <polygon points="100,65 125,35 108,60" fill="#E11D48" stroke="#242044" stroke-width="2.5"/>
+  </g>
+
+  <!-- Child-Safe Craft Scissors (Left) -->
+  <g transform="translate(45, 90) rotate(-25)">
+    <!-- Blades -->
+    <path d="M35 18 L75 30 L35 34 Z" fill="#CBD5E1" stroke="#242044" stroke-width="2.5"/>
+    <path d="M35 34 L75 22 L35 18 Z" fill="#E2E8F0" stroke="#242044" stroke-width="2.5"/>
+    <!-- Pivot screw -->
+    <circle cx="48" cy="26" r="3.5" fill="#242044"/>
+    <!-- Pink & Yellow Handle Loops -->
+    <ellipse cx="22" cy="16" rx="14" ry="9" fill="none" stroke="#FF5C8A" stroke-width="6"/>
+    <ellipse cx="22" cy="38" rx="14" ry="9" fill="none" stroke="#FFD93D" stroke-width="6"/>
+  </g>
+
+  <!-- Glue Stick & Washi Tape Roll (Right) -->
+  <g transform="translate(305, 110)">
+    <!-- Washi Tape Roll -->
+    <ellipse cx="40" cy="55" rx="22" ry="14" fill="#A855F7" stroke="#242044" stroke-width="3"/>
+    <ellipse cx="40" cy="55" rx="10" ry="6" fill="#E2FAF0" stroke="#242044" stroke-width="2.5"/>
+    <!-- Glue Stick -->
+    <g transform="rotate(35 20 20)">
+      <rect x="10" y="0" width="18" height="42" rx="4" fill="#38B6FF" stroke="#242044" stroke-width="2.5"/>
+      <rect x="12" y="-12" width="14" height="14" fill="#93C5FD"/>
+      <rect x="9" y="32" width="20" height="12" rx="2" fill="#F59E0B" stroke="#242044" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Paper Confetti Stars & Buttons -->
+  <polygon points="110,35 113,41 119,43 113,45 110,51 107,45 101,43 107,41" fill="#FF5C8A"/>
+  <circle cx="280" cy="40" r="7" fill="#F59E0B" stroke="#242044" stroke-width="2"/>
+  <circle cx="278" cy="39" r="1.5" fill="#242044"/>
+  <circle cx="282" cy="39" r="1.5" fill="#242044"/>
+</svg>

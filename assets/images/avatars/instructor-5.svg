@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <clipPath id="avatar-clip-5">
+      <circle cx="80" cy="80" r="74"/>
+    </clipPath>
+    <linearGradient id="bg-grad-5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2EBFF"/>
+      <stop offset="100%" stop-color="#DCBEFF"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#avatar-clip-5)">
+    <!-- Background -->
+    <rect width="160" height="160" fill="url(#bg-grad-5)"/>
+    <circle cx="30" cy="40" r="20" fill="#C084FC" opacity="0.3"/>
+    <circle cx="130" cy="120" r="22" fill="#C084FC" opacity="0.3"/>
+
+    <!-- Torso / Burgundy Artist Turtleneck -->
+    <path d="M28 160 Q32 125 55 116 L105 116 Q128 125 132 160 Z" fill="#881337"/>
+    <!-- Turtleneck Neckband -->
+    <rect x="68" y="104" width="24" height="16" rx="6" fill="#9F1239"/>
+
+    <!-- Neck -->
+    <rect x="71" y="94" width="18" height="20" rx="8" fill="#FCE7D6"/>
+
+    <!-- Head -->
+    <ellipse cx="80" cy="74" rx="27" ry="32" fill="#FFF1E6"/>
+    <!-- Ears -->
+    <ellipse cx="51" cy="75" rx="4.5" ry="7" fill="#FFF1E6"/>
+    <ellipse cx="109" cy="75" rx="4.5" ry="7" fill="#FFF1E6"/>
+
+    <!-- Chic Dark Bob Haircut (Framing the face) -->
+    <path d="M46 72 Q42 42 80 38 Q118 42 114 72 Q116 94 106 102 Q108 80 108 68 Q100 48 80 48 Q60 48 52 68 Q52 80 54 102 Q44 94 46 72 Z" fill="#2E1065"/>
+    
+    <!-- Pencil Tucked Behind Left Ear -->
+    <path d="M42 66 L56 46" stroke="#F59E0B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M54 48 L56 46" stroke="#242044" stroke-width="4" stroke-linecap="round"/>
+    <path d="M42 66 L44 64" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Face Details -->
+    <!-- Sophisticated arched eyebrows -->
+    <path d="M61 62 Q66 58 72 61" stroke="#2E1065" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M88 61 Q94 58 99 62" stroke="#2E1065" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Focus artist eyes -->
+    <ellipse cx="66" cy="68" rx="4" ry="4.5" fill="#242044"/>
+    <ellipse cx="94" cy="68" rx="4" ry="4.5" fill="#242044"/>
+    <circle cx="67.5" cy="66.5" r="1.5" fill="#FFFFFF"/>
+    <circle cx="95.5" cy="66.5" r="1.5" fill="#FFFFFF"/>
+    <!-- Eyelash flick -->
+    <path d="M70 65 L73 63" stroke="#242044" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M98 63 L101 65" stroke="#242044" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Soft Cheeks -->
+    <ellipse cx="58" cy="77" rx="5.5" ry="3" fill="#F472B6" opacity="0.4"/>
+    <ellipse cx="102" cy="77" rx="5.5" ry="3" fill="#F472B6" opacity="0.4"/>
+
+    <!-- Slender Nose -->
+    <path d="M79 71 Q81 77 77 78" stroke="#E0A376" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Confident Artist Smile -->
+    <path d="M73 85 Q80 92 87 85" stroke="#242044" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M75 86 Q80 90 85 86 Z" fill="#BE123C"/>
+
+    <!-- Straight Bob Bangs -->
+    <path d="M52 60 Q66 50 80 50 Q94 50 108 60 Q96 54 80 54 Q64 54 52 60 Z" fill="#2E1065"/>
+  </g>
+
+  <!-- Outer Outline Circle -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="#242044" stroke-width="5"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="300" height="240">
+      <rect width="300" height="240" fill="#1B1834"/>
+      <!-- Stars -->
+      <circle cx="40" cy="40" r="3" fill="#FFD93D"/>
+      <circle cx="120" cy="30" r="4" fill="#FFF"/>
+      <circle cx="260" cy="60" r="3" fill="#35C9FF"/>
+      <circle cx="250" cy="180" r="4" fill="#FF5C8A"/>
+      <!-- Rocket -->
+      <g transform="rotate(45 150 120)">
+        <polygon points="150,50 130,100 170,100" fill="#FF5C8A"/>
+        <rect x="130" y="100" width="40" height="60" rx="4" fill="#FFFFFF"/>
+        <circle cx="150" cy="125" r="10" fill="#35C9FF"/>
+        <polygon points="120,150 130,130 130,160" fill="#6C63FF"/>
+        <polygon points="180,150 170,130 170,160" fill="#6C63FF"/>
+        <polygon points="140,160 150,185 160,160" fill="#FF8A3D"/>
+      </g>
+    </svg>

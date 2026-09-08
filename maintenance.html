@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Maintenance — Studio Getting a Makeover | Little Canvas</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="canonical" href="https://littlecanvas.example.com/maintenance.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; background: var(--cream);">
+
+  <!-- Minimal Header -->
+  <header class="header-main">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"><i data-lucide="palette"></i></div>
+        <span>Little<span class="text-gradient-pink">Canvas</span></span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
+        <button class="rtl-toggle-btn" aria-label="Toggle Right-To-Left Layout" title="Toggle RTL">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+      </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Maintenance Content -->
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 1.5rem; position: relative; overflow: hidden;">
+    <div class="blob blob-pink" style="top: 15%; right: 15%;"></div>
+    <div class="blob blob-green" style="bottom: 15%; left: 15%;"></div>
+
+    <div style="max-width: 650px; position: relative; z-index: 2;">
+      <div style="font-size: 4.5rem; margin-bottom: 1.5rem; display: inline-block; animation: rollerBob 2s infinite ease-in-out;">
+        🖌️ 🎨 🧹
+      </div>
+
+      <h1 class="hero-title" style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 1.25rem;">
+        Our Creative Studio Is <span class="text-gradient-sun">Getting a Makeover</span>.
+      </h1>
+
+      <p style="color: var(--muted); font-size: 1.15rem; line-height: 1.6; margin-bottom: 2.5rem;">
+        We are applying a fresh coat of paint and polishing up our servers! Our online class registration portal will be back online shortly.
+      </p>
+
+      <div class="admin-card" style="border: 3px solid var(--border); box-shadow: 0 6px 0 var(--border); max-width: 420px; margin: 0 auto 2.5rem auto; padding: 1.25rem;">
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; margin-bottom: 0.25rem;">Estimated Completion</div>
+        <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--primary);">Today at 2:00 PM EST</div>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="index.html" class="btn-toy btn-pink"><i data-lucide="refresh-cw"></i> Check Back Now</a>
+        <a href="contact.html" class="btn-toy btn-yellow"><i data-lucide="mail"></i> Urgent Studio Inquiries</a>
+      </div>
+    </div>
+  </main>
+
+  <footer style="text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--muted); border-top: 2px solid var(--border-light);">
+    © 2026 Little Canvas Studio. All rights reserved.
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-water" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E3F5FF"/>
+      <stop offset="100%" stop-color="#BAEBFF"/>
+    </linearGradient>
+    <linearGradient id="wet-wash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38B6FF"/>
+      <stop offset="50%" stop-color="#6C63FF"/>
+      <stop offset="100%" stop-color="#FF5C8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-bleed background -->
+  <rect width="400" height="240" fill="url(#bg-water)"/>
+  
+  <!-- Soft Organic Water Blooms in Background -->
+  <circle cx="80" cy="60" r="65" fill="#38B6FF" opacity="0.25"/>
+  <circle cx="120" cy="110" r="50" fill="#6C63FF" opacity="0.2"/>
+  <circle cx="320" cy="80" r="75" fill="#FF5C8A" opacity="0.2"/>
+  <circle cx="280" cy="150" r="60" fill="#38B6FF" opacity="0.2"/>
+
+  <!-- Studio Wooden Table Floor -->
+  <rect y="195" width="400" height="45" fill="#E8D5C4"/>
+  <line x1="0" y1="195" x2="400" y2="195" stroke="#242044" stroke-width="4"/>
+
+  <!-- Heavy Cold-Pressed Watercolor Paper Sheet (Center-Left) -->
+  <g transform="translate(60, 25) rotate(-3)">
+    <rect x="0" y="0" width="185" height="150" rx="8" fill="#FFFFFF" stroke="#242044" stroke-width="3.5"/>
+    <!-- Wet Flowing Waves Art -->
+    <path d="M15 85 Q50 45 95 70 T170 55 L170 135 L15 135 Z" fill="url(#wet-wash)" opacity="0.85"/>
+    <path d="M15 105 Q60 75 105 95 T170 85 L170 135 L15 135 Z" fill="#2563EB" opacity="0.75"/>
+    <path d="M15 120 Q70 100 120 115 T170 110 L170 135 L15 135 Z" fill="#1D4ED8"/>
+    <!-- Salt Bleed Bloom Effect -->
+    <circle cx="65" cy="70" r="14" fill="#FFFFFF" opacity="0.5"/>
+    <circle cx="140" cy="65" r="18" fill="#FFFFFF" opacity="0.4"/>
+    <circle cx="105" cy="55" r="10" fill="#FFFFFF" opacity="0.6"/>
+    <!-- Botanical leaf silhouettes -->
+    <path d="M30 40 Q45 20 40 55 Q25 45 30 40 Z" fill="#10B981" opacity="0.85"/>
+    <path d="M42 45 Q60 30 50 65 Q38 52 42 45 Z" fill="#059669" opacity="0.85"/>
+  </g>
+
+  <!-- Metal Watercolor Tin Pan Set (Right) -->
+  <g transform="translate(255, 60) rotate(8)">
+    <rect x="0" y="0" width="115" height="110" rx="10" fill="#242044" stroke="#242044" stroke-width="3"/>
+    <rect x="4" y="4" width="107" height="102" rx="7" fill="#F8FAFC"/>
+    <!-- Mixing wells on lid -->
+    <rect x="8" y="8" width="48" height="42" rx="5" fill="#E2E8F0" opacity="0.7"/>
+    <rect x="59" y="8" width="48" height="42" rx="5" fill="#E2E8F0" opacity="0.7"/>
+    <!-- Colored Half Pans -->
+    <rect x="10" y="58" width="20" height="20" rx="3" fill="#EF4444"/>
+    <rect x="34" y="58" width="20" height="20" rx="3" fill="#F59E0B"/>
+    <rect x="58" y="58" width="20" height="20" rx="3" fill="#10B981"/>
+    <rect x="82" y="58" width="20" height="20" rx="3" fill="#06B6D4"/>
+    <rect x="10" y="82" width="20" height="20" rx="3" fill="#3B82F6"/>
+    <rect x="34" y="82" width="20" height="20" rx="3" fill="#8B5CF6"/>
+    <rect x="58" y="82" width="20" height="20" rx="3" fill="#EC4899"/>
+    <rect x="82" y="82" width="20" height="20" rx="3" fill="#374151"/>
+  </g>
+
+  <!-- Mop Brush with water droplets -->
+  <g transform="translate(190, 100) rotate(-40)">
+    <rect x="0" y="0" width="90" height="10" rx="3" fill="#78350F" stroke="#242044" stroke-width="2"/>
+    <rect x="85" y="-1" width="18" height="12" fill="#D1D5DB" stroke="#242044" stroke-width="2"/>
+    <!-- Mop bristle head with wash -->
+    <path d="M103 -1 C 115 -2, 125 5, 120 11 C 115 16, 103 11, 103 -1 Z" fill="#2563EB" stroke="#242044" stroke-width="2"/>
+    <!-- Water Drop falling -->
+    <path d="M128 15 Q133 22 131 25 A3 3 0 0 1 126 23 Q125 18 128 15 Z" fill="#38B6FF"/>
+  </g>
+</svg>

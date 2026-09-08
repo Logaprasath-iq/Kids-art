@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eventWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F3E5F5"/>
+      <stop offset="50%" stop-color="#EDE7F6"/>
+      <stop offset="100%" stop-color="#E8EAF6"/>
+    </linearGradient>
+    <linearGradient id="goldRibbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+    <radialGradient id="spotlight1" cx="0.5" cy="0" r="0.8">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFF9C4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadowEvt" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="0" flood-color="#242044"/>
+    </filter>
+  </defs>
+
+  <!-- Gallery Wall Background -->
+  <rect width="600" height="380" fill="url(#eventWall)"/>
+
+  <!-- Gallery Wood Flooring with Perspective Lines -->
+  <rect y="310" width="600" height="70" fill="#E0C39E" stroke="#242044" stroke-width="3"/>
+  <line x1="140" y1="310" x2="100" y2="380" stroke="#242044" stroke-width="2" stroke-opacity="0.25"/>
+  <line x1="300" y1="310" x2="280" y2="380" stroke="#242044" stroke-width="2" stroke-opacity="0.25"/>
+  <line x1="460" y1="310" x2="440" y2="380" stroke="#242044" stroke-width="2" stroke-opacity="0.25"/>
+
+  <!-- Overhead Spotlight Fixtures -->
+  <!-- Track -->
+  <line x1="40" y1="20" x2="560" y2="20" stroke="#242044" stroke-width="4"/>
+  <!-- Light 1 -->
+  <rect x="130" y="20" width="14" height="16" fill="#6C63FF" stroke="#242044" stroke-width="2"/>
+  <polygon points="122,36 152,36 142,48 132,48" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+  <!-- Spotlight Cone 1 -->
+  <polygon points="137,48 40,310 240,310" fill="url(#spotlight1)"/>
+
+  <!-- Light 2 (Center) -->
+  <rect x="293" y="20" width="14" height="16" fill="#FF5C8A" stroke="#242044" stroke-width="2"/>
+  <polygon points="285,36 315,36 305,48 295,48" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+  <!-- Spotlight Cone 2 -->
+  <polygon points="300,48 190,310 410,310" fill="url(#spotlight1)"/>
+
+  <!-- Light 3 -->
+  <rect x="455" y="20" width="14" height="16" fill="#48D597" stroke="#242044" stroke-width="2"/>
+  <polygon points="447,36 477,36 467,48 457,48" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+  <!-- Spotlight Cone 3 -->
+  <polygon points="462,48 360,310 560,310" fill="url(#spotlight1)"/>
+
+  <!-- Hanging Party Bunting Garland -->
+  <path d="M 30 35 Q 300 80 570 35" fill="none" stroke="#242044" stroke-width="2.5"/>
+  <polygon points="70,44 95,48 82,78" fill="#FF5C8A" stroke="#242044" stroke-width="2"/>
+  <polygon points="150,56 175,60 162,90" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+  <polygon points="230,65 255,67 242,97" fill="#48D597" stroke="#242044" stroke-width="2"/>
+  <polygon points="310,67 335,67 322,97" fill="#35C9FF" stroke="#242044" stroke-width="2"/>
+  <polygon points="390,63 415,60 402,91" fill="#A66CFF" stroke="#242044" stroke-width="2"/>
+  <polygon points="470,53 495,49 482,80" fill="#FF8A3D" stroke="#242044" stroke-width="2"/>
+
+  <!-- FRAMED ARTWORK 1 (Left: Colorful Abstract Butterfly) -->
+  <g transform="translate(65, 95)">
+    <!-- Hanging cord -->
+    <line x1="60" y1="0" x2="60" y2="15" stroke="#242044" stroke-width="2"/>
+    <!-- Outer Frame (Turquoise) -->
+    <rect x="0" y="15" width="120" height="135" rx="10" fill="#35C9FF" stroke="#242044" stroke-width="3.5" filter="url(#shadowEvt)"/>
+    <!-- Inner Mat -->
+    <rect x="12" y="27" width="96" height="111" rx="5" fill="#FFFFFF" stroke="#242044" stroke-width="2"/>
+    <!-- Artwork -->
+    <rect x="20" y="35" width="80" height="95" rx="3" fill="#FFF9E9"/>
+    <!-- Butterfly wings -->
+    <circle cx="50" cy="72" r="16" fill="#FF5C8A"/>
+    <circle cx="70" cy="72" r="16" fill="#FFD93D"/>
+    <circle cx="53" cy="92" r="12" fill="#A66CFF"/>
+    <circle cx="67" cy="92" r="12" fill="#48D597"/>
+    <ellipse cx="60" cy="82" rx="4" ry="18" fill="#242044"/>
+    <!-- Student Artist Plaque -->
+    <rect x="35" y="155" width="50" height="16" rx="3" fill="#FFE5D9" stroke="#242044" stroke-width="1.5"/>
+    <text x="60" y="167" font-family="'Fredoka', cursive" font-size="8" font-weight="700" fill="#242044" text-anchor="middle">Leo • Age 6</text>
+  </g>
+
+  <!-- FRAMED ARTWORK 2 (Centerpiece: Golden Gala Winner) -->
+  <g transform="translate(225, 70)">
+    <!-- Hanging cord -->
+    <line x1="75" y1="0" x2="75" y2="15" stroke="#242044" stroke-width="2"/>
+    <!-- Outer Frame (Sunny Gold) -->
+    <rect x="0" y="15" width="150" height="165" rx="12" fill="#FFD93D" stroke="#242044" stroke-width="4" filter="url(#shadowEvt)"/>
+    <!-- Inner Mat -->
+    <rect x="14" y="29" width="122" height="137" rx="6" fill="#FFFFFF" stroke="#242044" stroke-width="2.5"/>
+    <!-- Canvas Art: Cosmic Rocket & Stars -->
+    <rect x="22" y="37" width="106" height="121" rx="4" fill="#242044"/>
+    <!-- Stars & Moon -->
+    <circle cx="45" cy="58" r="8" fill="#FFD93D"/>
+    <circle cx="105" cy="65" r="3" fill="#FFFFFF"/>
+    <circle cx="35" cy="115" r="2.5" fill="#FFFFFF"/>
+    <circle cx="112" cy="125" r="2" fill="#FFFFFF"/>
+    <!-- Rocket Body -->
+    <polygon points="75,55 90,95 60,95" fill="#FF5C8A" stroke="#FFFFFF" stroke-width="2"/>
+    <rect x="65" y="95" width="20" height="25" fill="#35C9FF" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="75" cy="107" r="5" fill="#FFD93D"/>
+    <!-- Flame -->
+    <polygon points="65,120 75,138 85,120" fill="#FF8A3D"/>
+    <polygon points="70,120 75,130 80,120" fill="#FFD93D"/>
+
+    <!-- Gold Award Rosette on Frame -->
+    <g transform="translate(130, 15)">
+      <!-- Rosette pleated circle -->
+      <circle cx="15" cy="15" r="18" fill="url(#goldRibbon)" stroke="#242044" stroke-width="2.5" filter="url(#shadowEvt)"/>
+      <circle cx="15" cy="15" r="11" fill="#FF5C8A" stroke="#242044" stroke-width="1.5"/>
+      <polygon points="15,9 17,13 21,13 18,16 19,20 15,18 11,20 12,16 9,13 13,13" fill="#FFD93D"/>
+      <!-- Ribbons tails -->
+      <polygon points="10,32 5,52 14,46 17,52 16,32" fill="#FFB300" stroke="#242044" stroke-width="1.5"/>
+      <polygon points="17,32 18,52 23,46 30,52 24,32" fill="#FF8F00" stroke="#242044" stroke-width="1.5"/>
+    </g>
+
+    <!-- Student Plaque -->
+    <rect x="45" y="186" width="60" height="18" rx="4" fill="#FFE5D9" stroke="#242044" stroke-width="2"/>
+    <text x="75" y="199" font-family="'Fredoka', cursive" font-size="9" font-weight="700" fill="#242044" text-anchor="middle">Aanya • Age 8</text>
+  </g>
+
+  <!-- FRAMED ARTWORK 3 (Right: Magical Tree) -->
+  <g transform="translate(415, 95)">
+    <!-- Hanging cord -->
+    <line x1="60" y1="0" x2="60" y2="15" stroke="#242044" stroke-width="2"/>
+    <!-- Outer Frame (Coral Pink) -->
+    <rect x="0" y="15" width="120" height="135" rx="10" fill="#FF5C8A" stroke="#242044" stroke-width="3.5" filter="url(#shadowEvt)"/>
+    <!-- Inner Mat -->
+    <rect x="12" y="27" width="96" height="111" rx="5" fill="#FFFFFF" stroke="#242044" stroke-width="2"/>
+    <!-- Artwork -->
+    <rect x="20" y="35" width="80" height="95" rx="3" fill="#E8F8F5"/>
+    <!-- Colorful Polka-Dot Tree -->
+    <rect x="56" y="80" width="8" height="40" fill="#8D6E63" stroke="#242044" stroke-width="2"/>
+    <circle cx="60" cy="70" r="24" fill="#48D597" stroke="#242044" stroke-width="2"/>
+    <circle cx="50" cy="62" r="5" fill="#FF5C8A"/>
+    <circle cx="70" cy="65" r="4" fill="#FFD93D"/>
+    <circle cx="62" cy="78" r="5" fill="#35C9FF"/>
+    <circle cx="55" cy="74" r="4" fill="#A66CFF"/>
+    <!-- Student Plaque -->
+    <rect x="35" y="155" width="50" height="16" rx="3" fill="#FFE5D9" stroke="#242044" stroke-width="1.5"/>
+    <text x="60" y="167" font-family="'Fredoka', cursive" font-size="8" font-weight="700" fill="#242044" text-anchor="middle">Rohan • Age 9</text>
+  </g>
+
+  <!-- Velvet Stanchion Rope (Gallery Barrier) -->
+  <g transform="translate(0, 275)">
+    <!-- Posts -->
+    <circle cx="80" cy="40" r="14" fill="#FFD93D" stroke="#242044" stroke-width="2.5"/>
+    <rect x="74" y="15" width="12" height="45" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+    <ellipse cx="80" cy="15" rx="9" ry="5" fill="#FFE082" stroke="#242044" stroke-width="1.5"/>
+
+    <circle cx="300" cy="40" r="14" fill="#FFD93D" stroke="#242044" stroke-width="2.5"/>
+    <rect x="294" y="15" width="12" height="45" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+    <ellipse cx="300" cy="15" rx="9" ry="5" fill="#FFE082" stroke="#242044" stroke-width="1.5"/>
+
+    <circle cx="520" cy="40" r="14" fill="#FFD93D" stroke="#242044" stroke-width="2.5"/>
+    <rect x="514" y="15" width="12" height="45" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+    <ellipse cx="520" cy="15" rx="9" ry="5" fill="#FFE082" stroke="#242044" stroke-width="1.5"/>
+
+    <!-- Red Velvet Rope Swag -->
+    <path d="M 80 22 Q 190 55 300 22" fill="none" stroke="#FF5C8A" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 80 22 Q 190 55 300 22" fill="none" stroke="#242044" stroke-width="1.5" stroke-dasharray="3,4"/>
+    <path d="M 300 22 Q 410 55 520 22" fill="none" stroke="#FF5C8A" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 300 22 Q 410 55 520 22" fill="none" stroke="#242044" stroke-width="1.5" stroke-dasharray="3,4"/>
+  </g>
+
+  <!-- Celebration Confetti Floating -->
+  <circle cx="50" cy="65" r="4" fill="#FF5C8A"/>
+  <circle cx="180" cy="190" r="4" fill="#FFD93D"/>
+  <rect x="210" y="210" width="8" height="8" rx="2" fill="#48D597" transform="rotate(25 214 214)"/>
+  <rect x="390" y="220" width="9" height="7" rx="2" fill="#35C9FF" transform="rotate(-30 394 223)"/>
+  <circle cx="540" cy="180" r="5" fill="#A66CFF"/>
+  <polygon points="560,95 564,103 573,103 566,108 568,116 560,111 552,116 554,108 547,103 556,103" fill="#FFD93D"/>
+</svg>

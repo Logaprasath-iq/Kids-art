@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-b2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F4FD"/>
+      <stop offset="100%" stop-color="#CCE7FC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="240" fill="url(#bg-b2)"/>
+  
+  <!-- Cozy Window with Raindrops (Background Left) -->
+  <g transform="translate(30, 25)">
+    <rect x="0" y="0" width="90" height="110" rx="8" fill="#FFFFFF" stroke="#242044" stroke-width="3.5"/>
+    <line x1="45" y1="0" x2="45" y2="110" stroke="#242044" stroke-width="2.5"/>
+    <line x1="0" y1="55" x2="90" y2="55" stroke="#242044" stroke-width="2.5"/>
+    <!-- Raindrops -->
+    <line x1="15" y1="18" x2="10" y2="30" stroke="#38B6FF" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="32" y1="35" x2="27" y2="47" stroke="#38B6FF" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="65" y1="20" x2="60" y2="32" stroke="#38B6FF" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="75" y1="75" x2="70" y2="87" stroke="#38B6FF" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Hanging Paper Mobile above Table -->
+  <g transform="translate(200, 15)">
+    <line x1="40" y1="0" x2="40" y2="35" stroke="#242044" stroke-width="2"/>
+    <line x1="0" y1="35" x2="80" y2="35" stroke="#242044" stroke-width="2.5"/>
+    <line x1="15" y1="35" x2="15" y2="60" stroke="#242044" stroke-width="1.5"/>
+    <polygon points="15,60 21,70 32,71 24,79 26,90 15,84 4,90 6,79 -2,71 9,70" fill="#FFD93D"/>
+    <line x1="65" y1="35" x2="65" y2="55" stroke="#242044" stroke-width="1.5"/>
+    <circle cx="65" cy="65" r="12" fill="#FF5C8A"/>
+  </g>
+
+  <!-- Wooden Craft Table -->
+  <rect y="145" width="400" height="95" fill="#EAD5C3"/>
+  <line x1="0" y1="145" x2="400" y2="145" stroke="#242044" stroke-width="4"/>
+
+  <!-- Tactile Sensory Slime Jar (Center) -->
+  <g transform="translate(160, 110)">
+    <rect x="0" y="10" width="55" height="55" rx="8" fill="#F0FDFA" stroke="#242044" stroke-width="3" opacity="0.9"/>
+    <!-- Glowing Turquoise Slime with Glitter -->
+    <rect x="4" y="24" width="47" height="38" rx="5" fill="#14B8A6"/>
+    <circle cx="18" cy="36" r="2.5" fill="#FFFFFF"/>
+    <circle cx="34" cy="45" r="2" fill="#FFD93D"/>
+    <circle cx="25" cy="50" r="3" fill="#FF5C8A"/>
+    <!-- Lid -->
+    <rect x="-4" y="2" width="63" height="12" rx="3" fill="#F59E0B" stroke="#242044" stroke-width="2.5"/>
+  </g>
+
+  <!-- Sensory Playdough Shapes (Right) -->
+  <g transform="translate(250, 155)">
+    <!-- Rolled dough ball -->
+    <circle cx="25" cy="18" r="16" fill="#A855F7" stroke="#242044" stroke-width="2.5"/>
+    <circle cx="60" cy="22" r="14" fill="#38B6FF" stroke="#242044" stroke-width="2.5"/>
+    <circle cx="90" cy="16" r="18" fill="#FF5C8A" stroke="#242044" stroke-width="2.5"/>
+  </g>
+
+  <!-- Colorful Sponge Stamps (Left Foreground) -->
+  <g transform="translate(70, 160)">
+    <polygon points="25,0 31,14 46,15 34,24 38,38 25,30 12,38 16,24 4,15 19,14" fill="#48D597" stroke="#242044" stroke-width="2"/>
+    <circle cx="65" cy="20" r="12" fill="#FF8A3D" stroke="#242044" stroke-width="2"/>
+  </g>
+</svg>

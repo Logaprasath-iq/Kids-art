@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages Inbox — Little Canvas Studio Admin</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="canonical" href="https://littlecanvas.example.com/admin/messages.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="admin-body">
+
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-logo">
+      <div class="brand-icon" style="width: 36px; height: 36px;"><i data-lucide="palette" style="width: 20px;"></i></div>
+      <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem;">Little<span class="text-gradient-pink">Studio</span></span>
+    </div>
+
+    <nav class="admin-nav-list">
+      <a href="dashboard.html" class="admin-nav-link"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a href="students.html" class="admin-nav-link"><i data-lucide="graduation-cap"></i> Students</a>
+      <a href="instructors.html" class="admin-nav-link"><i data-lucide="users"></i> Instructors</a>
+      <a href="classes.html" class="admin-nav-link"><i data-lucide="book-open"></i> Classes</a>
+      <a href="orders.html" class="admin-nav-link"><i data-lucide="credit-card"></i> Orders & Fees</a>
+      <a href="messages.html" class="admin-nav-link active"><i data-lucide="message-square"></i> Messages <span class="badge-status trial" style="margin-left: auto;">3</span></a>
+      <a href="events.html" class="admin-nav-link"><i data-lucide="calendar"></i> Events</a>
+      <a href="blog.html" class="admin-nav-link"><i data-lucide="file-text"></i> Blog Posts</a>
+      <a href="reviews.html" class="admin-nav-link"><i data-lucide="star"></i> Reviews</a>
+      <a href="analytics.html" class="admin-nav-link"><i data-lucide="bar-chart-2"></i> Analytics</a>
+      <a href="settings.html" class="admin-nav-link"><i data-lucide="settings"></i> Settings</a>
+    </nav>
+
+    <div style="padding: 1rem 1.5rem; border-top: 2px solid rgba(36, 32, 68, 0.06);">
+      <a href="../index.html" class="btn-toy btn-sm btn-white" style="width: 100%; justify-content: center;">
+        <i data-lucide="external-link" style="width: 14px;"></i> View Public Site
+      </a>
+    </div>
+  </aside>
+
+  <div class="admin-main-wrap">
+    <header class="admin-topbar">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="admin-sidebar-toggle" style="background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--text-main);">
+          <i data-lucide="menu"></i>
+        </button>
+        <h2 style="font-size: 1.25rem;">Parent Inquiries & Messaging</h2>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
+        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border);">
+          <span style="font-weight: 700; font-size: 0.9rem;">Emma Wilson</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-content-area">
+      <div style="display: grid; grid-template-columns: 340px 1fr; gap: 2rem; align-items: flex-start;">
+        
+        <!-- Messages List Column -->
+        <div class="admin-card" style="padding: 1rem;">
+          <div style="padding: 0.5rem 0.5rem 1rem 0.5rem; border-bottom: 1px solid rgba(36,32,68,0.08); margin-bottom: 0.5rem;">
+            <input type="text" class="form-control" placeholder="Search messages..." style="font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: 999px;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <!-- Message 1 -->
+            <div class="inbox-message-row active" style="padding: 1rem; border-radius: 12px; background: rgba(255, 92, 138, 0.08); border: 2px solid var(--primary); cursor: pointer;"
+                 data-sender="Sarah Jenkins (Mom to Lily, 7)"
+                 data-subject="Free Trial Inquiry for Acrylics"
+                 data-time="10:45 AM"
+                 data-body="Hi Emma! My daughter Lily (age 7) has been drawing constantly in her notebook and we would love to try the Saturday Acrylics trial class. Are there still spots open this weekend? Does she need to bring her own apron? Thank you so much!">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                <strong style="color: var(--primary);">Sarah Jenkins</strong>
+                <span style="color: var(--muted);">10:45 AM</span>
+              </div>
+              <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Free Trial Inquiry for Acrylics</div>
+              <div style="font-size: 0.8rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                Hi Emma! My daughter Lily (age 7) has been drawing constantly...
+              </div>
+            </div>
+
+            <!-- Message 2 -->
+            <div class="inbox-message-row" style="padding: 1rem; border-radius: 12px; background: var(--white); border: 1px solid rgba(36,32,68,0.08); cursor: pointer;"
+                 data-sender="David Miller (Dad to Lucas, 9)"
+                 data-subject="Rescheduling Saturday Pottery"
+                 data-time="Yesterday"
+                 data-body="Hello Little Canvas Team, Lucas has a soccer tournament this Saturday and won't be able to make the 10am Pottery class. Could we reschedule his session to the Tuesday 4pm group? Please let us know if that works!">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                <strong>David Miller</strong>
+                <span style="color: var(--muted);">Yesterday</span>
+              </div>
+              <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Rescheduling Saturday Pottery</div>
+              <div style="font-size: 0.8rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                Hello Little Canvas Team, Lucas has a soccer tournament...
+              </div>
+            </div>
+
+            <!-- Message 3 -->
+            <div class="inbox-message-row" style="padding: 1rem; border-radius: 12px; background: var(--white); border: 1px solid rgba(36,32,68,0.08); cursor: pointer;"
+                 data-sender="Priya Patel (Mom to Aarav, 6)"
+                 data-subject="Exhibition Canvas Delivery"
+                 data-time="Aug 31"
+                 data-body="Dear Emma, we received the invitation for the Fall Showcase on Sept 12. Aarav is beyond excited to display his dinosaur painting! When should we bring his framed canvas to the studio? Thanks!">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                <strong>Priya Patel</strong>
+                <span style="color: var(--muted);">Aug 31</span>
+              </div>
+              <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Exhibition Canvas Delivery</div>
+              <div style="font-size: 0.8rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                Dear Emma, we received the invitation for the Fall Showcase...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message Detail Pane -->
+        <div class="admin-card" id="inbox-detail-view" style="padding: 2.5rem; min-height: 480px;">
+          <div style="border-bottom: 2px solid rgba(36,32,68,0.08); padding-bottom: 1.25rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <h3 style="font-size: 1.4rem;">Free Trial Inquiry for Acrylics</h3>
+              <span style="font-size: 0.85rem; color: var(--muted);">10:45 AM</span>
+            </div>
+            <div style="font-size: 0.95rem; color: var(--muted); font-weight: 600;">From: <strong style="color: var(--text-main);">Sarah Jenkins (Mom to Lily, 7)</strong></div>
+          </div>
+
+          <div style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 2rem;">
+            Hi Emma! My daughter Lily (age 7) has been drawing constantly in her notebook and we would love to try the Saturday Acrylics trial class. Are there still spots open this weekend? Does she need to bring her own apron? Thank you so much!
+          </div>
+
+          <div style="display: flex; gap: 1rem;">
+            <button class="btn-toy btn-pink btn-sm" onclick="window.showToast('Reply composer opened for Sarah Jenkins', 'info');"><i data-lucide="reply"></i> Reply</button>
+            <button class="btn-toy btn-white btn-sm" onclick="window.showToast('Message archived', 'info');"><i data-lucide="archive"></i> Archive</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/validation.js"></script>
+</body>
+</html>

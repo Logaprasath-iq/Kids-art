@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-sketch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF8D6"/>
+      <stop offset="100%" stop-color="#FFEBA3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-bleed background -->
+  <rect width="400" height="240" fill="url(#bg-sketch)"/>
+  <!-- Dotted draft grid -->
+  <circle cx="40" cy="40" r="4" fill="#E0C870" opacity="0.4"/>
+  <circle cx="90" cy="40" r="4" fill="#E0C870" opacity="0.4"/>
+  <circle cx="320" cy="40" r="4" fill="#E0C870" opacity="0.4"/>
+  <circle cx="370" cy="40" r="4" fill="#E0C870" opacity="0.4"/>
+  
+  <!-- Desk Base -->
+  <rect y="195" width="400" height="45" fill="#F0DCB8"/>
+  <line x1="0" y1="195" x2="400" y2="195" stroke="#242044" stroke-width="4"/>
+
+  <!-- Big Open Spiral Sketchbook (Center) -->
+  <g transform="translate(100, 30)">
+    <!-- Drop shadow -->
+    <rect x="8" y="10" width="200" height="150" rx="8" fill="#242044" opacity="0.15"/>
+    <!-- Left Page -->
+    <rect x="0" y="5" width="100" height="150" rx="6" fill="#FFFDF7" stroke="#242044" stroke-width="3.5"/>
+    <!-- Right Page -->
+    <rect x="100" y="5" width="100" height="150" rx="6" fill="#FFFFFF" stroke="#242044" stroke-width="3.5"/>
+    <!-- Spiral Spine Binding -->
+    <line x1="100" y1="5" x2="100" y2="155" stroke="#D1D5DB" stroke-width="3"/>
+    <ellipse cx="100" cy="18" rx="7" ry="3" fill="#242044"/>
+    <ellipse cx="100" cy="38" rx="7" ry="3" fill="#242044"/>
+    <ellipse cx="100" cy="58" rx="7" ry="3" fill="#242044"/>
+    <ellipse cx="100" cy="78" rx="7" ry="3" fill="#242044"/>
+    <ellipse cx="100" cy="98" rx="7" ry="3" fill="#242044"/>
+    <ellipse cx="100" cy="118" rx="7" ry="3" fill="#242044"/>
+    <ellipse cx="100" cy="138" rx="7" ry="3" fill="#242044"/>
+
+    <!-- Left Page Sketch: Comic Panels & Drafts -->
+    <rect x="12" y="18" width="76" height="52" rx="3" fill="none" stroke="#6C63FF" stroke-width="2" stroke-dasharray="3 2"/>
+    <!-- Cute little cloud character sketch -->
+    <ellipse cx="50" cy="42" rx="22" ry="12" fill="#E8E5FF"/>
+    <circle cx="42" cy="40" r="2.5" fill="#242044"/>
+    <circle cx="58" cy="40" r="2.5" fill="#242044"/>
+    <path d="M47 46 Q50 50 53 46" stroke="#242044" stroke-width="1.5" fill="none"/>
+    <ellipse cx="38" cy="44" rx="3" ry="2" fill="#FF5C8A"/>
+    <ellipse cx="62" cy="44" rx="3" ry="2" fill="#FF5C8A"/>
+
+    <!-- Draft lines below -->
+    <line x1="15" y1="82" x2="75" y2="82" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="15" y1="94" x2="65" y2="94" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="15" y1="106" x2="80" y2="106" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="15" y1="118" x2="55" y2="118" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Right Page: Completed Cute Dinosaur Character -->
+    <g transform="translate(112, 22)">
+      <!-- Dino Body -->
+      <path d="M22 80 C 15 50, 40 30, 60 40 C 72 25, 82 40, 78 52 C 72 65, 68 75, 75 90 C 72 94, 60 98, 48 95 C 32 94, 25 90, 22 80 Z" fill="#48D597" stroke="#242044" stroke-width="2.5"/>
+      <!-- Belly -->
+      <path d="M42 62 Q52 60 58 75 Q52 88 42 85 Z" fill="#FFD93D"/>
+      <!-- Eyes & Smile -->
+      <circle cx="68" cy="44" r="3.5" fill="#242044"/>
+      <circle cx="69" cy="43" r="1.2" fill="#FFFFFF"/>
+      <path d="M68 52 Q72 56 76 52" stroke="#242044" stroke-width="2" fill="none"/>
+      <!-- Dino Back Spikes -->
+      <polygon points="32,44 26,38 35,39" fill="#FF8A3D"/>
+      <polygon points="44,36 40,28 49,32" fill="#FF8A3D"/>
+      <polygon points="56,34 54,26 62,31" fill="#FF8A3D"/>
+      <!-- Tail Sparkle -->
+      <polygon points="12,78 6,70 14,73" fill="#FF8A3D"/>
+      <!-- Heart sticker -->
+      <path d="M62 20 Q62 14 67 14 Q72 14 72 20 Q72 26 67 30 Q62 26 62 20 Z" fill="#FF5C8A"/>
+    </g>
+  </g>
+
+  <!-- Left Side: Sharpener & Pencil Shavings -->
+  <g transform="translate(25, 140)">
+    <!-- Yellow Wooden Ruler angled -->
+    <rect x="-10" y="10" width="75" height="18" rx="3" fill="#FFD93D" stroke="#242044" stroke-width="2.5" transform="rotate(35 25 15)"/>
+    <!-- Pencil sharpener -->
+    <rect x="35" y="15" width="26" height="18" rx="4" fill="#38B6FF" stroke="#242044" stroke-width="2.5"/>
+    <circle cx="48" cy="24" r="4.5" fill="#242044"/>
+  </g>
+
+  <!-- Right Side: Colored Pencils resting on desk -->
+  <g transform="translate(315, 130)">
+    <!-- Pink Pencil -->
+    <g transform="rotate(-30)">
+      <rect x="0" y="0" width="75" height="11" rx="2" fill="#FF5C8A" stroke="#242044" stroke-width="2"/>
+      <polygon points="75,0 90,5.5 75,11" fill="#FAD1AC" stroke="#242044" stroke-width="2"/>
+      <polygon points="85,3.5 90,5.5 85,7.5" fill="#FF5C8A"/>
+    </g>
+    <!-- Teal Pencil -->
+    <g transform="translate(15, 22) rotate(-25)">
+      <rect x="0" y="0" width="70" height="11" rx="2" fill="#14B8A6" stroke="#242044" stroke-width="2"/>
+      <polygon points="70,0 85,5.5 70,11" fill="#FAD1AC" stroke="#242044" stroke-width="2"/>
+      <polygon points="80,3.5 85,5.5 80,7.5" fill="#14B8A6"/>
+    </g>
+  </g>
+
+  <!-- Creative Star Sparkles -->
+  <polygon points="80,35 83,43 91,46 83,49 80,57 77,49 69,46 77,43" fill="#FF5C8A"/>
+  <polygon points="325,45 327,51 333,53 327,55 325,61 323,55 317,53 323,51" fill="#6C63FF"/>
+</svg>

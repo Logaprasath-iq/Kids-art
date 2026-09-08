@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="240" height="120">
+  <rect width="240" height="120" fill="#FFF9E9"/>
+  <circle cx="40" cy="40" r="25" fill="#FF5C8A" opacity="0.3"/>
+  <circle cx="200" cy="80" r="30" fill="#35C9FF" opacity="0.3"/>
+  <rect x="25" y="30" width="90" height="16" rx="8" fill="#242044"/>
+  <rect x="25" y="52" width="70" height="8" rx="4" fill="#716C88"/>
+  <rect x="25" y="66" width="55" height="8" rx="4" fill="#716C88"/>
+  <rect x="25" y="85" width="45" height="14" rx="7" fill="#FF5C8A"/>
+  <!-- Playground objects -->
+  <circle cx="160" cy="55" r="28" fill="#FFD93D" stroke="#242044" stroke-width="3"/>
+  <rect x="175" y="35" width="35" height="45" rx="6" fill="#FFF" stroke="#242044" stroke-width="3" transform="rotate(10 190 55)"/>
+  <circle cx="140" cy="75" r="10" fill="#48D597"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="300" height="240">
+      <rect width="300" height="240" fill="#E8F8F0"/>
+      <!-- Dinosaur body -->
+      <path d="M70 170 C 80 120, 140 100, 180 120 C 210 110, 230 70, 220 50 C 200 45, 190 70, 180 80 C 140 70, 90 90, 70 140 C 40 130, 20 160, 40 180 Z" fill="#48D597" stroke="#242044" stroke-width="4"/>
+      <circle cx="210" cy="55" r="4" fill="#242044"/>
+      <!-- Spots -->
+      <circle cx="130" cy="125" r="10" fill="#FFD93D"/>
+      <circle cx="160" cy="135" r="8" fill="#FF5C8A"/>
+      <rect x="100" y="170" width="16" height="35" rx="8" fill="#48D597" stroke="#242044" stroke-width="3"/>
+      <rect x="150" y="170" width="16" height="35" rx="8" fill="#48D597" stroke="#242044" stroke-width="3"/>
+    </svg>

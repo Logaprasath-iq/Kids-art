@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-clay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3EB"/>
+      <stop offset="100%" stop-color="#FFE1CF"/>
+    </linearGradient>
+    <linearGradient id="clay-vase" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-bleed background -->
+  <rect width="400" height="240" fill="url(#bg-clay)"/>
+  <circle cx="60" cy="60" r="70" fill="#FFC9A8" opacity="0.35"/>
+  <circle cx="340" cy="160" r="80" fill="#FFC9A8" opacity="0.3"/>
+
+  <!-- Studio Floor / Table -->
+  <rect y="195" width="400" height="45" fill="#E2C7B0"/>
+  <line x1="0" y1="195" x2="400" y2="195" stroke="#242044" stroke-width="4"/>
+
+  <!-- Pottery Wheel (Center) -->
+  <g transform="translate(200, 175)">
+    <!-- Base stand -->
+    <rect x="-40" y="10" width="80" height="25" rx="4" fill="#64748B" stroke="#242044" stroke-width="3.5"/>
+    <!-- Turntable Disc -->
+    <ellipse cx="0" cy="10" rx="90" ry="18" fill="#94A3B8" stroke="#242044" stroke-width="4"/>
+    <ellipse cx="0" cy="7" rx="75" ry="13" fill="#CBD5E1"/>
+
+    <!-- Handcrafted Clay Vase on Wheel -->
+    <g transform="translate(0, -55)">
+      <!-- Base of vase -->
+      <path d="M-22 55 C -55 35, -45 -10, -25 -35 L 25 -35 C 45 -10, 55 35, 22 55 Z" fill="url(#clay-vase)" stroke="#242044" stroke-width="4"/>
+      <!-- Rim of vase -->
+      <ellipse cx="0" cy="-35" rx="25" ry="8" fill="#FCD34D" stroke="#242044" stroke-width="3.5"/>
+      <ellipse cx="0" cy="-35" rx="16" ry="5" fill="#78350F"/>
+      <!-- Decorative Incised Bands -->
+      <path d="M-36 12 Q0 20 36 12" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.75"/>
+      <path d="M-32 25 Q0 33 32 25" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.75"/>
+      <!-- Hand shaping clay silhouette -->
+      <ellipse cx="-45" cy="5" rx="12" ry="7" fill="#FAD1AC" stroke="#242044" stroke-width="2.5" opacity="0.9"/>
+      <ellipse cx="45" cy="5" rx="12" ry="7" fill="#FAD1AC" stroke="#242044" stroke-width="2.5" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- Left: Mini Ceramic Pinch Pots -->
+  <g transform="translate(55, 150)">
+    <path d="M5 25 C 0 10, 45 10, 40 25 C 38 40, 7 40, 5 25 Z" fill="#38B6FF" stroke="#242044" stroke-width="3"/>
+    <ellipse cx="22" cy="15" rx="18" ry="6" fill="#93C5FD"/>
+  </g>
+
+  <!-- Right: Wooden Loop Tools & Sponge -->
+  <g transform="translate(315, 145)">
+    <!-- Yellow Sponge -->
+    <ellipse cx="40" cy="35" rx="18" ry="12" fill="#FDE047" stroke="#242044" stroke-width="2.5"/>
+    <!-- Wire Loop Tool -->
+    <rect x="-10" y="25" width="45" height="7" rx="2" fill="#B45309" stroke="#242044" stroke-width="2" transform="rotate(-20)"/>
+    <ellipse cx="38" cy="12" rx="8" ry="5" fill="none" stroke="#242044" stroke-width="2.5" transform="rotate(-20)"/>
+  </g>
+</svg>

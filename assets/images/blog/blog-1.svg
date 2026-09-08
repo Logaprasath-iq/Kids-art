@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-b1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE8F0"/>
+      <stop offset="100%" stop-color="#FFD1E0"/>
+    </linearGradient>
+    <linearGradient id="b1-sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="240" fill="url(#bg-b1)"/>
+  <circle cx="50" cy="50" r="80" fill="#FFCCD9" opacity="0.4"/>
+  <circle cx="360" cy="190" r="70" fill="#FFD93D" opacity="0.3"/>
+
+  <!-- Large Easel Canvas in Center -->
+  <rect x="90" y="25" width="220" height="175" rx="14" fill="#FFFFFF" stroke="#242044" stroke-width="4"/>
+
+  <!-- Quirky Purple Smiling Sun on Canvas (Imperfection as Superpower) -->
+  <g transform="translate(200, 105)">
+    <!-- Sun Rays -->
+    <path d="M0 -55 L0 -45" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M38 -38 L31 -31" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M55 0 L45 0" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M38 38 L31 31" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M0 55 L0 45" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-38 38 L-31 31" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-55 0 L-45 0" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-38 -38 L-31 -31" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Sun Disc -->
+    <circle cx="0" cy="0" r="38" fill="url(#b1-sun)"/>
+    <!-- Smiling Happy Eyes & Smile -->
+    <circle cx="-12" cy="-6" r="4.5" fill="#FFFFFF"/>
+    <circle cx="12" cy="-6" r="4.5" fill="#FFFFFF"/>
+    <circle cx="-11" cy="-7" r="2" fill="#242044"/>
+    <circle cx="13" cy="-7" r="2" fill="#242044"/>
+    <ellipse cx="-15" cy="4" rx="4" ry="2.5" fill="#F472B6"/>
+    <ellipse cx="15" cy="4" rx="4" ry="2.5" fill="#F472B6"/>
+    <!-- Big joyful smile -->
+    <path d="M-12 10 Q0 22 12 10" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Big Paint Splashes across Canvas -->
+  <path d="M125 150 Q110 170 135 175 Q150 160 140 145 Z" fill="#FF5C8A"/>
+  <circle cx="120" cy="138" r="4" fill="#FF5C8A"/>
+  <path d="M255 45 Q275 60 260 75 Q245 65 255 45 Z" fill="#38B6FF"/>
+  <circle cx="275" cy="80" r="5" fill="#38B6FF"/>
+  <circle cx="288" cy="92" r="3" fill="#38B6FF"/>
+
+  <!-- Happy Little Artist Hands holding big brush (Bottom) -->
+  <g transform="translate(60, 160)">
+    <!-- Hand holding paintbrush -->
+    <rect x="0" y="20" width="80" height="9" rx="4.5" fill="#B45309" stroke="#242044" stroke-width="2.5" transform="rotate(-30 40 25)"/>
+    <polygon points="72,-2 85,-18 78,-22" fill="#A855F7"/>
+  </g>
+
+  <!-- Floor base -->
+  <rect y="210" width="400" height="30" fill="#E8D2BF"/>
+  <line x1="0" y1="210" x2="400" y2="210" stroke="#242044" stroke-width="3"/>
+</svg>

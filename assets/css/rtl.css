@@ -1,0 +1,113 @@
+/* ==========================================================================
+   LITTLE CANVAS — RTL (RIGHT-TO-LEFT) STYLESHEET
+   Full Arabic & Hebrew Support for Complete Multi-Language Readiness
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .nav-menu {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .dropdown-menu-custom {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .tape-strip {
+  transform: translateX(50%) rotate(2deg);
+}
+
+[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .class-category-badge {
+  right: auto;
+  left: 14px;
+}
+
+[dir="rtl"] .class-card-arrow {
+  transform: scaleX(-1);
+}
+[dir="rtl"] .class-card:hover .class-card-arrow {
+  transform: scaleX(-1) translateX(-4px) rotate(-45deg);
+}
+
+[dir="rtl"] .feature-check-icon {
+  margin-right: 0;
+  margin-left: 1.25rem;
+}
+
+[dir="rtl"] .timeline-event-card:hover {
+  transform: translateX(-8px);
+}
+
+[dir="rtl"] .footer-col ul a:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .toast-container {
+  right: auto;
+  left: 24px;
+}
+
+[dir="rtl"] .toast-alert {
+  transform: translateX(-120%);
+}
+
+[dir="rtl"] .toast-alert.show {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .toast-success {
+  border-left: 3px solid var(--border);
+  border-right: 10px solid var(--green);
+}
+
+[dir="rtl"] .toast-error {
+  border-left: 3px solid var(--border);
+  border-right: 10px solid var(--primary);
+}
+
+/* Admin Dashboard RTL */
+[dir="rtl"] .admin-sidebar {
+  border-right: none;
+  border-left: 2px solid rgba(36, 32, 68, 0.08);
+}
+[dir="rtl"][data-theme="dark"] .admin-sidebar {
+  border-left-color: rgba(255, 255, 255, 0.08);
+}
+
+[dir="rtl"] .table-custom th {
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  [dir="rtl"] .nav-menu {
+    right: auto;
+    left: -100%;
+    border-left: none;
+    border-right: 3px solid var(--border);
+    transition: left 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  [dir="rtl"] .nav-menu.open {
+    left: 0;
+  }
+
+  [dir="rtl"] .admin-sidebar {
+    left: auto;
+    right: -280px;
+    transition: right 0.3s ease;
+  }
+
+  [dir="rtl"] .admin-sidebar.mobile-open {
+    right: 0;
+  }
+}

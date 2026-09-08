@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="classBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9E9"/>
+      <stop offset="60%" stop-color="#FFF0F5"/>
+      <stop offset="100%" stop-color="#E8F4F8"/>
+    </linearGradient>
+    <linearGradient id="digitalScreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B1834"/>
+      <stop offset="100%" stop-color="#2D2856"/>
+    </linearGradient>
+    <linearGradient id="rainbowPaint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF5C8A"/>
+      <stop offset="25%" stop-color="#FF8A3D"/>
+      <stop offset="50%" stop-color="#FFD93D"/>
+      <stop offset="75%" stop-color="#48D597"/>
+      <stop offset="100%" stop-color="#35C9FF"/>
+    </linearGradient>
+    <filter id="shadowCls" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="0" flood-color="#242044"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="380" fill="url(#classBg)"/>
+  
+  <!-- Studio Desk Surface -->
+  <rect y="290" width="600" height="90" fill="#FFE5D9" stroke="#242044" stroke-width="3"/>
+  <line x1="0" y1="290" x2="600" y2="290" stroke="#242044" stroke-width="3"/>
+
+  <!-- Swirling Rainbow Paint Ribbon -->
+  <path d="M 40 230 Q 150 140 300 180 T 560 130" fill="none" stroke="url(#rainbowPaint)" stroke-width="14" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 40 230 Q 150 140 300 180 T 560 130" fill="none" stroke="#242044" stroke-width="2" stroke-dasharray="6,6" opacity="0.4"/>
+
+  <!-- LEFT: Ceramic Clay Wheel & Sculpture -->
+  <g transform="translate(60, 160)">
+    <!-- Turntable Base -->
+    <ellipse cx="65" cy="135" rx="55" ry="16" fill="#D7CCC8" stroke="#242044" stroke-width="3" filter="url(#shadowCls)"/>
+    <rect x="35" y="115" width="60" height="20" fill="#BCAAA4" stroke="#242044" stroke-width="2.5"/>
+    <ellipse cx="65" cy="115" rx="45" ry="12" fill="#E8A87C" stroke="#242044" stroke-width="3"/>
+    
+    <!-- Terracotta Clay Vase -->
+    <path d="M 45 110 Q 30 75 50 45 Q 65 35 80 45 Q 100 75 85 110 Z" fill="#FF8A3D" stroke="#242044" stroke-width="3" filter="url(#shadowCls)"/>
+    <ellipse cx="65" cy="45" rx="15" ry="6" fill="#FFA726" stroke="#242044" stroke-width="2.5"/>
+    <!-- Vase carving grooves -->
+    <path d="M 42 75 Q 65 85 88 75" fill="none" stroke="#242044" stroke-width="2"/>
+    <path d="M 46 88 Q 65 96 84 88" fill="none" stroke="#242044" stroke-width="2"/>
+    
+    <!-- Wooden Loop Tool -->
+    <line x1="12" y1="125" x2="35" y2="100" stroke="#8D6E63" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="10" cy="127" rx="5" ry="3" fill="none" stroke="#242044" stroke-width="2" transform="rotate(-40 10 127)"/>
+    <!-- Yellow Sponge -->
+    <ellipse cx="120" cy="125" rx="14" ry="9" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+  </g>
+
+  <!-- CENTER: Painting Easel & Canvas -->
+  <g transform="translate(195, 45)">
+    <!-- Easel Legs -->
+    <line x1="105" y1="30" x2="35" y2="250" stroke="#D48B59" stroke-width="8" stroke-linecap="round"/>
+    <line x1="115" y1="30" x2="185" y2="250" stroke="#D48B59" stroke-width="8" stroke-linecap="round"/>
+    <line x1="110" y1="40" x2="110" y2="250" stroke="#B87333" stroke-width="7" stroke-linecap="round"/>
+    
+    <!-- Canvas Shelf -->
+    <rect x="25" y="160" width="170" height="12" rx="4" fill="#D48B59" stroke="#242044" stroke-width="3" filter="url(#shadowCls)"/>
+    
+    <!-- Canvas Board -->
+    <rect x="40" y="45" width="140" height="120" rx="8" fill="#FFFFFF" stroke="#242044" stroke-width="3.5" filter="url(#shadowCls)"/>
+    <!-- Art on Canvas: Cute Dino Sketch & Watercolor Background -->
+    <rect x="48" y="53" width="124" height="104" rx="5" fill="#E8F8F5"/>
+    <!-- Cute friendly monster/dino -->
+    <ellipse cx="110" cy="115" rx="32" ry="26" fill="#48D597" stroke="#242044" stroke-width="2.5"/>
+    <circle cx="100" cy="105" r="5" fill="#FFFFFF" stroke="#242044" stroke-width="1.5"/>
+    <circle cx="101" cy="105" r="2.5" fill="#242044"/>
+    <circle cx="120" cy="105" r="5" fill="#FFFFFF" stroke="#242044" stroke-width="1.5"/>
+    <circle cx="121" cy="105" r="2.5" fill="#242044"/>
+    <path d="M 104 120 Q 110 126 116 120" fill="none" stroke="#242044" stroke-width="2" stroke-linecap="round"/>
+    <!-- Back spikes -->
+    <polygon points="85,95 80,85 92,90" fill="#FFD93D" stroke="#242044" stroke-width="1.5"/>
+    <polygon points="98,90 95,78 106,85" fill="#FF5C8A" stroke="#242044" stroke-width="1.5"/>
+    <polygon points="112,88 112,76 122,86" fill="#35C9FF" stroke="#242044" stroke-width="1.5"/>
+
+    <!-- Washi Tape -->
+    <rect x="90" y="38" width="40" height="14" rx="2" fill="#FF5C8A" stroke="#242044" stroke-width="1.5" transform="rotate(-4 110 45)"/>
+  </g>
+
+  <!-- RIGHT: Modern Digital Art iPad & Stylus -->
+  <g transform="translate(390, 135)">
+    <!-- iPad Body -->
+    <rect x="20" y="35" width="165" height="120" rx="14" fill="#242044" stroke="#242044" stroke-width="3" filter="url(#shadowCls)"/>
+    <!-- Screen Glass -->
+    <rect x="28" y="43" width="149" height="104" rx="8" fill="url(#digitalScreen)"/>
+    
+    <!-- Procreate UI on Screen -->
+    <!-- Top toolbar dots -->
+    <circle cx="38" cy="51" r="3" fill="#FF5C8A"/>
+    <circle cx="46" cy="51" r="3" fill="#FFD93D"/>
+    <circle cx="54" cy="51" r="3" fill="#48D597"/>
+    <!-- Neon Artwork on Tablet -->
+    <circle cx="102" cy="95" r="28" fill="none" stroke="#35C9FF" stroke-width="3"/>
+    <path d="M 85 95 Q 102 70 120 95" fill="none" stroke="#FF5C8A" stroke-width="3"/>
+    <polygon points="102,78 108,92 122,92 110,100 115,114 102,104 90,114 94,100 82,92 97,92" fill="#FFD93D"/>
+    <!-- Color Wheel in corner -->
+    <circle cx="160" cy="55" r="8" fill="none" stroke="#A66CFF" stroke-width="3"/>
+    <circle cx="160" cy="55" r="3" fill="#FFFFFF"/>
+
+    <!-- Digital Apple Stylus resting across frame -->
+    <g transform="translate(110, 135) rotate(-22)">
+      <rect x="0" y="0" width="80" height="7" rx="3.5" fill="#FFFFFF" stroke="#242044" stroke-width="1.5" filter="url(#shadowCls)"/>
+      <polygon points="80,0 90,3.5 80,7" fill="#E0E0E0" stroke="#242044" stroke-width="1"/>
+      <circle cx="89" cy="3.5" r="1.5" fill="#242044"/>
+    </g>
+  </g>
+
+  <!-- FOREGROUND: Paint Palette, Brushes, Squeezed Paint -->
+  <!-- Paint Palette -->
+  <g transform="translate(230, 265)">
+    <ellipse cx="70" cy="35" rx="65" ry="32" fill="#FFFFFF" stroke="#242044" stroke-width="3" filter="url(#shadowCls)"/>
+    <circle cx="105" cy="40" r="10" fill="#FFE5D9" stroke="#242044" stroke-width="2"/>
+    <!-- Paint Blobs -->
+    <circle cx="35" cy="25" r="9" fill="#FF5C8A"/>
+    <circle cx="55" cy="18" r="9" fill="#FFD93D"/>
+    <circle cx="78" cy="18" r="9" fill="#35C9FF"/>
+    <circle cx="98" cy="24" r="9" fill="#48D597"/>
+    <circle cx="45" cy="42" r="9" fill="#A66CFF"/>
+    <circle cx="68" cy="45" r="9" fill="#FF8A3D"/>
+  </g>
+
+  <!-- Squeezed Paint Tube -->
+  <g transform="translate(140, 290) rotate(15)">
+    <rect x="0" y="0" width="35" height="16" rx="3" fill="#FF5C8A" stroke="#242044" stroke-width="2.5"/>
+    <polygon points="35,3 42,6 42,10 35,13" fill="#C2185B" stroke="#242044" stroke-width="2"/>
+    <!-- Squeezed dollop -->
+    <path d="M 42 8 Q 50 2 56 8 Q 50 14 42 8 Z" fill="#FF5C8A"/>
+  </g>
+
+  <!-- Floating Origami Crane (Paper Crafts) -->
+  <g transform="translate(485, 55) rotate(-12)">
+    <polygon points="30,0 60,35 30,25 0,35" fill="#35C9FF" stroke="#242044" stroke-width="2.5" filter="url(#shadowCls)"/>
+    <polygon points="30,0 30,25 15,45" fill="#48D597" stroke="#242044" stroke-width="2"/>
+    <polygon points="30,0 30,25 45,45" fill="#00B0FF" stroke="#242044" stroke-width="2"/>
+  </g>
+
+  <!-- Floating Sticker Badge -->
+  <g transform="translate(45, 30) rotate(-6)">
+    <rect width="130" height="34" rx="17" fill="#FFD93D" stroke="#242044" stroke-width="2.5" filter="url(#shadowCls)"/>
+    <text x="65" y="22" font-family="'Fredoka', cursive, sans-serif" font-weight="700" font-size="12" fill="#242044" text-anchor="middle">6 Creative Mediums</text>
+  </g>
+</svg>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students Roster — Little Canvas Studio Admin</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="canonical" href="https://littlecanvas.example.com/admin/students.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="admin-body">
+
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-logo">
+      <div class="brand-icon" style="width: 36px; height: 36px;"><i data-lucide="palette" style="width: 20px;"></i></div>
+      <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem;">Little<span class="text-gradient-pink">Studio</span></span>
+    </div>
+
+    <nav class="admin-nav-list">
+      <a href="dashboard.html" class="admin-nav-link"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a href="students.html" class="admin-nav-link active"><i data-lucide="graduation-cap"></i> Students</a>
+      <a href="instructors.html" class="admin-nav-link"><i data-lucide="users"></i> Instructors</a>
+      <a href="classes.html" class="admin-nav-link"><i data-lucide="book-open"></i> Classes</a>
+      <a href="orders.html" class="admin-nav-link"><i data-lucide="credit-card"></i> Orders & Fees</a>
+      <a href="messages.html" class="admin-nav-link"><i data-lucide="message-square"></i> Messages <span class="badge-status trial" style="margin-left: auto;">3</span></a>
+      <a href="events.html" class="admin-nav-link"><i data-lucide="calendar"></i> Events</a>
+      <a href="blog.html" class="admin-nav-link"><i data-lucide="file-text"></i> Blog Posts</a>
+      <a href="reviews.html" class="admin-nav-link"><i data-lucide="star"></i> Reviews</a>
+      <a href="analytics.html" class="admin-nav-link"><i data-lucide="bar-chart-2"></i> Analytics</a>
+      <a href="settings.html" class="admin-nav-link"><i data-lucide="settings"></i> Settings</a>
+    </nav>
+
+    <div style="padding: 1rem 1.5rem; border-top: 2px solid rgba(36, 32, 68, 0.06);">
+      <a href="../index.html" class="btn-toy btn-sm btn-white" style="width: 100%; justify-content: center;">
+        <i data-lucide="external-link" style="width: 14px;"></i> View Public Site
+      </a>
+    </div>
+  </aside>
+
+  <div class="admin-main-wrap">
+    <header class="admin-topbar">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="admin-sidebar-toggle" style="background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--text-main);">
+          <i data-lucide="menu"></i>
+        </button>
+        <h2 style="font-size: 1.25rem;">Students Directory</h2>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
+        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border);">
+          <span style="font-weight: 700; font-size: 0.9rem;">Emma Wilson</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-content-area">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h1 style="font-size: 1.8rem;">Enrolled Students (512)</h1>
+          <p style="color: var(--muted); font-size: 0.9rem;">Manage active student memberships, trial cohorts, and medical notes.</p>
+        </div>
+        <button class="btn-toy btn-pink btn-sm" onclick="window.showToast('Student enrollment modal opened', 'info');"><i data-lucide="user-plus"></i> Enroll New Student</button>
+      </div>
+
+      <!-- Filters & Search Toolbar -->
+      <div class="admin-card" style="margin-bottom: 2rem; padding: 1rem 1.5rem;">
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 240px; position: relative;">
+            <input type="text" id="table-search-input" class="form-control" placeholder="Search by student or parent name..." style="padding-left: 2.5rem; border-radius: 999px;">
+            <i data-lucide="search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 16px; color: var(--muted);"></i>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label style="font-weight: 700; font-size: 0.85rem; color: var(--muted);">Status:</label>
+            <select id="status-filter-select" class="form-control" style="width: 160px; border-radius: 999px;">
+              <option value="all">All Statuses</option>
+              <option value="active">Active Members</option>
+              <option value="trial">Free Trial</option>
+              <option value="inactive">Paused / Inactive</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Students Table -->
+      <div class="admin-card">
+        <div class="table-responsive-wrapper">
+          <table class="table-custom">
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Parent</th>
+                <th>Age</th>
+                <th>Class Track</th>
+                <th>Status</th>
+                <th>Enrolled</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="filterable-table-row" data-status="active">
+                <td><strong>Mia Thorne</strong></td>
+                <td>Rachel Green</td>
+                <td>7</td>
+                <td>Watercolor Splash & Flow</td>
+                <td><span class="badge-status active">Active</span></td>
+                <td>Sep 02, 2026</td>
+                <td>
+                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Mia record', 'info');">Edit</button>
+                </td>
+              </tr>
+              <tr class="filterable-table-row" data-status="active">
+                <td><strong>Arjun Patel</strong></td>
+                <td>Priya Patel</td>
+                <td>9</td>
+                <td>Creative Acrylic & Canvas</td>
+                <td><span class="badge-status active">Active</span></td>
+                <td>Aug 28, 2026</td>
+                <td>
+                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Arjun record', 'info');">Edit</button>
+                </td>
+              </tr>
+              <tr class="filterable-table-row" data-status="trial">
+                <td><strong>Sara Brooks</strong></td>
+                <td>Julian Brooks</td>
+                <td>6</td>
+                <td>Paper Craft & Collage</td>
+                <td><span class="badge-status trial">Trial</span></td>
+                <td>Sep 04, 2026</td>
+                <td>
+                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Sara completed trial class!', 'success');">Convert</button>
+                </td>
+              </tr>
+              <tr class="filterable-table-row" data-status="active">
+                <td><strong>Leo Zhang</strong></td>
+                <td>Wei Zhang</td>
+                <td>10</td>
+                <td>Digital Illustration & Procreate</td>
+                <td><span class="badge-status active">Active</span></td>
+                <td>Aug 15, 2026</td>
+                <td>
+                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Leo record', 'info');">Edit</button>
+                </td>
+              </tr>
+              <tr class="filterable-table-row" data-status="inactive">
+                <td><strong>Chloe Miller</strong></td>
+                <td>David Miller</td>
+                <td>8</td>
+                <td>Ceramic Handbuilding & Clay</td>
+                <td><span class="badge-status inactive">Inactive</span></td>
+                <td>Jul 10, 2026</td>
+                <td>
+                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Reactivated Chloe membership', 'success');">Resume</button>
+                </td>
+              </tr>
+              <tr class="filterable-table-row" data-status="active">
+                <td><strong>Lucas Jenkins</strong></td>
+                <td>Sarah Jenkins</td>
+                <td>5</td>
+                <td>Sensory Art & Color Play</td>
+                <td><span class="badge-status active">Active</span></td>
+                <td>Jun 18, 2026</td>
+                <td>
+                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Lucas record', 'info');">Edit</button>
+                </td>
+              </tr>
+              <tr class="filterable-table-row" data-status="trial">
+                <td><strong>Maya Lin</strong></td>
+                <td>Kenneth Lin</td>
+                <td>8</td>
+                <td>Storybook Sketch & Form</td>
+                <td><span class="badge-status trial">Trial</span></td>
+                <td>Sep 05, 2026</td>
+                <td>
+                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Maya trial booked for Saturday', 'info');">Schedule</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/validation.js"></script>
+</body>
+</html>

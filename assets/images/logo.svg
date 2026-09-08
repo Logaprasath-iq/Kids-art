@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5C8A"/>
+      <stop offset="30%" stop-color="#FFD93D"/>
+      <stop offset="70%" stop-color="#35C9FF"/>
+      <stop offset="100%" stop-color="#6C63FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M50 10 C 25 10, 10 28, 10 52 C 10 75, 28 90, 52 90 C 65 90, 78 84, 84 72 C 88 64, 82 56, 74 56 C 68 56, 64 60, 58 60 C 52 60, 48 54, 52 46 C 56 38, 64 36, 72 38 C 82 40, 90 32, 90 22 C 90 12, 70 10, 50 10 Z" fill="#FFF2D6" stroke="#242044" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="32" cy="30" r="7" fill="#FF5C8A" stroke="#242044" stroke-width="2.5"/>
+  <circle cx="54" cy="24" r="7" fill="#FFD93D" stroke="#242044" stroke-width="2.5"/>
+  <circle cx="28" cy="52" r="7" fill="#48D597" stroke="#242044" stroke-width="2.5"/>
+  <circle cx="42" cy="70" r="7" fill="#35C9FF" stroke="#242044" stroke-width="2.5"/>
+  <!-- Paint brush slanted across -->
+  <g transform="rotate(-35 60 40)">
+    <rect x="58" y="10" width="8" height="50" rx="4" fill="#242044"/>
+    <rect x="56" y="55" width="12" height="12" rx="2" fill="#E0E0E0" stroke="#242044" stroke-width="2"/>
+    <path d="M56 67 C 56 78, 62 82, 62 82 C 62 82, 68 78, 68 67 Z" fill="#FF5C8A"/>
+  </g>
+</svg>

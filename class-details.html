@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Acrylic & Canvas — Class Details | Little Canvas</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description" content="Detailed curriculum, schedule, and tuition for Creative Acrylic & Canvas painting classes for kids aged 5-8 at Little Canvas.">
+  <link rel="canonical" href="https://littlecanvas.example.com/class-details.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header-main" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"><i data-lucide="palette"></i></div>
+        <span>Little<span class="text-gradient-pink">Canvas</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <div class="nav-dropdown-wrapper">
+          <a href="#" class="nav-link nav-dropdown-toggle">
+            Home <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+          </a>
+          <div class="dropdown-menu-custom">
+            <div class="dropdown-preview-grid">
+              <a href="index.html" class="dropdown-item-card">
+                <div class="dropdown-thumbnail"><img src="assets/images/preview-home-1.svg" alt="Home 1"></div>
+                <div class="dropdown-info"><h4>Home 1</h4><p>Creative Art School</p></div>
+              </a>
+              <a href="home-2.html" class="dropdown-item-card">
+                <div class="dropdown-thumbnail"><img src="assets/images/preview-home-2.svg" alt="Home 2"></div>
+                <div class="dropdown-info"><h4>Home 2</h4><p>Digital Art Academy</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="classes.html" class="nav-link active">Classes</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      
+        <div class="mobile-nav-cta" style="display: none; flex-direction: column; gap: 0.75rem; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 2px dashed var(--border-light);">
+          <div style="display: flex; gap: 0.5rem; width: 100%;">
+            <a href="auth/login.html" class="btn-toy btn-white btn-sm" style="flex: 1; text-align: center;">Login</a>
+            <a href="auth/register.html" class="btn-toy btn-yellow btn-sm" style="flex: 1; text-align: center;">Sign Up</a>
+          </div>
+          <a href="contact.html" class="btn-toy btn-pink btn-sm" style="width: 100%; text-align: center;">Free Trial</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
+        <button class="rtl-toggle-btn" aria-label="Toggle Right-To-Left Layout" title="Toggle RTL">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+      </button>
+        <a href="auth/login.html" class="btn-toy btn-white btn-sm nav-auth-btn">Login</a>
+        <a href="auth/register.html" class="btn-toy btn-yellow btn-sm nav-auth-btn">Sign Up</a>
+        <a href="contact.html" class="btn-toy btn-pink btn-sm d-none d-md-flex">Enroll Now</a>
+        <button class="mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <div class="hamburger-box">
+            <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Class Hero Banner -->
+  <section class="section-py" style="background: var(--cream); padding-top: 3.5rem; position: relative; overflow: hidden;">
+    <!-- Ambient Blobs -->
+    <div class="blob blob-pink" style="top: -60px; left: -80px; width: 320px; height: 320px;"></div>
+    <div class="blob blob-yellow" style="top: 20%; right: -60px; width: 280px; height: 280px;"></div>
+    <div class="container">
+      <div style="margin-bottom: 1.5rem;">
+        <a href="classes.html" style="font-weight: 700; color: var(--muted); display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="arrow-left" style="width: 16px;"></i> Back to All Classes
+        </a>
+      </div>
+
+      <div class="grid grid-2 items-center" style="gap: 3.5rem;">
+        <div>
+          <span class="badge-sticker badge-pink" id="class-track-badge" style="margin-bottom: 1rem;">Acrylic Painting Track</span>
+          <h1 class="hero-title" id="class-hero-title" style="font-size: clamp(2.2rem, 3.5vw + 1rem, 3.4rem); margin-bottom: 1.25rem;">
+            Creative Acrylic & <span class="text-gradient-pink">Canvas Studio</span>
+          </h1>
+          <p class="hero-desc" id="class-hero-desc" style="font-size: 1.15rem; margin-bottom: 2rem;">
+            A vibrant, joyful course where budding young artists discover the excitement of mixing vivid colors, applying expressive brushstrokes, and building gallery-ready stretched canvases.
+          </p>
+
+          <div id="class-meta-badges" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+            <span class="badge-sticker badge-yellow"><i data-lucide="users" style="width: 14px;"></i> Ages 5–8</span>
+            <span class="badge-sticker badge-blue"><i data-lucide="clock" style="width: 14px;"></i> 60 Min Weekly</span>
+            <span class="badge-sticker badge-green"><i data-lucide="shield-check" style="width: 14px;"></i> Max 8 Kids</span>
+            <span class="badge-sticker badge-purple"><i data-lucide="package" style="width: 14px;"></i> Supplies Included</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="contact.html" id="class-enroll-btn" class="btn-toy btn-pink">Enroll in Class — $45/session</a>
+            <a href="contact.html" class="btn-toy btn-yellow">Book Free Trial</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="border: 4px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 16px 0 var(--border);">
+            <img id="class-hero-img" src="assets/images/classes/class-painting.svg" alt="Creative Acrylic Class">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Kids Learn & Learning Outcomes -->
+  <section class="section-py" style="background: var(--white);">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 4rem;">
+        <div>
+          <h2 class="section-title">What Kids <span class="text-gradient-rainbow">Learn</span></h2>
+          <p id="class-learn-desc" style="color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            This course is designed around playful sensory exploration rather than rigid repetition. Every student works on real wooden-framed canvases with artist-grade, non-toxic heavy body acrylics.
+          </p>
+          <ul id="class-learn-list" style="display: flex; flex-direction: column; gap: 1rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span class="badge-sticker badge-pink" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">01</span>
+              <span><strong>Color Wheel & Harmony:</strong> Understanding primary, secondary, and complementary tones through direct experiential mixing.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span class="badge-sticker badge-yellow" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">02</span>
+              <span><strong>Brush Handling & Mark Making:</strong> Flat brushes, filberts, fan brushes, and sponge dabbing to create expressive textures.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span class="badge-sticker badge-blue" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">03</span>
+              <span><strong>Layering & Opacity:</strong> Background washes, midground horizons, and crisp foreground details.</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span class="badge-sticker badge-green" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">04</span>
+              <span><strong>Artistic Voice:</strong> Choosing personal color palettes and titling their artwork for studio exhibitions.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="section-title">4-Week <span class="text-gradient-sun">Curriculum</span></h2>
+          <div id="class-curriculum-list" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="admin-card" style="border: 2px solid var(--border);">
+              <div style="font-family: var(--font-display); font-weight: 800; color: var(--primary); font-size: 1.15rem;">Week 1: The Magic of Primary Pigments</div>
+              <p style="color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem;">Color theory games, mixing rainbow palettes, and creating an expressive sunset gradient.</p>
+            </div>
+            <div class="admin-card" style="border: 2px solid var(--border);">
+              <div style="font-family: var(--font-display); font-weight: 800; color: var(--secondary); font-size: 1.15rem;">Week 2: Fantastic Creatures & Texture</div>
+              <p style="color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem;">Using palette knives and sponges to sculpt the scales, fur, and feathers of wild creatures.</p>
+            </div>
+            <div class="admin-card" style="border: 2px solid var(--border);">
+              <div style="font-family: var(--font-display); font-weight: 800; color: var(--green); font-size: 1.15rem;">Week 3: Nature & Impressionist Dabs</div>
+              <p style="color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem;">Inspired by Claude Monet's water lilies; building atmospheric lighting and water reflections.</p>
+            </div>
+            <div class="admin-card" style="border: 2px solid var(--border);">
+              <div style="font-family: var(--font-display); font-weight: 800; color: var(--orange); font-size: 1.15rem;">Week 4: Final Masterpiece & Gallery Varnishing</div>
+              <p style="color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem;">Completing a 12x16 inch stretched canvas, adding a protective gloss coat, and signing like a master!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructor Spotlight & Schedule -->
+  <section class="section-py" style="background: var(--cream);">
+    <div class="container">
+      <div class="grid grid-2 items-center" style="gap: 3.5rem;">
+        <div class="admin-card" style="border: 3px solid var(--border); box-shadow: 0 10px 0 var(--border); display: flex; align-items: center; gap: 2rem;">
+          <img id="class-instructor-img" src="assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 110px; height: 110px; border-radius: 50%; border: 3px solid var(--border); flex-shrink: 0;">
+          <div>
+            <span class="badge-sticker badge-pink" id="class-instructor-badge" style="font-size: 0.75rem; margin-bottom: 0.5rem;">Lead Mentor</span>
+            <h3 id="class-instructor-name" style="font-size: 1.4rem; margin-bottom: 0.25rem;">Emma Wilson</h3>
+            <div id="class-instructor-credential" style="color: var(--primary); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem;">BFA Rhode Island School of Design</div>
+            <p id="class-instructor-quote" style="color: var(--muted); font-size: 0.9rem; line-height: 1.5;">
+              "My goal is for every child to leave our studio holding their head a little higher, knowing their ideas are worthy of a canvas."
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="section-title">Weekly Class <span class="text-gradient-blue">Schedule</span></h2>
+          <div id="class-schedule-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--white); border: 2px solid var(--border); border-radius: 12px;">
+              <div><strong>Tuesday Afternoon</strong> (Ages 5–6)</div>
+              <span class="badge-sticker badge-yellow">4:00 PM – 5:00 PM</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--white); border: 2px solid var(--border); border-radius: 12px;">
+              <div><strong>Thursday Afternoon</strong> (Ages 7–8)</div>
+              <span class="badge-sticker badge-pink">4:30 PM – 5:30 PM</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--white); border: 2px solid var(--border); border-radius: 12px;">
+              <div><strong>Saturday Morning</strong> (Ages 5–8)</div>
+              <span class="badge-sticker badge-green">10:00 AM – 11:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section-py" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="badge-sticker badge-yellow" style="margin-bottom: 1rem;">Got Questions?</span>
+        <h2 class="section-title">Class Frequently Asked <span class="text-gradient-pink">Questions</span></h2>
+      </div>
+
+      <div class="faq-accordion-group">
+        <div class="faq-item open">
+          <div class="faq-header">
+            <div class="faq-question">What if my child has never painted on canvas before?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-body">
+            No prior experience is necessary! Our mentors scaffold every exercise step-by-step with warm encouragement. Most of our enrolled students started with zero formal background.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-question">Are paints and protective aprons provided?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-body">
+            Yes, 100% of supplies—including kid-sized canvas boards, stretched gallery canvases, non-toxic water-based acrylics, aprons, and brush sets—are fully included in tuition.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-question">What is your missed class / makeup policy?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-body">
+            We understand family schedules change. Simply notify us 24 hours prior and you can book a free makeup session during any of our open Saturday maker studios.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-question">Can parents stay and watch the session?</div>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-body">
+            Parents are welcome to relax in our parent lounge with complimentary coffee and Wi-Fi, which overlooks the studio through observation windows.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: #fff; margin-bottom: 1.25rem;">
+            <div class="brand-icon"><i data-lucide="palette"></i></div>
+            <span>LittleCanvas</span>
+          </a>
+          <p style="color: #D1CCEC; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            A premier creative learning playground empowering kids aged 4-14 through tactile painting, drawing, sculpture, and digital storytelling.
+          </p>
+          <div class="footer-social-links" style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#FFFFFF" style="width: 18px; height: 18px; display: block;">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/15557892278" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M16.7 14.8c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5C9.4 8.7 8.8 7.3 8.5 6.7c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9 0 1.7 1.2 3.4 1.4 3.6.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.6-.4z" fill="#FFFFFF" stroke="none"/>
+                <path d="M12 21.8a9.8 9.8 0 0 1-5-1.4L2 22l1.6-4.9A9.8 9.8 0 1 1 12 21.8z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#FFFFFF" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Programs -->
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">Acrylic Painting</a></li>
+            <li><a href="classes.html">Watercolor Magic</a></li>
+            <li><a href="classes.html">Sketch & Comics</a></li>
+            <li><a href="classes.html">Digital Art Academy</a></li>
+            <li><a href="classes.html">Clay & Pottery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#instructors">Meet Faculty</a></li>
+            <li><a href="events.html">Art Exhibitions</a></li>
+            <li><a href="pricing.html">Tuition Plans</a></li>
+            <li><a href="contact.html">Studio Tours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Parenting & Art</a></li>
+            <li><a href="coming-soon.html">Summer Camps</a></li>
+            <li><a href="auth/login.html">Parent Portal</a></li>
+            <li><a href="admin/dashboard.html">Educator SaaS</a></li>
+            <li><a href="documentation/index.html">Documentation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div class="footer-col">
+          <h4>Creative Dispatch</h4>
+          <p style="color: #D1CCEC; font-size: 0.9rem; margin-bottom: 1rem;">Get monthly art prompts, coloring printables, and exhibition announcements.</p>
+          <form onsubmit="event.preventDefault(); this.reset(); window.showToast('Subscribed! Welcome to Little Canvas Club 🎨', 'success');" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email address" required style="padding: 0.7rem 1rem; border-radius: var(--radius-pill); border: 2px solid var(--border); font-size: 0.9rem; width: 100%;">
+            <button type="submit" class="btn-toy btn-pink btn-sm" style="flex-shrink: 0;">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Little Canvas Studio. All rights reserved. Crafted for ThemeForest.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script>
+    const CLASS_COURSES = {
+      '1': {
+        track: 'Painting Track',
+        badgeClass: 'badge-pink',
+        title: 'Creative Acrylic & <span class="text-gradient-pink">Canvas</span>',
+        desc: 'Kids explore primary pigment mixing, brush handling, canvas texture, and joyful expressive techniques on real stretched canvases.',
+        price: '$45/class',
+        heroImg: 'assets/images/class1.jpg',
+        badges: [
+          { icon: 'users', text: 'Ages 5–8', class: 'badge-yellow' },
+          { icon: 'clock', text: '60 Mins', class: 'badge-blue' },
+          { icon: 'sparkles', text: 'Beginner', class: 'badge-green' },
+          { icon: 'package', text: 'Supplies Included', class: 'badge-purple' }
+        ],
+        learnDesc: 'This course is designed around playful sensory exploration rather than rigid repetition. Every student works on real wooden-framed canvases with artist-grade, non-toxic heavy body acrylics.',
+        outcomes: [
+          { num: '01', color: 'badge-pink', title: 'Color Wheel & Harmony', text: 'Understanding primary, secondary, and complementary tones through direct experiential mixing.' },
+          { num: '02', color: 'badge-yellow', title: 'Brush Handling & Mark Making', text: 'Flat brushes, filberts, fan brushes, and sponge dabbing to create expressive textures.' },
+          { num: '03', color: 'badge-blue', title: 'Layering & Opacity', text: 'Background washes, midground horizons, and crisp foreground details.' },
+          { num: '04', color: 'badge-green', title: 'Artistic Voice', text: 'Choosing personal color palettes and titling their artwork for studio exhibitions.' }
+        ],
+        curriculum: [
+          { week: 'Week 1: The Magic of Primary Pigments', text: 'Color theory games, mixing rainbow palettes, and creating an expressive sunset gradient.', color: 'var(--primary)' },
+          { week: 'Week 2: Fantastic Creatures & Texture', text: 'Using palette knives and sponges to sculpt the scales, fur, and feathers of wild creatures.', color: 'var(--secondary)' },
+          { week: 'Week 3: Nature & Impressionist Dabs', text: 'Inspired by Claude Monet\'s water lilies; building atmospheric lighting and water reflections.', color: 'var(--green)' },
+          { week: 'Week 4: Final Masterpiece & Gallery Varnishing', text: 'Completing a 12x16 inch stretched canvas, adding a protective gloss coat, and signing like a master!', color: 'var(--orange)' }
+        ],
+        instructor: {
+          name: 'Emma Wilson',
+          badge: 'Lead Mentor',
+          badgeColor: 'badge-pink',
+          credential: 'BFA Rhode Island School of Design',
+          img: 'assets/images/avatars/instructor-1.jpg',
+          quote: '"My goal is for every child to leave our studio holding their head a little higher, knowing their ideas are worthy of a canvas."'
+        },
+        schedule: [
+          { day: 'Tuesday Afternoon (Ages 5–6)', time: '4:00 PM – 5:00 PM', badge: 'badge-yellow' },
+          { day: 'Thursday Afternoon (Ages 7–8)', time: '4:30 PM – 5:30 PM', badge: 'badge-pink' },
+          { day: 'Saturday Morning (Ages 5–8)', time: '10:00 AM – 11:00 AM', badge: 'badge-green' }
+        ]
+      },
+      '2': {
+        track: 'Drawing Track',
+        badgeClass: 'badge-yellow',
+        title: 'Storybook Sketch & <span class="text-gradient-sun">Form</span>',
+        desc: 'Learn fundamental proportions, character expressions, cross-hatching, and draft original comic strips and illustrated storybooks.',
+        price: '$40/class',
+        heroImg: 'assets/images/class2.jpg',
+        badges: [
+          { icon: 'users', text: 'Ages 6–10', class: 'badge-yellow' },
+          { icon: 'clock', text: '75 Mins', class: 'badge-blue' },
+          { icon: 'sparkles', text: 'All Levels', class: 'badge-green' },
+          { icon: 'package', text: 'Sketchbook Provided', class: 'badge-purple' }
+        ],
+        learnDesc: 'Drawing is the universal language of imagination. Students learn to see the world as geometric shapes, master line weights, and breathe emotional life into their illustrated heroes.',
+        outcomes: [
+          { num: '01', color: 'badge-yellow', title: 'Geometric Construction', text: 'Breaking complex animals and heroes down into circles, cylinders, and basic geometric forms.' },
+          { num: '02', color: 'badge-pink', title: 'Facial Expressions & Mood', text: 'Mastering eye shapes, eyebrow tilt, and mouth curves to express joy, shock, determination, and mischief.' },
+          { num: '03', color: 'badge-blue', title: 'Cross-Hatching & Shading', text: 'Creating depth and three-dimensional volume using graphite pencils and fine-line archival ink pens.' },
+          { num: '04', color: 'badge-green', title: 'Comic Panel Layouts', text: 'Drafting 4-panel storyboard sequences complete with dialogue bubbles and energetic sound effect typography.' }
+        ],
+        curriculum: [
+          { week: 'Week 1: Shapes to Silhouettes', text: 'Transforming basic squares, spheres, and cones into lively forest creatures and superhero poses.', color: 'var(--secondary)' },
+          { week: 'Week 2: Character Faces & Manga Eyes', text: 'Expressing nuanced character emotions, head rotation angles, and stylized hairstyles.', color: 'var(--primary)' },
+          { week: 'Week 3: Action Lines & Dynamic Poses', text: 'Applying lines of action, foreshortening, and weight distribution so drawings leap off the page.', color: 'var(--accent)' },
+          { week: 'Week 4: The 4-Panel Comic Strip', text: 'Storyboarding an original narrative, clean micron pen inking, and binding a take-home mini zine.', color: 'var(--green)' }
+        ],
+        instructor: {
+          name: 'Elena Rostova',
+          badge: 'Classical Drawing Mentor',
+          badgeColor: 'badge-yellow',
+          credential: 'MFA St. Petersburg Academy of Fine Arts',
+          img: 'assets/images/avatars/instructor-5.jpg',
+          quote: '"Drawing is learning to look at the world with curiosity and translating lines into stories."'
+        },
+        schedule: [
+          { day: 'Wednesday Afternoon (Ages 6–8)', time: '4:00 PM – 5:15 PM', badge: 'badge-yellow' },
+          { day: 'Friday Afternoon (Ages 8–10)', time: '4:30 PM – 5:45 PM', badge: 'badge-pink' },
+          { day: 'Saturday Morning (Ages 6–10)', time: '11:15 AM – 12:30 PM', badge: 'badge-green' }
+        ]
+      },
+      '3': {
+        track: 'Watercolor Track',
+        badgeClass: 'badge-blue',
+        title: 'Watercolor Splash & <span class="text-gradient-blue">Flow</span>',
+        desc: 'Master wet-on-wet washes, salt bleeding, botanical landscapes, and delicate gradient bleeding on archival cold-press cotton paper.',
+        price: '$48/class',
+        heroImg: 'assets/images/class3.jpg',
+        badges: [
+          { icon: 'users', text: 'Ages 7–12', class: 'badge-yellow' },
+          { icon: 'clock', text: '60 Mins', class: 'badge-blue' },
+          { icon: 'sparkles', text: 'Intermediate', class: 'badge-green' },
+          { icon: 'package', text: '300 GSM Cotton Paper', class: 'badge-purple' }
+        ],
+        learnDesc: 'Watercolor is pure sensory poetry. Our gentle methods encourage young painters to watch colors bloom spontaneously across heavy cold-press cotton sheets without fear.',
+        outcomes: [
+          { num: '01', color: 'badge-blue', title: 'Water-to-Pigment Ratios', text: 'Mastering the delicate balance between watery transparent glazes and velvety, saturated colors.' },
+          { num: '02', color: 'badge-pink', title: 'Spontaneous Bleeding', text: 'Allowing wet paints to blend effortlessly across paper to form dreamy sunset skies and ocean horizons.' },
+          { num: '03', color: 'badge-yellow', title: 'Resist & Textural Magic', text: 'Harnessing coarse sea salt, wax crayons, and masking fluid to create crystalline sparkles and coral reefs.' },
+          { num: '04', color: 'badge-green', title: 'Botanical & Wildlife Silhouettes', text: 'Painting delicate ferns, sea turtles, and starry night skies with dry-brush and splatter stars.' }
+        ],
+        curriculum: [
+          { week: 'Week 1: Fluid Sky Washes & Secondary Blooms', text: 'Learning graduated flat washes, wet-on-wet sky blending, and color dispersion games.', color: 'var(--accent)' },
+          { week: 'Week 2: Sea Salt Ocean Reefs', text: 'Dropping crystalline sea salt on turquoise washes to form natural oceanic textures and coral reefs.', color: 'var(--blue)' },
+          { week: 'Week 3: Bioluminescent Night Creatures', text: 'Wax crayon and masking fluid resists to create glowing jellyfish and deep forest fireflies.', color: 'var(--purple)' },
+          { week: 'Week 4: Botanical Wreath & Gallery Matting', text: 'Creating an intricate botanical illustration and framing the finished watercolor in a custom studio mat.', color: 'var(--green)' }
+        ],
+        instructor: {
+          name: 'Emma Wilson',
+          badge: 'Watercolor Mentor',
+          badgeColor: 'badge-blue',
+          credential: 'BFA Rhode Island School of Design',
+          img: 'assets/images/avatars/instructor-1.jpg',
+          quote: '"Watercolor teaches children to embrace spontaneity. When water moves across paper, magic happens."'
+        },
+        schedule: [
+          { day: 'Monday Afternoon (Ages 7–9)', time: '4:15 PM – 5:15 PM', badge: 'badge-blue' },
+          { day: 'Thursday Afternoon (Ages 10–12)', time: '5:00 PM – 6:00 PM', badge: 'badge-pink' },
+          { day: 'Saturday Midday (Ages 7–12)', time: '1:00 PM – 2:00 PM', badge: 'badge-yellow' }
+        ]
+      },
+      '4': {
+        track: 'Crafts Track',
+        badgeClass: 'badge-green',
+        title: 'Paper Craft & <span class="text-gradient-green">Collage Studio</span>',
+        desc: 'Tearing, folding origami, 3D paper sculpture, and mixed-media collages that build tactile coordination and joyful spatial problem-solving.',
+        price: '$38/class',
+        heroImg: 'assets/images/class4.jpg',
+        badges: [
+          { icon: 'users', text: 'Ages 4–7', class: 'badge-yellow' },
+          { icon: 'clock', text: '50 Mins', class: 'badge-blue' },
+          { icon: 'sparkles', text: 'Beginner', class: 'badge-green' },
+          { icon: 'package', text: 'All Craft Supplies Included', class: 'badge-purple' }
+        ],
+        learnDesc: 'Why limit art to flat paper? In this workshop, young makers tear, fold, weave, and assemble everyday materials into three-dimensional storyboards celebrating creative resourcefulness.',
+        outcomes: [
+          { num: '01', color: 'badge-green', title: 'Precision Tearing & Cutting', text: 'Practicing safety scissor control, paper fringe slicing, and organic hand-torn mosaic shapes.' },
+          { num: '02', color: 'badge-yellow', title: 'Origami Folds & Symmetry', text: 'Understanding valley folds, mountain creases, and geometric symmetry through origami animals.' },
+          { num: '03', color: 'badge-pink', title: '3D Pop-Up Engineering', text: 'Building accordions, paper hinges, and pop-up mechanics that leap out of greeting cards.' },
+          { num: '04', color: 'badge-blue', title: 'Textural Mixed-Media Assemblage', text: 'Combining yarn, felt, buttons, corrugated cardboard, and patterned tissue paper into rich collage boards.' }
+        ],
+        curriculum: [
+          { week: 'Week 1: Hand-Painted Decorative Papers & Tear Mosaics', text: 'Painting custom textured papers with combs and sponges, then tearing them to build whimsical story collages.', color: 'var(--green)' },
+          { week: 'Week 2: 3D Origami Animals & Mobiles', text: 'Folding classic jumping frogs, flapping cranes, and assembling a balanced hanging bedroom mobile.', color: 'var(--secondary)' },
+          { week: 'Week 3: Pop-Up Architecture & Secret Rooms', text: 'Engineering pop-up cardboard structures, fairy houses, and accordion foldout storybooks.', color: 'var(--primary)' },
+          { week: 'Week 4: Shadowbox Diorama with Fairy Lights', text: 'Mounting layered paper cuts inside a deep wooden shadowbox with battery mini lights for an enchanting display.', color: 'var(--orange)' }
+        ],
+        instructor: {
+          name: 'Aisha Khan',
+          badge: 'Mixed Media Lead',
+          badgeColor: 'badge-green',
+          credential: 'BFA National Institute of Design',
+          img: 'assets/images/avatars/instructor-3.jpg',
+          quote: '"Paper is the most versatile sculpture material on Earth. Fold it, bend it, cut it, and an entire universe springs to life."'
+        },
+        schedule: [
+          { day: 'Tuesday Midday (Ages 4–5)', time: '3:00 PM – 3:50 PM', badge: 'badge-green' },
+          { day: 'Thursday Afternoon (Ages 5–7)', time: '3:30 PM – 4:20 PM', badge: 'badge-yellow' },
+          { day: 'Saturday Morning (Ages 4–7)', time: '9:30 AM – 10:20 AM', badge: 'badge-pink' }
+        ]
+      },
+      '5': {
+        track: 'Digital Track',
+        badgeClass: 'badge-purple',
+        title: 'Digital Illustration & <span class="text-gradient-purple">Procreate</span>',
+        desc: 'Step onto iPad tablets with stylus brushes, digital layering, color theory, and animated sticker creation in our state-of-the-art cyber lab.',
+        price: '$55/class',
+        heroImg: 'assets/images/class5.jpg',
+        badges: [
+          { icon: 'users', text: 'Ages 9–14', class: 'badge-yellow' },
+          { icon: 'clock', text: '90 Mins', class: 'badge-blue' },
+          { icon: 'sparkles', text: 'All Levels', class: 'badge-green' },
+          { icon: 'tablet', text: 'Studio iPads Provided', class: 'badge-purple' }
+        ],
+        learnDesc: 'We provide individual iPad Pros and Apple Pencils in our cyber lab. Students learn industry-standard illustration workflows from rough thumbnail sketch to final export.',
+        outcomes: [
+          { num: '01', color: 'badge-purple', title: 'Apple Pencil Pressure Dynamics', text: 'Harnessing tilt, taper, and pressure sensitivity for authentic gouache, pencil, and ink strokes.' },
+          { num: '02', color: 'badge-blue', title: 'Layer Hierarchy & Clipping Masks', text: 'Organizing line art, flats, shadow layers, and lighting highlights non-destructively.' },
+          { num: '03', color: 'badge-pink', title: 'Color Harmonies & Ambient FX', text: 'Crafting vibrant custom color swatches, Multiply shading, and Add/Screen glowing magic particles.' },
+          { num: '04', color: 'badge-green', title: 'Animation Assist & GIF Output', text: 'Breathing movement into characters through looping frame-by-frame blinking, bouncing, and run cycles.' }
+        ],
+        curriculum: [
+          { week: 'Week 1: Procreate Interface & Clean Line Art', text: 'Canvas resolution, gesture shortcuts, brush stabilization (StreamLine), and crisp digital inking.', color: 'var(--accent)' },
+          { week: 'Week 2: ColorDrop, Alpha Lock & Cell Shading', text: 'Filling shapes cleanly with color thresholds, locking alpha channels, and brushing soft ambient gradients.', color: 'var(--primary)' },
+          { week: 'Week 3: Fantasy Backgrounds & Cinematic Lighting', text: 'Painting glowing enchanted landscapes, neon futuristic skies, and volumetric light beam effects.', color: 'var(--secondary)' },
+          { week: 'Week 4: Frame-by-Frame Animation & Sticker Export', text: 'Activating Animation Assist to produce an animated mascot GIF and ready-to-print holographic sticker sheets.', color: 'var(--green)' }
+        ],
+        instructor: {
+          name: 'Daniel Lee',
+          badge: 'Digital Arts Lead',
+          badgeColor: 'badge-purple',
+          credential: 'BA Animation CalArts',
+          img: 'assets/images/avatars/instructor-2.jpg',
+          quote: '"We transform passive tablet screen time into active visual worldbuilding, character design, and animation mastery."'
+        },
+        schedule: [
+          { day: 'Monday Evening (Ages 9–11)', time: '5:30 PM – 7:00 PM', badge: 'badge-blue' },
+          { day: 'Friday Evening (Ages 12–14)', time: '6:00 PM – 7:30 PM', badge: 'badge-purple' },
+          { day: 'Sunday Afternoon (Ages 9–14)', time: '2:00 PM – 3:30 PM', badge: 'badge-yellow' }
+        ]
+      },
+      '6': {
+        track: 'Play Track',
+        badgeClass: 'badge-yellow',
+        title: 'Sensory Art & <span class="text-gradient-sun">Color Play</span>',
+        desc: 'Finger paints, sponge stamping, shaving cream marbling, and joyful sensory exploration for tiny tots aged 3 to 5.',
+        price: '$35/class',
+        heroImg: 'assets/images/class6.jpg',
+        badges: [
+          { icon: 'users', text: 'Ages 3–5', class: 'badge-yellow' },
+          { icon: 'clock', text: '45 Mins', class: 'badge-blue' },
+          { icon: 'sparkles', text: 'Sensory', class: 'badge-green' },
+          { icon: 'smile', text: 'Washable Pigments', class: 'badge-purple' }
+        ],
+        learnDesc: 'Designed especially for preschoolers! We foster tactile sensory play with taste-safe, non-toxic washable finger paints, squishy shaving cream, and giant paper rolls.',
+        outcomes: [
+          { num: '01', color: 'badge-yellow', title: 'Tactile Sensory Immersion', text: 'Exploring slippery, cool, textured, and squishy art mediums that engage all five senses safely.' },
+          { num: '02', color: 'badge-pink', title: 'Color Discovery & Swirl Mixing', text: 'Watching primary pigments collide to form brand-new secondary colors right beneath tiny fingers.' },
+          { num: '03', color: 'badge-blue', title: 'Bilateral Hand-Eye Coordination', text: 'Two-handed stamping, sponge pressing, and large gross-motor sweeping movements across giant paper rolls.' },
+          { num: '04', color: 'badge-green', title: 'Carefree Creative Confidence', text: 'Zero expectations of photorealism—encouraging pure joy, giggles, and pride in self-expression.' }
+        ],
+        curriculum: [
+          { week: 'Week 1: Giant Finger Paint Murals & Handprint Safari', text: 'Rolling out floor-length kraft paper and turning colorful handprints into lions, giraffes, and jungle vines.', color: 'var(--secondary)' },
+          { week: 'Week 2: Fruit, Veggie & Sponge Stamping', text: 'Dipping carved apples, starfruit, and natural sea sponges into warm non-toxic tempera paints.', color: 'var(--primary)' },
+          { week: 'Week 3: Shaving Cream & Food Coloring Swirl Marbling', text: 'Swirling rainbow food coloring through fluffy shaving cream, then pressing paper on top to lift marbled prints.', color: 'var(--purple)' },
+          { week: 'Week 4: Textured Sensory Squish Collage Keepsake', text: 'Sealing colorful paints and glitter inside mess-free sensory squish bags and creating a framed toddler collage.', color: 'var(--green)' }
+        ],
+        instructor: {
+          name: 'Julian Brooks',
+          badge: 'Early Childhood Specialist',
+          badgeColor: 'badge-yellow',
+          credential: 'M.Ed Early Childhood Education, Boston University',
+          img: 'assets/images/avatars/instructor-6.jpg',
+          quote: '"At this tender age, art is not about making something pretty—it is pure sensory discovery, giggles, and joyful freedom."'
+        },
+        schedule: [
+          { day: 'Tuesday Morning (Ages 3–4)', time: '10:00 AM – 10:45 AM', badge: 'badge-yellow' },
+          { day: 'Thursday Morning (Ages 4–5)', time: '10:30 AM – 11:15 AM', badge: 'badge-pink' },
+          { day: 'Saturday Morning (Ages 3–5)', time: '9:00 AM – 9:45 AM', badge: 'badge-green' }
+        ]
+      }
+    };
+
+    function renderClassDetails() {
+      // 1. Resolve ID from query param, hash, or localStorage
+      const urlParams = new URLSearchParams(window.location.search);
+      let classId = urlParams.get('id');
+      if (!classId && window.location.hash) {
+        const hash = window.location.hash.replace('#', '');
+        const hashParams = new URLSearchParams(hash);
+        classId = hashParams.get('id') || (!isNaN(hash) ? hash : null);
+      }
+      if (!classId) {
+        classId = localStorage.getItem('selected_class') || '1';
+      }
+
+      const course = CLASS_COURSES[classId] || CLASS_COURSES['1'];
+
+      // 2. Track badge
+      const trackBadgeEl = document.getElementById('class-track-badge');
+      if (trackBadgeEl) {
+        trackBadgeEl.textContent = course.track;
+        trackBadgeEl.className = 'badge-sticker ' + (course.badgeClass || 'badge-pink');
+      }
+
+      // 3. Hero title
+      const titleEl = document.getElementById('class-hero-title');
+      if (titleEl) {
+        titleEl.innerHTML = course.title;
+        document.title = (course.title.replace(/<[^>]*>?/gm, '')) + ' — Little Canvas Studio';
+      }
+
+      // 4. Hero desc
+      const descEl = document.getElementById('class-hero-desc');
+      if (descEl) descEl.textContent = course.desc;
+
+      // 5. Meta badges
+      const metaBadgesEl = document.getElementById('class-meta-badges');
+      if (metaBadgesEl && course.badges) {
+        metaBadgesEl.innerHTML = course.badges.map(b => `
+          <span class="badge-sticker ${b.class}"><i data-lucide="${b.icon}" style="width: 14px;"></i> ${b.text}</span>
+        `).join('');
+      }
+
+      // 6. Enroll button
+      const enrollBtnEl = document.getElementById('class-enroll-btn');
+      if (enrollBtnEl) {
+        enrollBtnEl.textContent = `Enroll in Class — ${course.price}`;
+      }
+
+      // 7. Hero Image
+      const heroImgEl = document.getElementById('class-hero-img');
+      if (heroImgEl) {
+        heroImgEl.src = course.heroImg;
+        heroImgEl.alt = (course.title.replace(/<[^>]*>?/gm, '')) + ' - Class';
+      }
+
+      // 8. Learn desc
+      const learnDescEl = document.getElementById('class-learn-desc');
+      if (learnDescEl) learnDescEl.textContent = course.learnDesc;
+
+      // 9. Outcomes list
+      const outcomesEl = document.getElementById('class-learn-list');
+      if (outcomesEl && course.outcomes) {
+        outcomesEl.innerHTML = course.outcomes.map(o => `
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span class="badge-sticker ${o.color}" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">${o.num}</span>
+            <span><strong>${o.title}:</strong> ${o.text}</span>
+          </li>
+        `).join('');
+      }
+
+      // 10. Curriculum list
+      const curriculumEl = document.getElementById('class-curriculum-list');
+      if (curriculumEl && course.curriculum) {
+        curriculumEl.innerHTML = course.curriculum.map(c => `
+          <div class="admin-card" style="border: 2px solid var(--border);">
+            <div style="font-family: var(--font-display); font-weight: 800; color: ${c.color}; font-size: 1.15rem;">${c.week}</div>
+            <p style="color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem;">${c.text}</p>
+          </div>
+        `).join('');
+      }
+
+      // 11. Instructor
+      const instrImgEl = document.getElementById('class-instructor-img');
+      if (instrImgEl) {
+        instrImgEl.src = course.instructor.img;
+        instrImgEl.alt = course.instructor.name;
+      }
+      const instrBadgeEl = document.getElementById('class-instructor-badge');
+      if (instrBadgeEl) {
+        instrBadgeEl.textContent = course.instructor.badge;
+        instrBadgeEl.className = 'badge-sticker ' + (course.instructor.badgeColor || 'badge-pink');
+      }
+      const instrNameEl = document.getElementById('class-instructor-name');
+      if (instrNameEl) instrNameEl.textContent = course.instructor.name;
+      const instrCredEl = document.getElementById('class-instructor-credential');
+      if (instrCredEl) instrCredEl.textContent = course.instructor.credential;
+      const instrQuoteEl = document.getElementById('class-instructor-quote');
+      if (instrQuoteEl) instrQuoteEl.textContent = course.instructor.quote;
+
+      // 12. Schedule
+      const scheduleEl = document.getElementById('class-schedule-list');
+      if (scheduleEl && course.schedule) {
+        scheduleEl.innerHTML = course.schedule.map(s => `
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--white); border: 2px solid var(--border); border-radius: 12px;">
+            <div><strong>${s.day}</strong></div>
+            <span class="badge-sticker ${s.badge}">${s.time}</span>
+          </div>
+        `).join('');
+      }
+
+      // Re-initialize Lucide icons
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderClassDetails);
+    } else {
+      renderClassDetails();
+    }
+  </script>
+</body>
+</html>

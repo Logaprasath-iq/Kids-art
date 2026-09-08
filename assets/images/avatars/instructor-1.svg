@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <clipPath id="avatar-clip-1">
+      <circle cx="80" cy="80" r="74"/>
+    </clipPath>
+    <linearGradient id="bg-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE8EF"/>
+      <stop offset="100%" stop-color="#FFCCD9"/>
+    </linearGradient>
+  </defs>
+  
+  <g clip-path="url(#avatar-clip-1)">
+    <!-- Background -->
+    <rect width="160" height="160" fill="url(#bg-grad-1)"/>
+    <circle cx="25" cy="40" r="18" fill="#FFB3C6" opacity="0.4"/>
+    <circle cx="135" cy="115" r="22" fill="#FFB3C6" opacity="0.3"/>
+    
+    <!-- Torso / Smock -->
+    <path d="M28 160 Q32 125 55 116 L105 116 Q128 125 132 160 Z" fill="#38B6FF"/>
+    <!-- Smock Collar & Apron Strap -->
+    <path d="M55 116 L68 135 L92 135 L105 116 Z" fill="#242044" opacity="0.15"/>
+    <path d="M68 116 L74 160" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M92 116 L86 160" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <!-- Paintbrush pin -->
+    <circle cx="50" cy="138" r="7" fill="#FFD93D"/>
+    <path d="M47 141 L53 135" stroke="#FF5C8A" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Neck -->
+    <rect x="71" y="96" width="18" height="24" rx="9" fill="#FBD5B5"/>
+    <ellipse cx="80" cy="108" rx="9" ry="4" fill="#E8B993" opacity="0.5"/>
+
+    <!-- Head -->
+    <ellipse cx="80" cy="74" rx="30" ry="34" fill="#FDE2C8"/>
+    <!-- Ears -->
+    <ellipse cx="49" cy="75" rx="5" ry="8" fill="#FDE2C8"/>
+    <ellipse cx="111" cy="75" rx="5" ry="8" fill="#FDE2C8"/>
+
+    <!-- Hair Back -->
+    <ellipse cx="80" cy="42" rx="20" ry="16" fill="#8D4925"/>
+
+    <!-- Face details -->
+    <!-- Eyebrows -->
+    <path d="M60 62 Q66 59 71 62" stroke="#683416" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M89 62 Q94 59 100 62" stroke="#683416" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Eyes (Happy open) -->
+    <ellipse cx="65" cy="69" rx="4" ry="4.5" fill="#242044"/>
+    <ellipse cx="95" cy="69" rx="4" ry="4.5" fill="#242044"/>
+    <circle cx="66.5" cy="67.5" r="1.5" fill="#FFFFFF"/>
+    <circle cx="96.5" cy="67.5" r="1.5" fill="#FFFFFF"/>
+    <!-- Glasses -->
+    <circle cx="65" cy="69" r="10" fill="none" stroke="#E84370" stroke-width="2.5"/>
+    <circle cx="95" cy="69" r="10" fill="none" stroke="#E84370" stroke-width="2.5"/>
+    <path d="M75 68 L85 68" stroke="#E84370" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M55 67 L49 68" stroke="#E84370" stroke-width="2"/>
+    <path d="M105 67 L111 68" stroke="#E84370" stroke-width="2"/>
+
+    <!-- Rosy Cheeks -->
+    <ellipse cx="58" cy="78" rx="6" ry="3.5" fill="#FF8BA7" opacity="0.6"/>
+    <ellipse cx="102" cy="78" rx="6" ry="3.5" fill="#FF8BA7" opacity="0.6"/>
+
+    <!-- Nose -->
+    <path d="M79 73 Q81 77 78 79" stroke="#E0A376" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Sweet Smile -->
+    <path d="M73 85 Q80 92 87 85" stroke="#242044" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M75 86 Q80 91 85 86 Z" fill="#FF5C8A"/>
+
+    <!-- Hair Front / Bangs -->
+    <path d="M50 62 Q58 48 80 48 Q102 48 110 62 Q105 52 80 53 Q55 52 50 62 Z" fill="#8D4925"/>
+    <!-- Side tresses -->
+    <path d="M51 62 Q48 78 54 88 Q50 78 52 64" fill="#8D4925"/>
+    <path d="M109 62 Q112 78 106 88 Q110 78 108 64" fill="#8D4925"/>
+
+    <!-- Artist Beret (French painter hat) -->
+    <ellipse cx="80" cy="42" rx="36" ry="14" fill="#FF5C8A" transform="rotate(-7 80 42)"/>
+    <path d="M48 42 Q60 22 96 28 Q116 32 112 45 Z" fill="#FF5C8A"/>
+    <!-- Beret stalk -->
+    <path d="M84 26 Q86 18 90 20" stroke="#FF5C8A" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- Shadow under beret -->
+    <ellipse cx="80" cy="45" rx="32" ry="4" fill="#242044" opacity="0.15"/>
+  </g>
+  
+  <!-- Outer Outline Circle -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="#242044" stroke-width="5"/>
+</svg>

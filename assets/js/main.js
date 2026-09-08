@@ -1,0 +1,249 @@
+/**
+ * LITTLE CANVAS — MAIN JAVASCRIPT
+ * Handles Navigation, Dark Mode, RTL, Custom Cursor, Accordions, Pricing, and Countdown
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Sticky Header
+  const header = document.querySelector('.header-main');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    });
+  }
+
+  // 2. Mobile Menu & Home Dropdown Navigation
+  const mobileToggle = document.querySelector('.mobile-toggle-btn');
+  const navMenu = document.querySelector('.nav-menu');
+  const homeDropdownWrapper = document.querySelector('.nav-dropdown-wrapper');
+  const homeToggleLink = document.querySelector('.nav-dropdown-toggle');
+
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('open');
+      const isExpanded = navMenu.classList.contains('open');
+      mobileToggle.setAttribute('aria-expanded', isExpanded);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('open');
+        if (homeDropdownWrapper) homeDropdownWrapper.classList.remove('open');
+      }
+    });
+  }
+
+  // Dropdown click & keyboard accessibility
+  if (homeDropdownWrapper && homeToggleLink) {
+    homeToggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      homeDropdownWrapper.classList.toggle('open');
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        homeDropdownWrapper.classList.remove('open');
+        if (navMenu) navMenu.classList.remove('open');
+      }
+    });
+  }
+
+  // 3. Dark Mode Toggle with localStorage
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+  const storedTheme = localStorage.getItem('littleCanvasTheme');
+
+  if (storedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    updateThemeIcons(true);
+  } else if (storedTheme === 'light') {
+    document.documentElement.removeAttribute('data-theme');
+    updateThemeIcons(false);
+  } else {
+    // If no preference stored yet, respect the initial data-theme from markup
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    updateThemeIcons(isDark);
+  }
+
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('littleCanvasTheme', 'light');
+        updateThemeIcons(false);
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('littleCanvasTheme', 'dark');
+        updateThemeIcons(true);
+      }
+    });
+  });
+
+  function updateThemeIcons(isDark) {
+    themeToggleBtns.forEach(btn => {
+      btn.innerHTML = isDark 
+        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>' 
+        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+    });
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  // 4. RTL Mode Toggle with localStorage
+  const rtlToggleBtns = document.querySelectorAll('.rtl-toggle-btn');
+  const currentDir = localStorage.getItem('littleCanvasDir') || 'ltr';
+
+  if (currentDir === 'rtl') {
+    document.documentElement.setAttribute('dir', 'rtl');
+  }
+
+  rtlToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+      if (isRtl) {
+        document.documentElement.removeAttribute('dir');
+        localStorage.setItem('littleCanvasDir', 'ltr');
+      } else {
+        document.documentElement.setAttribute('dir', 'rtl');
+        localStorage.setItem('littleCanvasDir', 'rtl');
+      }
+    });
+  });
+
+  // 5. Custom Playground Cursor (Desktop Only)
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!isTouchDevice && !prefersReducedMotion) {
+    const cursorDot = document.createElement('div');
+    cursorDot.className = 'custom-cursor';
+    const cursorFollower = document.createElement('div');
+    cursorFollower.className = 'cursor-follower';
+    document.body.appendChild(cursorDot);
+    document.body.appendChild(cursorFollower);
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let followerX = mouseX;
+    let followerY = mouseY;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = `${mouseX}px`;
+      cursorDot.style.top = `${mouseY}px`;
+    });
+
+    const renderFollower = () => {
+      followerX += (mouseX - followerX) * 0.15;
+      followerY += (mouseY - followerY) * 0.15;
+      cursorFollower.style.left = `${followerX}px`;
+      cursorFollower.style.top = `${followerY}px`;
+      requestAnimationFrame(renderFollower);
+    };
+    renderFollower();
+
+    // Hover states
+    const interactiveLinks = document.querySelectorAll('a, button, .btn-toy, .filter-btn');
+    interactiveLinks.forEach(el => {
+      el.addEventListener('mouseenter', () => cursorFollower.classList.add('cursor-hover-btn'));
+      el.addEventListener('mouseleave', () => cursorFollower.classList.remove('cursor-hover-btn'));
+    });
+
+    const artworkCards = document.querySelectorAll('.artwork-paper-card');
+    artworkCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        cursorFollower.classList.add('cursor-hover-artwork');
+        cursorFollower.textContent = 'EXPLORE';
+      });
+      card.addEventListener('mouseleave', () => {
+        cursorFollower.classList.remove('cursor-hover-artwork');
+        cursorFollower.textContent = '';
+      });
+    });
+  }
+
+  // 6. Pricing Monthly / Yearly Switch
+  const pricingSwitch = document.querySelector('.pricing-switch');
+  if (pricingSwitch) {
+    const starterPrice = document.querySelector('[data-price="starter"]');
+    const creativePrice = document.querySelector('[data-price="creative"]');
+    const proPrice = document.querySelector('[data-price="pro"]');
+
+    pricingSwitch.addEventListener('click', () => {
+      pricingSwitch.classList.toggle('yearly');
+      const isYearly = pricingSwitch.classList.contains('yearly');
+
+      if (starterPrice && creativePrice && proPrice) {
+        if (isYearly) {
+          starterPrice.textContent = '₹0';
+          creativePrice.textContent = '₹1,999'; // discounted from ₹2,499
+          proPrice.textContent = '₹3,599';     // discounted from ₹4,499
+          document.querySelectorAll('.pricing-period').forEach(el => el.textContent = '/mo billed annually');
+        } else {
+          starterPrice.textContent = '₹0';
+          creativePrice.textContent = '₹2,499';
+          proPrice.textContent = '₹4,499';
+          document.querySelectorAll('.pricing-period').forEach(el => el.textContent = '/month');
+        }
+      }
+    });
+  }
+
+  // 7. FAQ Accordion
+  const faqHeaders = document.querySelectorAll('.faq-header');
+  faqHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const parent = header.closest('.faq-item');
+      const wasOpen = parent.classList.contains('open');
+
+      // Close all others in group
+      document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+
+      if (!wasOpen) {
+        parent.classList.add('open');
+      }
+    });
+  });
+
+  // 8. Launch Countdown Timer (Coming Soon page)
+  const countdownDays = document.getElementById('count-days');
+  const countdownHours = document.getElementById('count-hours');
+  const countdownMinutes = document.getElementById('count-minutes');
+  const countdownSeconds = document.getElementById('count-seconds');
+
+  if (countdownDays && countdownHours && countdownMinutes && countdownSeconds) {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 30);
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const diff = targetDate.getTime() - now;
+
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdownDays.textContent = String(days).padStart(2, '0');
+        countdownHours.textContent = String(hours).padStart(2, '0');
+        countdownMinutes.textContent = String(minutes).padStart(2, '0');
+        countdownSeconds.textContent = String(seconds).padStart(2, '0');
+      }
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
+
+  // 9. Initialize Lucide Icons
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+});

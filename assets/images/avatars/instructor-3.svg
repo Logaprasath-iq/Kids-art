@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <clipPath id="avatar-clip-3">
+      <circle cx="80" cy="80" r="74"/>
+    </clipPath>
+    <linearGradient id="bg-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2FAF0"/>
+      <stop offset="100%" stop-color="#B8F2DA"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#avatar-clip-3)">
+    <!-- Background -->
+    <rect width="160" height="160" fill="url(#bg-grad-3)"/>
+    <circle cx="28" cy="38" r="16" fill="#8CE8C0" opacity="0.5"/>
+    <circle cx="132" cy="118" r="22" fill="#8CE8C0" opacity="0.4"/>
+
+    <!-- Torso / Bohemian Linen Apron -->
+    <path d="M28 160 Q32 125 55 116 L105 116 Q128 125 132 160 Z" fill="#FF8A3D"/>
+    <!-- Patterned shirt underneath -->
+    <path d="M60 116 Q80 130 100 116" fill="#48D597"/>
+    <!-- Wooden bead necklace -->
+    <circle cx="70" cy="120" r="3" fill="#FFD93D"/>
+    <circle cx="76" cy="123" r="3" fill="#FF5C8A"/>
+    <circle cx="84" cy="123" r="3" fill="#38B6FF"/>
+    <circle cx="90" cy="120" r="3" fill="#FFD93D"/>
+
+    <!-- Neck -->
+    <rect x="71" y="94" width="18" height="24" rx="8" fill="#D99B6A"/>
+
+    <!-- Head -->
+    <ellipse cx="80" cy="74" rx="27" ry="31" fill="#E8B083"/>
+
+    <!-- Chic Artistic Turban / Headwrap (Teal with golden prints) -->
+    <ellipse cx="80" cy="48" rx="34" ry="22" fill="#14B8A6"/>
+    <path d="M46 54 Q42 78 48 94 Q62 60 80 56 Q100 60 112 94 Q118 78 114 54 Z" fill="#0D9488" opacity="0.3"/>
+    <!-- Turban knot on top -->
+    <ellipse cx="80" cy="30" rx="14" ry="10" fill="#14B8A6"/>
+    <ellipse cx="80" cy="30" rx="9" ry="6" fill="#F59E0B"/>
+    <circle cx="80" cy="30" r="4" fill="#0D9488"/>
+
+    <!-- Fun Palette / Geometric Earrings -->
+    <circle cx="49" cy="85" r="5" fill="#FFD93D"/>
+    <circle cx="111" cy="85" r="5" fill="#FF5C8A"/>
+
+    <!-- Face Details -->
+    <!-- Beautiful arched eyebrows -->
+    <path d="M60 62 Q66 58 72 61" stroke="#3D2010" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M88 61 Q94 58 100 62" stroke="#3D2010" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Big warm expressive eyes -->
+    <ellipse cx="66" cy="68" rx="4.5" ry="4.5" fill="#242044"/>
+    <ellipse cx="94" cy="68" rx="4.5" ry="4.5" fill="#242044"/>
+    <circle cx="68" cy="66.5" r="1.6" fill="#FFFFFF"/>
+    <circle cx="96" cy="66.5" r="1.6" fill="#FFFFFF"/>
+    <!-- Eyelash accents -->
+    <path d="M71 66 L74 64" stroke="#242044" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M99 64 L102 66" stroke="#242044" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Rosy Cheek Glow -->
+    <ellipse cx="58" cy="77" rx="6" ry="3.5" fill="#F43F5E" opacity="0.35"/>
+    <ellipse cx="102" cy="77" rx="6" ry="3.5" fill="#F43F5E" opacity="0.35"/>
+
+    <!-- Elegant Nose -->
+    <path d="M79 71 Q81 77 77 78" stroke="#BD7E4E" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Joyful Radiant Smile -->
+    <path d="M71 84 Q80 94 89 84" stroke="#242044" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M73 85 Q80 92 87 85 Z" fill="#E11D48"/>
+    <path d="M75 85 Q80 88 85 85" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Outer Outline Circle -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="#242044" stroke-width="5"/>
+</svg>

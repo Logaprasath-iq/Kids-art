@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <clipPath id="parent-clip-3"><circle cx="60" cy="60" r="54"/></clipPath>
+  </defs>
+  <g clip-path="url(#parent-clip-3)">
+    <rect width="120" height="120" fill="#F3E8FF"/>
+    <path d="M20 120 Q24 95 42 88 L78 88 Q96 95 100 120 Z" fill="#7C3AED"/>
+    <rect x="53" y="74" width="14" height="18" rx="6" fill="#E9D5FF"/>
+    <ellipse cx="60" cy="58" rx="22" ry="25" fill="#FBCFE8"/>
+    <!-- Hair & Earrings -->
+    <ellipse cx="60" cy="42" rx="25" ry="18" fill="#18181B"/>
+    <ellipse cx="36" cy="62" rx="4" ry="6" fill="#F59E0B"/>
+    <ellipse cx="84" cy="62" rx="4" ry="6" fill="#F59E0B"/>
+    <circle cx="49" cy="55" r="3" fill="#242044"/>
+    <circle cx="71" cy="55" r="3" fill="#242044"/>
+    <path d="M54 68 Q60 74 66 68" stroke="#242044" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+  <circle cx="60" cy="60" r="54" fill="none" stroke="#242044" stroke-width="4"/>
+</svg>

@@ -1,0 +1,185 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="500" height="320">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="cyberCanvasBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141128"/>
+      <stop offset="60%" stop-color="#1E193C"/>
+      <stop offset="100%" stop-color="#2A2252"/>
+    </linearGradient>
+
+    <!-- Neon Glow Gradient -->
+    <linearGradient id="neonGlowBrush" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF5C8A"/>
+      <stop offset="40%" stop-color="#FFD93D"/>
+      <stop offset="80%" stop-color="#35C9FF"/>
+      <stop offset="100%" stop-color="#48D597"/>
+    </linearGradient>
+
+    <!-- Character Shading -->
+    <linearGradient id="foxGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Visor Glass -->
+    <linearGradient id="visorGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Color Wheel -->
+    <linearGradient id="swatchWheel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF5C8A"/>
+      <stop offset="25%" stop-color="#FFD93D"/>
+      <stop offset="50%" stop-color="#48D597"/>
+      <stop offset="75%" stop-color="#35C9FF"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="500" height="320" fill="url(#cyberCanvasBg)"/>
+
+  <!-- Perspective Perspective Grid Lines (Digital Animation Lab) -->
+  <g opacity="0.18" stroke="#818CF8" stroke-width="1">
+    <line x1="0" y1="50" x2="500" y2="50"/>
+    <line x1="0" y1="100" x2="500" y2="100"/>
+    <line x1="0" y1="160" x2="500" y2="160"/>
+    <line x1="0" y1="220" x2="500" y2="220"/>
+    <line x1="0" y1="280" x2="500" y2="280"/>
+    
+    <line x1="70" y1="0" x2="70" y2="320"/>
+    <line x1="160" y1="0" x2="160" y2="320"/>
+    <line x1="250" y1="0" x2="250" y2="320"/>
+    <line x1="340" y1="0" x2="340" y2="320"/>
+    <line x1="430" y1="0" x2="430" y2="320"/>
+  </g>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="240" cy="150" r="110" fill="#6366F1" opacity="0.22" filter="url(#neonBlur)"/>
+  <circle cx="100" cy="80" r="60" fill="#FF5C8A" opacity="0.15" filter="url(#neonBlur)"/>
+  <circle cx="390" cy="200" r="70" fill="#38BDF8" opacity="0.15" filter="url(#neonBlur)"/>
+
+  <!-- Animation Onion-Skin Silhouette (Previous Animation Frame Ghost) -->
+  <g transform="translate(180, 160) scale(0.92)" opacity="0.25">
+    <ellipse cx="0" cy="0" rx="42" ry="48" fill="none" stroke="#A855F7" stroke-width="2.5" stroke-dasharray="4 4"/>
+    <circle cx="0" cy="-55" r="32" fill="none" stroke="#A855F7" stroke-width="2.5" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Main Digital Character: Cute Cyber Space Dino / Astronaut Mascot -->
+  <g transform="translate(230, 160)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="85" rx="55" ry="12" fill="#0A0818" opacity="0.6"/>
+
+    <!-- Spacesuit Body -->
+    <path d="M-40,25 C-42,75 -25,82 0,82 C25,82 42,75 40,25 C40,-5 -40,-5 -40,25 Z" fill="#FFFFFF" stroke="#242044" stroke-width="4"/>
+    
+    <!-- Chest Plate UI -->
+    <rect x="-22" y="30" width="44" height="28" rx="6" fill="#1E193C" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="-10" cy="44" r="5" fill="#48D597"/>
+    <circle cx="4" cy="44" r="4" fill="#FFD93D"/>
+    <circle cx="14" cy="44" r="4" fill="#FF5C8A"/>
+    <!-- Heartbeat signal on chest -->
+    <path d="M-18 44 L-12 44 L-9 38 L-6 50 L-3 44 L-1 44" stroke="#48D597" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Left Foot & Right Foot -->
+    <ellipse cx="-24" cy="82" rx="14" ry="9" fill="#FF5C8A" stroke="#242044" stroke-width="3"/>
+    <ellipse cx="24" cy="82" rx="14" ry="9" fill="#FF5C8A" stroke="#242044" stroke-width="3"/>
+
+    <!-- Big Round Astronaut Helmet -->
+    <circle cx="0" cy="-35" r="52" fill="#FFFFFF" stroke="#242044" stroke-width="4.5"/>
+    
+    <!-- Helmet Ears / Antenna Gadgets -->
+    <g transform="translate(-46, -62)">
+      <polygon points="0,0 -8,-24 16,-12" fill="#FFD93D" stroke="#242044" stroke-width="3"/>
+      <circle cx="-8" cy="-24" r="5" fill="#FF5C8A"/>
+    </g>
+    <g transform="translate(46, -62)">
+      <polygon points="0,0 8,-24 -16,-12" fill="#FFD93D" stroke="#242044" stroke-width="3"/>
+      <circle cx="8" cy="-24" r="5" fill="#FF5C8A"/>
+    </g>
+
+    <!-- Visor Glass with Glowing Reflection -->
+    <ellipse cx="0" cy="-33" rx="42" ry="34" fill="url(#visorGrad)" stroke="#242044" stroke-width="3.5"/>
+    <!-- Visor Highlights -->
+    <ellipse cx="-16" cy="-44" rx="15" ry="6" fill="#FFFFFF" opacity="0.85" transform="rotate(-15 -16 -44)"/>
+
+    <!-- Cute Smiling Face Inside Visor -->
+    <ellipse cx="-14" cy="-30" rx="5" ry="8" fill="#FFFFFF"/>
+    <ellipse cx="14" cy="-30" rx="5" ry="8" fill="#FFFFFF"/>
+    <circle cx="-13" cy="-32" r="3" fill="#1E193C"/>
+    <circle cx="15" cy="-32" r="3" fill="#1E193C"/>
+    <!-- Rosy Cheek Dots -->
+    <ellipse cx="-24" cy="-22" rx="6" ry="3.5" fill="#FF5C8A" opacity="0.8"/>
+    <ellipse cx="24" cy="-22" rx="6" ry="3.5" fill="#FF5C8A" opacity="0.8"/>
+    <!-- Smile -->
+    <path d="M-6 -22 Q0 -16 6 -22" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Cute Little Dino Tail wagging behind -->
+    <path d="M-38 52 Q-65 40 -68 18 Q-52 35 -34 40" fill="#48D597" stroke="#242044" stroke-width="3"/>
+  </g>
+
+  <!-- Glowing Neon Brush Stroke Trail (Being Painted in Real-Time) -->
+  <path d="M 60 220 C 120 280, 200 230, 250 180 S 340 70, 420 110" 
+        fill="none" stroke="url(#neonGlowBrush)" stroke-width="8" stroke-linecap="round" filter="url(#neonBlur)"/>
+  <path d="M 60 220 C 120 280, 200 230, 250 180 S 340 70, 420 110" 
+        fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Vector Bezier Anchors and Tangent Control Handles -->
+  <g transform="translate(250, 180)">
+    <line x1="-30" y1="20" x2="30" y2="-20" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="-30" cy="20" r="4" fill="#38BDF8"/>
+    <circle cx="30" cy="-20" r="4" fill="#38BDF8"/>
+    <!-- Active Anchor Point -->
+    <rect x="-5" y="-5" width="10" height="10" fill="#FFD93D" stroke="#242044" stroke-width="1.5"/>
+  </g>
+
+  <!-- Digital Stylus Apple Pencil drawing the path (Top Right) -->
+  <g transform="translate(420, 110) rotate(-45)">
+    <!-- Stylus Tip Glow -->
+    <circle cx="0" cy="0" r="10" fill="#FFD93D" filter="url(#neonBlur)"/>
+    <!-- Nib -->
+    <polygon points="0,0 -4,-12 4,-12" fill="#FFFFFF" stroke="#242044" stroke-width="1.5"/>
+    <polygon points="0,0 -2,-6 2,-6" fill="#242044"/>
+    <!-- Stylus Body -->
+    <rect x="-5" y="-95" width="10" height="83" rx="2" fill="#FFFFFF" stroke="#242044" stroke-width="2"/>
+    <line x1="-5" y1="-80" x2="5" y2="-80" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="-5" y="-98" width="10" height="6" rx="2" fill="#E2E8F0" stroke="#242044" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating Digital Art UI Elements: Color Swatch Palette (Top Left) -->
+  <g transform="translate(40, 30)">
+    <rect x="0" y="0" width="115" height="34" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="#6366F1" stroke-width="1.5"/>
+    <!-- Color dots -->
+    <circle cx="20" cy="17" r="8" fill="#FF5C8A"/>
+    <circle cx="42" cy="17" r="8" fill="#FFD93D"/>
+    <circle cx="64" cy="17" r="8" fill="#48D597"/>
+    <circle cx="86" cy="17" r="8" fill="#38BDF8"/>
+    <!-- Selected Ring around Blue -->
+    <circle cx="86" cy="17" r="11" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating Digital Layer Badge (Top Right) -->
+  <g transform="translate(365, 30)">
+    <rect x="0" y="0" width="105" height="30" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="#38BDF8" stroke-width="1.5"/>
+    <path d="M12 15 L22 10 L32 15 L22 20 Z" fill="#6366F1" stroke="#38BDF8" stroke-width="1"/>
+    <path d="M12 18 L22 23 L32 18" fill="none" stroke="#38BDF8" stroke-width="1"/>
+    <text x="38" y="19" fill="#F8FAFC" font-family="'Nunito', sans-serif" font-weight="800" font-size="10">Layer 03: Hero</text>
+  </g>
+
+  <!-- Neon Particles & Sparkles -->
+  <path d="M 120 140 Q 128 140 128 132 Q 128 140 136 140 Q 128 140 128 148 Q 128 140 120 140" fill="#FFD93D"/>
+  <path d="M 330 240 Q 338 240 338 232 Q 338 240 346 240 Q 338 240 338 248 Q 338 240 330 240" fill="#35C9FF"/>
+  <path d="M 380 150 Q 386 150 386 144 Q 386 150 392 150 Q 386 150 386 156 Q 386 150 380 150" fill="#FF5C8A"/>
+  <circle cx="150" cy="70" r="3" fill="#48D597"/>
+  <circle cx="340" cy="80" r="2.5" fill="#FFD93D"/>
+</svg>

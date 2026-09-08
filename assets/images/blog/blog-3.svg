@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg-b3-left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="100%" stop-color="#E2D9F3"/>
+    </linearGradient>
+    <linearGradient id="bg-b3-right" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B1736"/>
+      <stop offset="100%" stop-color="#2C235A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Half: Classical Studio Tone -->
+  <rect x="0" y="0" width="200" height="240" fill="url(#bg-b3-left)"/>
+  <!-- Right Half: Neon Digital Tone -->
+  <rect x="200" y="0" width="200" height="240" fill="url(#bg-b3-right)"/>
+
+  <!-- Dynamic Energy Transformation Wave in Center -->
+  <path d="M190 0 Q215 60 195 120 T210 240 L200 240 L200 0 Z" fill="#6C63FF" opacity="0.4"/>
+  <path d="M200 0 Q225 60 205 120 T220 240" stroke="#38B6FF" stroke-width="4" fill="none"/>
+
+  <!-- Left Side: Traditional Drawing Paper & Classical Portrait Sketch -->
+  <g transform="translate(35, 30)">
+    <rect x="0" y="0" width="145" height="175" rx="8" fill="#FFFDF7" stroke="#242044" stroke-width="3"/>
+    <!-- Classical Cross-hatched Eye & Face Outline -->
+    <g transform="translate(25, 30)">
+      <path d="M20 50 Q50 20 80 50 Q50 80 20 50 Z" fill="none" stroke="#242044" stroke-width="2.5"/>
+      <circle cx="50" cy="50" r="14" fill="#3B2E58"/>
+      <circle cx="50" cy="50" r="6" fill="#1A1329"/>
+      <circle cx="47" cy="46" r="3" fill="#FFFFFF"/>
+      <path d="M15 32 Q50 15 85 30" stroke="#242044" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <!-- Crosshatch shading -->
+      <line x1="25" y1="52" x2="35" y2="62" stroke="#716C88" stroke-width="1.5"/>
+      <line x1="30" y1="52" x2="40" y2="62" stroke="#716C88" stroke-width="1.5"/>
+      <line x1="60" y1="52" x2="70" y2="62" stroke="#716C88" stroke-width="1.5"/>
+      <line x1="65" y1="52" x2="75" y2="62" stroke="#716C88" stroke-width="1.5"/>
+    </g>
+    <!-- Wooden Graphite Pencil -->
+    <g transform="translate(100, 110) rotate(-45)">
+      <rect x="0" y="0" width="65" height="8" rx="2" fill="#FFD93D" stroke="#242044" stroke-width="1.5"/>
+      <polygon points="65,0 75,4 65,8" fill="#FAD1AC"/>
+      <polygon points="72,2.5 75,4 72,5.5" fill="#242044"/>
+    </g>
+  </g>
+
+  <!-- Right Side: Glowing Digital Screen with Luminous Cyber Character -->
+  <g transform="translate(225, 30)">
+    <rect x="0" y="0" width="145" height="175" rx="12" fill="#0F172A" stroke="#38B6FF" stroke-width="3"/>
+    <!-- Glowing digital eye & cyber avatar -->
+    <g transform="translate(25, 30)">
+      <path d="M20 50 Q50 20 80 50 Q50 80 20 50 Z" fill="none" stroke="#FF5C8A" stroke-width="3"/>
+      <circle cx="50" cy="50" r="14" fill="#38B6FF"/>
+      <circle cx="50" cy="50" r="6" fill="#A855F7"/>
+      <circle cx="47" cy="46" r="3" fill="#FFFFFF"/>
+      <path d="M15 32 Q50 15 85 30" stroke="#FFD93D" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+      <!-- Digital node dots -->
+      <circle cx="20" cy="50" r="3.5" fill="#38B6FF"/>
+      <circle cx="80" cy="50" r="3.5" fill="#38B6FF"/>
+      <circle cx="50" cy="20" r="3.5" fill="#FF5C8A"/>
+    </g>
+    <!-- Digital stylus with neon beam -->
+    <g transform="translate(10, 135) rotate(-35)">
+      <rect x="0" y="0" width="75" height="7" rx="3.5" fill="#FFFFFF"/>
+      <polygon points="0,0 -12,3.5 0,7" fill="#38B6FF"/>
+    </g>
+  </g>
+</svg>

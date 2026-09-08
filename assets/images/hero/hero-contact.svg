@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="contactSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E1F5FE"/>
+      <stop offset="50%" stop-color="#FFF9E9"/>
+      <stop offset="100%" stop-color="#FFE0B2"/>
+    </linearGradient>
+    <linearGradient id="deskWood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFE0B2"/>
+      <stop offset="50%" stop-color="#FFCC80"/>
+      <stop offset="100%" stop-color="#FFA726"/>
+    </linearGradient>
+    <linearGradient id="chennaiPin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF5C8A"/>
+      <stop offset="100%" stop-color="#D81B60"/>
+    </linearGradient>
+    <filter id="shadowCnt" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="0" flood-color="#242044"/>
+    </filter>
+  </defs>
+
+  <!-- Sky & Wall Background -->
+  <rect width="600" height="380" fill="url(#contactSky)"/>
+
+  <!-- Subtle Distant Chennai Coast & Sun -->
+  <circle cx="100" cy="110" r="45" fill="#FFD93D" opacity="0.6"/>
+  <!-- Distant Marina Beach / Lighthouse silhouette in background -->
+  <path d="M 0 240 Q 80 230 160 240 T 320 240" fill="none" stroke="#81D4FA" stroke-width="3" opacity="0.6"/>
+  <g transform="translate(60, 140)" opacity="0.4">
+    <!-- Lighthouse tower -->
+    <polygon points="12,0 18,0 24,70 6,70" fill="#242044"/>
+    <rect x="8" y="0" width="14" height="6" fill="#FF5C8A"/>
+    <line x1="15" y1="-8" x2="15" y2="0" stroke="#242044" stroke-width="2"/>
+  </g>
+  <!-- Lush Tropical Coastal Palm fronds in top left -->
+  <g transform="translate(20, 10)">
+    <path d="M 0 10 Q 50 30 90 20 Q 50 50 0 70 Q 60 70 110 50" fill="none" stroke="#48D597" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 0 25 Q 70 45 130 35" fill="none" stroke="#37CF8C" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Warm Wooden Studio Floor -->
+  <rect y="300" width="600" height="80" fill="#D7CCC8" stroke="#242044" stroke-width="3"/>
+  <line x1="100" y1="300" x2="70" y2="380" stroke="#242044" stroke-width="2" stroke-opacity="0.25"/>
+  <line x1="300" y1="300" x2="280" y2="380" stroke="#242044" stroke-width="2" stroke-opacity="0.25"/>
+  <line x1="500" y1="300" x2="480" y2="380" stroke="#242044" stroke-width="2" stroke-opacity="0.25"/>
+
+  <!-- Kolam / Traditional Welcoming Rangoli Art on floor -->
+  <g transform="translate(480, 335)" opacity="0.75">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="6" fill="#FF5C8A"/>
+    <path d="M -18 0 Q 0 -18 18 0 Q 0 18 -18 0 Z" fill="none" stroke="#FFD93D" stroke-width="2"/>
+  </g>
+
+  <!-- Welcoming Wooden Studio Reception Counter (Center) -->
+  <g transform="translate(140, 170)">
+    <!-- Counter Base -->
+    <rect x="0" y="50" width="320" height="95" rx="12" fill="url(#deskWood)" stroke="#242044" stroke-width="3.5" filter="url(#shadowCnt)"/>
+    <!-- Decorative front wooden slats -->
+    <line x1="80" y1="50" x2="80" y2="145" stroke="#242044" stroke-width="2" stroke-opacity="0.3"/>
+    <line x1="160" y1="50" x2="160" y2="145" stroke="#242044" stroke-width="2" stroke-opacity="0.3"/>
+    <line x1="240" y1="50" x2="240" y2="145" stroke="#242044" stroke-width="2" stroke-opacity="0.3"/>
+
+    <!-- Counter Top Countertop -->
+    <rect x="-15" y="38" width="350" height="16" rx="5" fill="#FFFFFF" stroke="#242044" stroke-width="3" filter="url(#shadowCnt)"/>
+
+    <!-- Signboard Plaque on Front of Desk -->
+    <rect x="55" y="75" width="210" height="42" rx="8" fill="#FFFFFF" stroke="#242044" stroke-width="2.5" filter="url(#shadowCnt)"/>
+    <text x="160" y="94" font-family="'Fredoka', cursive, sans-serif" font-weight="700" font-size="13" fill="#242044" text-anchor="middle">LITTLE CANVAS STUDIO</text>
+    <text x="160" y="110" font-family="'Nunito', sans-serif" font-weight="800" font-size="10" fill="#FF5C8A" text-anchor="middle">CHENNAI • ANNA NAGAR</text>
+
+    <!-- Desktop Objects: -->
+    <!-- Friendly Ceramic Pen/Brush Holder -->
+    <rect x="25" y="5" width="28" height="34" rx="5" fill="#35C9FF" stroke="#242044" stroke-width="2.5"/>
+    <line x1="33" y1="5" x2="24" y2="-20" stroke="#FF5C8A" stroke-width="3" stroke-linecap="round"/>
+    <line x1="39" y1="5" x2="42" y2="-22" stroke="#FFD93D" stroke-width="3" stroke-linecap="round"/>
+    <line x1="45" y1="5" x2="52" y2="-15" stroke="#48D597" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Studio Registration Guestbook (Open) -->
+    <polygon points="120,28 175,22 230,28 225,38 175,34 125,38" fill="#FFF9E9" stroke="#242044" stroke-width="2"/>
+    <line x1="175" y1="22" x2="175" y2="34" stroke="#242044" stroke-width="1.5"/>
+    <!-- Quill / Pen -->
+    <line x1="210" y1="30" x2="235" y2="10" stroke="#FF5C8A" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="235,10 242,2 238,12" fill="#FFD93D"/>
+
+    <!-- Friendly Welcoming Bell -->
+    <ellipse cx="90" cy="36" rx="12" ry="5" fill="#242044"/>
+    <path d="M 80 35 Q 90 20 100 35 Z" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+    <circle cx="90" cy="22" r="3" fill="#FFD93D" stroke="#242044" stroke-width="1.5"/>
+  </g>
+
+  <!-- PROMINENT CHENNAI GOOGLE MAP PIN FLAG (Top Right) -->
+  <g transform="translate(420, 60)">
+    <!-- Giant Map Pin -->
+    <path d="M 60 15 C 35 15 15 35 15 60 C 15 95 60 140 60 140 C 60 140 105 95 105 60 C 105 35 85 15 60 15 Z" fill="url(#chennaiPin)" stroke="#242044" stroke-width="3.5" filter="url(#shadowCnt)"/>
+    <!-- Pin Inner White Circle with Palette Icon -->
+    <circle cx="60" cy="58" r="24" fill="#FFFFFF" stroke="#242044" stroke-width="2.5"/>
+    <!-- Mini Artist Palette inside Pin -->
+    <ellipse cx="60" cy="58" rx="14" ry="10" fill="#FFE5D9" stroke="#242044" stroke-width="1.5"/>
+    <circle cx="55" cy="55" r="2.5" fill="#FF5C8A"/>
+    <circle cx="62" cy="53" r="2.5" fill="#FFD93D"/>
+    <circle cx="66" cy="58" r="2.5" fill="#35C9FF"/>
+
+    <!-- Location Label Banner -->
+    <g transform="translate(20, 145)">
+      <rect width="80" height="26" rx="13" fill="#242044" stroke="#242044" stroke-width="2" filter="url(#shadowCnt)"/>
+      <text x="40" y="17" font-family="'Fredoka', cursive, sans-serif" font-weight="700" font-size="10" fill="#FFFFFF" text-anchor="middle">CHENNAI</text>
+    </g>
+  </g>
+
+  <!-- Welcoming Smiling Character (Left Mentor) -->
+  <g transform="translate(45, 160)">
+    <!-- Body & Apron -->
+    <path d="M 30 75 L 45 45 L 85 45 L 100 75 L 105 150 L 25 150 Z" fill="#6C63FF" stroke="#242044" stroke-width="3" filter="url(#shadowCnt)"/>
+    <!-- Apron Top -->
+    <rect x="42" y="65" width="46" height="75" rx="5" fill="#FFFFFF" stroke="#242044" stroke-width="2"/>
+    <circle cx="52" cy="85" r="3" fill="#FF5C8A"/>
+    <circle cx="65" cy="85" r="3" fill="#FFD93D"/>
+    <circle cx="78" cy="85" r="3" fill="#35C9FF"/>
+    
+    <!-- Head -->
+    <circle cx="65" cy="25" r="22" fill="#FAD0C4" stroke="#242044" stroke-width="2.5"/>
+    <!-- Friendly Face -->
+    <circle cx="58" cy="24" r="2.5" fill="#242044"/>
+    <circle cx="72" cy="24" r="2.5" fill="#242044"/>
+    <path d="M 61 31 Q 65 37 69 31" fill="none" stroke="#242044" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="53" cy="28" rx="4" ry="2" fill="#FF7EB6"/>
+    <ellipse cx="77" cy="28" rx="4" ry="2" fill="#FF7EB6"/>
+    <!-- Cute Artist Beret (Coral Pink) -->
+    <ellipse cx="65" cy="8" rx="24" ry="9" fill="#FF5C8A" stroke="#242044" stroke-width="2" transform="rotate(-10 65 8)"/>
+    <circle cx="68" cy="1" r="3" fill="#FF5C8A"/>
+
+    <!-- Waving Arm with Speech Bubble -->
+    <path d="M 85 55 Q 115 45 125 25" fill="none" stroke="#FAD0C4" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="125" cy="25" r="5" fill="#FAD0C4"/>
+    <!-- Floating Speech Bubble -->
+    <g transform="translate(100, -25)">
+      <rect width="75" height="30" rx="12" fill="#FFD93D" stroke="#242044" stroke-width="2" filter="url(#shadowCnt)"/>
+      <polygon points="20,30 28,30 18,38" fill="#FFD93D" stroke="#242044" stroke-width="1.5"/>
+      <text x="37" y="19" font-family="'Fredoka', cursive" font-size="11" font-weight="700" fill="#242044" text-anchor="middle">Vanakkam!</text>
+    </g>
+  </g>
+
+  <!-- Floating Sparkles & Heart -->
+  <polygon points="350,70 353,78 361,78 355,83 357,91 350,86 343,91 345,83 339,78 347,78" fill="#FFD93D" stroke="#242044" stroke-width="1.5"/>
+  <polygon points="530,195 532,201 538,201 534,205 535,211 530,207 525,211 526,205 522,201 528,201" fill="#48D597" stroke="#242044" stroke-width="1.5"/>
+</svg>

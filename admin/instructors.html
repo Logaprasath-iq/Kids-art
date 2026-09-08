@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructors Management — Little Canvas Studio Admin</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="canonical" href="https://littlecanvas.example.com/admin/instructors.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="admin-body">
+
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-logo">
+      <div class="brand-icon" style="width: 36px; height: 36px;"><i data-lucide="palette" style="width: 20px;"></i></div>
+      <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem;">Little<span class="text-gradient-pink">Studio</span></span>
+    </div>
+
+    <nav class="admin-nav-list">
+      <a href="dashboard.html" class="admin-nav-link"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a href="students.html" class="admin-nav-link"><i data-lucide="graduation-cap"></i> Students</a>
+      <a href="instructors.html" class="admin-nav-link active"><i data-lucide="users"></i> Instructors</a>
+      <a href="classes.html" class="admin-nav-link"><i data-lucide="book-open"></i> Classes</a>
+      <a href="orders.html" class="admin-nav-link"><i data-lucide="credit-card"></i> Orders & Fees</a>
+      <a href="messages.html" class="admin-nav-link"><i data-lucide="message-square"></i> Messages <span class="badge-status trial" style="margin-left: auto;">3</span></a>
+      <a href="events.html" class="admin-nav-link"><i data-lucide="calendar"></i> Events</a>
+      <a href="blog.html" class="admin-nav-link"><i data-lucide="file-text"></i> Blog Posts</a>
+      <a href="reviews.html" class="admin-nav-link"><i data-lucide="star"></i> Reviews</a>
+      <a href="analytics.html" class="admin-nav-link"><i data-lucide="bar-chart-2"></i> Analytics</a>
+      <a href="settings.html" class="admin-nav-link"><i data-lucide="settings"></i> Settings</a>
+    </nav>
+
+    <div style="padding: 1rem 1.5rem; border-top: 2px solid rgba(36, 32, 68, 0.06);">
+      <a href="../index.html" class="btn-toy btn-sm btn-white" style="width: 100%; justify-content: center;">
+        <i data-lucide="external-link" style="width: 14px;"></i> View Public Site
+      </a>
+    </div>
+  </aside>
+
+  <div class="admin-main-wrap">
+    <header class="admin-topbar">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="admin-sidebar-toggle" style="background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--text-main);">
+          <i data-lucide="menu"></i>
+        </button>
+        <h2 style="font-size: 1.25rem;">Faculty Management</h2>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
+        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border);">
+          <span style="font-weight: 700; font-size: 0.9rem;">Emma Wilson</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-content-area">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h1 style="font-size: 1.8rem;">Studio Instructors (6)</h1>
+          <p style="color: var(--muted); font-size: 0.9rem;">Teaching assignments, scheduling availability, and parent ratings.</p>
+        </div>
+        <button class="btn-toy btn-pink btn-sm" onclick="window.showToast('Mentor onboarding form opened', 'info');"><i data-lucide="plus"></i> Add Instructor</button>
+      </div>
+
+      <div class="admin-card">
+        <div class="table-responsive-wrapper">
+          <table class="table-custom">
+            <thead>
+              <tr>
+                <th>Instructor</th>
+                <th>Specialty Track</th>
+                <th>Active Cohorts</th>
+                <th>Weekly Hours</th>
+                <th>Parent Rating</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="display: flex; align-items: center; gap: 0.75rem;">
+                  <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border);">
+                  <div><strong>Emma Wilson</strong><div style="font-size: 0.75rem; color: var(--muted);">Director</div></div>
+                </td>
+                <td>Watercolor & Acrylics</td>
+                <td>6 Groups (48 Kids)</td>
+                <td>18 hrs/wk</td>
+                <td><span style="color: #FFA500; font-weight: 700;">★ 4.98</span></td>
+                <td><span class="badge-status active">Active</span></td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Viewing schedule for Emma', 'info');">Schedule</button></td>
+              </tr>
+              <tr>
+                <td style="display: flex; align-items: center; gap: 0.75rem;">
+                  <img src="../assets/images/avatars/instructor-2.svg" alt="Daniel Lee" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border);">
+                  <div><strong>Daniel Lee</strong><div style="font-size: 0.75rem; color: var(--muted);">Lead Tech</div></div>
+                </td>
+                <td>Digital Art & 2D Animation</td>
+                <td>5 Groups (40 Kids)</td>
+                <td>15 hrs/wk</td>
+                <td><span style="color: #FFA500; font-weight: 700;">★ 4.95</span></td>
+                <td><span class="badge-status active">Active</span></td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Viewing schedule for Daniel', 'info');">Schedule</button></td>
+              </tr>
+              <tr>
+                <td style="display: flex; align-items: center; gap: 0.75rem;">
+                  <img src="../assets/images/avatars/instructor-3.svg" alt="Aisha Khan" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border);">
+                  <div><strong>Aisha Khan</strong><div style="font-size: 0.75rem; color: var(--muted);">Crafts Lead</div></div>
+                </td>
+                <td>Mixed Media & Papercraft</td>
+                <td>4 Groups (32 Kids)</td>
+                <td>12 hrs/wk</td>
+                <td><span style="color: #FFA500; font-weight: 700;">★ 4.92</span></td>
+                <td><span class="badge-status active">Active</span></td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Viewing schedule for Aisha', 'info');">Schedule</button></td>
+              </tr>
+              <tr>
+                <td style="display: flex; align-items: center; gap: 0.75rem;">
+                  <img src="../assets/images/avatars/instructor-4.svg" alt="Marcus Chen" style="width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border);">
+                  <div><strong>Marcus Chen</strong><div style="font-size: 0.75rem; color: var(--muted);">Sculpture Lead</div></div>
+                </td>
+                <td>Ceramics & Clay Sculpting</td>
+                <td>4 Groups (28 Kids)</td>
+                <td>12 hrs/wk</td>
+                <td><span style="color: #FFA500; font-weight: 700;">★ 4.96</span></td>
+                <td><span class="badge-status active">Active</span></td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Viewing schedule for Marcus', 'info');">Schedule</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/validation.js"></script>
+</body>
+</html>

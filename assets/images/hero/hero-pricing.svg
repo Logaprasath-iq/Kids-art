@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pricingBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F8F5"/>
+      <stop offset="60%" stop-color="#FFF9E9"/>
+      <stop offset="100%" stop-color="#FFF0F5"/>
+    </linearGradient>
+    <linearGradient id="goldCoin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="50%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+    <linearGradient id="woodBox" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8A87C"/>
+      <stop offset="100%" stop-color="#C67D4E"/>
+    </linearGradient>
+    <filter id="shadowPrc" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="0" flood-color="#242044"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="380" fill="url(#pricingBg)"/>
+
+  <!-- Studio Wooden Desk Base -->
+  <rect y="295" width="600" height="85" fill="#FFE5D9" stroke="#242044" stroke-width="3"/>
+  <line x1="0" y1="295" x2="600" y2="295" stroke="#242044" stroke-width="3"/>
+
+  <!-- Floating Value Blobs & Sparkles -->
+  <circle cx="100" cy="80" r="14" fill="#48D597" opacity="0.3"/>
+  <circle cx="520" cy="90" r="18" fill="#FF5C8A" opacity="0.3"/>
+  <circle cx="280" cy="50" r="10" fill="#FFD93D" opacity="0.4"/>
+
+  <!-- Open Wooden Art Supplies Deluxe Chest (Center Left) -->
+  <g transform="translate(90, 110)">
+    <!-- Box Shadow & Back Lid Open -->
+    <polygon points="20,70 140,25 320,55 200,100" fill="#BCAAA4" stroke="#242044" stroke-width="3"/>
+    
+    <!-- Inner Box Tray with Supplies -->
+    <rect x="25" y="75" width="280" height="150" rx="10" fill="url(#woodBox)" stroke="#242044" stroke-width="3.5" filter="url(#shadowPrc)"/>
+    <!-- Box Partition Dividers -->
+    <line x1="120" y1="75" x2="120" y2="225" stroke="#242044" stroke-width="2.5"/>
+    <line x1="210" y1="75" x2="210" y2="225" stroke="#242044" stroke-width="2.5"/>
+
+    <!-- Inside Section 1: Set of 8 Acrylic Paint Tubes -->
+    <g transform="translate(38, 90)">
+      <rect x="0" y="0" width="14" height="40" rx="3" fill="#FF5C8A" stroke="#242044" stroke-width="2"/>
+      <rect x="18" y="0" width="14" height="40" rx="3" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+      <rect x="36" y="0" width="14" height="40" rx="3" fill="#35C9FF" stroke="#242044" stroke-width="2"/>
+      <rect x="54" y="0" width="14" height="40" rx="3" fill="#48D597" stroke="#242044" stroke-width="2"/>
+      
+      <rect x="0" y="55" width="14" height="40" rx="3" fill="#A66CFF" stroke="#242044" stroke-width="2"/>
+      <rect x="18" y="55" width="14" height="40" rx="3" fill="#FF8A3D" stroke="#242044" stroke-width="2"/>
+      <rect x="36" y="55" width="14" height="40" rx="3" fill="#E91E63" stroke="#242044" stroke-width="2"/>
+      <rect x="54" y="55" width="14" height="40" rx="3" fill="#00BCD4" stroke="#242044" stroke-width="2"/>
+    </g>
+
+    <!-- Inside Section 2: Sketchbook & Stretched Canvas Pads -->
+    <rect x="130" y="90" width="70" height="95" rx="6" fill="#FFFFFF" stroke="#242044" stroke-width="2.5"/>
+    <rect x="135" y="95" width="60" height="85" rx="4" fill="#FFF9E9"/>
+    <!-- Sketchbook Spiral Wire -->
+    <circle cx="140" cy="105" r="2.5" fill="#242044"/>
+    <circle cx="140" cy="120" r="2.5" fill="#242044"/>
+    <circle cx="140" cy="135" r="2.5" fill="#242044"/>
+    <circle cx="140" cy="150" r="2.5" fill="#242044"/>
+    <circle cx="140" cy="165" r="2.5" fill="#242044"/>
+    <!-- Embossed Little Canvas Heart on Cover -->
+    <path d="M 165 130 A 6 6 0 0 0 153 130 Q 153 138 165 146 Q 177 138 177 130 A 6 6 0 0 0 165 130 Z" fill="#FF5C8A"/>
+
+    <!-- Inside Section 3: Premium Wooden Brushes & Palette Knife -->
+    <line x1="230" y1="200" x2="270" y2="95" stroke="#8D6E63" stroke-width="4.5" stroke-linecap="round"/>
+    <polygon points="270,95 264,82 276,82" fill="#FF5C8A"/>
+    
+    <line x1="245" y1="205" x2="285" y2="105" stroke="#D7CCC8" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="285,105 279,94 291,94" fill="#35C9FF"/>
+    
+    <line x1="225" y1="205" x2="250" y2="110" stroke="#FFD54F" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="250,110 245,100 255,100" fill="#48D597"/>
+
+    <!-- Gold Brass Clasp and Handle -->
+    <rect x="145" y="215" width="40" height="15" rx="3" fill="#FFD54F" stroke="#242044" stroke-width="2"/>
+    <circle cx="165" cy="222" r="3" fill="#242044"/>
+  </g>
+
+  <!-- Child Artist Cotton Apron (Folded on Side) -->
+  <g transform="translate(30, 230) rotate(-10)">
+    <path d="M 10 30 L 25 10 L 75 10 L 90 30 L 95 90 L 5 90 Z" fill="#48D597" stroke="#242044" stroke-width="3" filter="url(#shadowPrc)"/>
+    <!-- Apron Neck Strap -->
+    <path d="M 25 10 Q 50 -10 75 10" fill="none" stroke="#242044" stroke-width="3"/>
+    <!-- Apron Front Pocket -->
+    <rect x="25" y="45" width="50" height="35" rx="5" fill="#FFFFFF" stroke="#242044" stroke-width="2.5"/>
+    <text x="50" y="66" font-family="'Fredoka', cursive" font-size="9" font-weight="700" fill="#FF5C8A" text-anchor="middle">ARTIST</text>
+  </g>
+
+  <!-- GIANT GOLDEN INDIAN RUPEE (₹) MEDALLION COIN (Prominent Right) -->
+  <g transform="translate(425, 120)">
+    <!-- Shadow & Coin Thickness -->
+    <ellipse cx="65" cy="70" rx="72" ry="72" fill="#C67D4E" stroke="#242044" stroke-width="3.5" filter="url(#shadowPrc)"/>
+    <!-- Outer Coin Rim -->
+    <circle cx="65" cy="65" r="70" fill="url(#goldCoin)" stroke="#242044" stroke-width="4"/>
+    <!-- Inner Beaded Border -->
+    <circle cx="65" cy="65" r="58" fill="#FFE082" stroke="#242044" stroke-width="2.5" stroke-dasharray="4,4"/>
+    
+    <!-- Indian Rupee (₹) Symbol (Bold & Regal) -->
+    <!-- Top horizontal bar -->
+    <rect x="35" y="36" width="60" height="8" rx="3" fill="#242044"/>
+    <!-- Second horizontal bar -->
+    <rect x="35" y="52" width="60" height="8" rx="3" fill="#242044"/>
+    <!-- Vertical stem & R upper loop -->
+    <path d="M 52 36 L 52 72 Q 85 72 85 54 Q 85 36 52 36 Z" fill="#242044"/>
+    <path d="M 52 44 L 52 64 Q 75 64 75 54 Q 75 44 52 44 Z" fill="#FFE082"/>
+    <!-- Rupee diagonal leg -->
+    <path d="M 58 66 L 90 98 L 78 102 L 48 70 Z" fill="#242044"/>
+    
+    <!-- Sparkle Stars around Coin -->
+    <polygon points="140,25 143,33 151,33 145,38 147,46 140,41 133,46 135,38 129,33 137,33" fill="#FFD93D" stroke="#242044" stroke-width="1.5"/>
+    <polygon points="0,110 3,116 9,116 5,120 7,126 1,122 -5,126 -3,120 -7,116 -1,116" fill="#FF5C8A" stroke="#242044" stroke-width="1.5"/>
+  </g>
+
+  <!-- Piggy Bank / Savings Motif with Artist Beret (Bottom Right) -->
+  <g transform="translate(435, 245)">
+    <!-- Body -->
+    <ellipse cx="45" cy="38" rx="38" ry="30" fill="#FF5C8A" stroke="#242044" stroke-width="3" filter="url(#shadowPrc)"/>
+    <!-- Snout -->
+    <ellipse cx="8" cy="40" rx="8" ry="12" fill="#FF7EB6" stroke="#242044" stroke-width="2"/>
+    <circle cx="7" cy="37" r="2" fill="#242044"/>
+    <circle cx="7" cy="43" r="2" fill="#242044"/>
+    <!-- Eye -->
+    <circle cx="28" cy="28" r="4.5" fill="#242044"/>
+    <circle cx="29" cy="27" r="1.5" fill="#FFFFFF"/>
+    <!-- Ear -->
+    <polygon points="38,15 48,5 54,20" fill="#FF7EB6" stroke="#242044" stroke-width="2.5"/>
+    <!-- Coin Slot on Top -->
+    <rect x="36" y="8" width="18" height="4" rx="2" fill="#242044"/>
+    <!-- Golden Coin Dropping in -->
+    <ellipse cx="45" cy="4" rx="10" ry="4" fill="#FFD93D" stroke="#242044" stroke-width="2"/>
+    <!-- Feet -->
+    <rect x="25" y="62" width="10" height="12" rx="3" fill="#C2185B" stroke="#242044" stroke-width="2"/>
+    <rect x="55" y="62" width="10" height="12" rx="3" fill="#C2185B" stroke="#242044" stroke-width="2"/>
+    <!-- Little Artist Beret on Piggy -->
+    <ellipse cx="46" cy="12" rx="16" ry="6" fill="#6C63FF" stroke="#242044" stroke-width="2" transform="rotate(-15 46 12)"/>
+    <circle cx="48" cy="8" r="2.5" fill="#6C63FF"/>
+  </g>
+
+  <!-- Sticker Badge: 100% Value -->
+  <g transform="translate(50, 40) rotate(-6)">
+    <rect width="165" height="34" rx="17" fill="#48D597" stroke="#242044" stroke-width="2.5" filter="url(#shadowPrc)"/>
+    <text x="82" y="22" font-family="'Fredoka', cursive, sans-serif" font-weight="700" font-size="12" fill="#242044" text-anchor="middle">All Materials Included (INR)</text>
+  </g>
+</svg>

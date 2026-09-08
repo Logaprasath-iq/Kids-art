@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Art Academy — Little Canvas | Future Creative Lab</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description" content="Future-ready creative digital art classes for kids. Illustration, Procreate, 2D animation, game art and visual storytelling.">
+  <link rel="canonical" href="https://littlecanvas.example.com/home-2.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="theme-cyber-lab cyber-grid-bg">
+
+  <!-- Sticky Navbar -->
+  <header class="header-main" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo" aria-label="Little Canvas Homepage">
+        <div class="brand-icon" style="background: var(--gradient-purple);">
+          <i data-lucide="cpu"></i>
+        </div>
+        <span>Little<span class="text-gradient-blue">Digital</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="#" class="nav-link active nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+          </a>
+          <div class="dropdown-menu-custom" role="menu">
+            <div class="dropdown-preview-grid">
+              <a href="index.html" class="dropdown-item-card" role="menuitem">
+                <div class="dropdown-thumbnail">
+                  <img src="assets/images/preview-home-1.svg" alt="Home 1 Creative Art School Preview">
+                </div>
+                <div class="dropdown-info">
+                  <h4>Home 1</h4>
+                  <p>Creative Art School</p>
+                </div>
+              </a>
+              <a href="home-2.html" class="dropdown-item-card active" role="menuitem">
+                <div class="dropdown-thumbnail">
+                  <img src="assets/images/preview-home-2.svg" alt="Home 2 Digital Art Academy Preview">
+                </div>
+                <div class="dropdown-info">
+                  <h4>Home 2</h4>
+                  <p>Digital Art Academy</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      
+        <div class="mobile-nav-cta" style="display: none; flex-direction: column; gap: 0.75rem; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 2px dashed var(--border-light);">
+          <div style="display: flex; gap: 0.5rem; width: 100%;">
+            <a href="auth/login.html" class="btn-toy btn-white btn-sm" style="flex: 1; text-align: center;">Login</a>
+            <a href="auth/register.html" class="btn-toy btn-yellow btn-sm" style="flex: 1; text-align: center;">Sign Up</a>
+          </div>
+          <a href="contact.html" class="btn-toy btn-pink btn-sm" style="width: 100%; text-align: center;">Free Trial</a>
+        </div>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+          </svg>
+        </button>
+        <button class="rtl-toggle-btn" aria-label="Toggle Right-To-Left Layout" title="Toggle RTL">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+      </button>
+        <a href="auth/login.html" class="btn-toy btn-white btn-sm nav-auth-btn">Login</a>
+        <a href="auth/register.html" class="btn-toy btn-yellow btn-sm nav-auth-btn">Sign Up</a>
+        <a href="contact.html" class="btn-toy btn-purple btn-sm d-none d-md-flex">Book Lab Pass</a>
+        <button class="mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <div class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Home 2 Future Creative Lab -->
+  <section class="hero-section" style="background: transparent;">
+    <div class="blob blob-purple" style="top: -100px; right: 10%; opacity: 0.35;"></div>
+    <div class="blob blob-blue" style="top: 30%; left: -80px; opacity: 0.3;"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left: Text -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="badge-sticker badge-purple glow-pill">
+              <i data-lucide="terminal" style="width: 14px; height: 14px;"></i>
+              Next-Gen Creative Tech
+            </span>
+          </div>
+          <h1 class="hero-title">
+            Turn <br>
+            <span class="text-gradient-blue">Curiosity</span> <br>
+            Into Creation.
+          </h1>
+          <p class="hero-desc">
+            Future-ready creative classes where kids learn illustration, digital painting, character animation and visual storytelling using modern digital tools.
+          </p>
+          <div class="hero-cta-group">
+            <a href="classes.html" class="btn-toy btn-purple">Explore Digital Labs <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="btn-toy btn-blue">Claim Free Tablet Trial</a>
+          </div>
+        </div>
+
+        <!-- Right: Digital Art Tablet Showcase -->
+        <div class="hero-visual-stage">
+          <div class="digital-tablet-frame">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.15rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.85rem;">
+              <div style="display: flex; gap: 7px;">
+                <span style="width: 11px; height: 11px; border-radius: 50%; background: #FF5C8A;"></span>
+                <span style="width: 11px; height: 11px; border-radius: 50%; background: #FFD93D;"></span>
+                <span style="width: 11px; height: 11px; border-radius: 50%; background: #48D597;"></span>
+              </div>
+              <div style="font-family: var(--font-display); font-size: 0.95rem; color: #35C9FF; font-weight: 600;">Canvas Studio v2.4</div>
+            </div>
+            
+            <div class="digital-tablet-screen">
+              <img src="assets/images/hero/hero-home-2.svg" alt="Digital Illustration & Character Animation">
+              <div style="position: absolute; bottom: 14px; left: 14px; background: rgba(27,24,52,0.9); backdrop-filter: blur(8px); padding: 0.45rem 0.95rem; border-radius: var(--radius-pill); border: 1px solid #6C63FF; font-size: 0.85rem; color: #FFF; font-weight: 600;">
+                🖌️ Procreate Brush: Neon Glow
+              </div>
+            </div>
+
+            <!-- Floating Tool Palette -->
+            <div style="display: flex; justify-content: space-around; margin-top: 1.15rem; background: rgba(12,11,23,0.85); border-radius: 16px; padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1);">
+              <button class="btn-toy btn-sm btn-pink" style="padding: 0.45rem 0.95rem; font-size: 0.8rem;">Brushes</button>
+              <button class="btn-toy btn-sm btn-blue" style="padding: 0.45rem 0.95rem; font-size: 0.8rem;">Layers</button>
+              <button class="btn-toy btn-sm btn-yellow" style="padding: 0.45rem 0.95rem; font-size: 0.8rem;">Effects</button>
+              <button class="btn-toy btn-sm btn-green" style="padding: 0.45rem 0.95rem; font-size: 0.8rem;">Animate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Classes Grid -->
+  <section class="classes-section section-py">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <span class="badge-sticker badge-purple glow-pill" style="margin-bottom: 1rem;">Future Curriculum</span>
+        <h2 class="section-title">Digital Art <span class="text-gradient-blue">Programs</span></h2>
+        <p class="section-subtitle">Equipping kids aged 8–16 with creative industry skills in a gaming-inspired studio atmosphere.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Digital Class 1 -->
+        <div class="class-card card-theme-purple">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-purple class-category-badge">iPad / Procreate</span>
+            <img src="assets/images/classes/class-digital.svg" alt="Digital Illustration">
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 8–12</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 75 Mins</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');">Digital Character Design</a></h3>
+            <p class="class-card-desc">Concept sketching, dynamic poses, digital cell-shading, and exporting high-res sticker sheets.</p>
+            <div class="class-card-footer">
+              <span class="class-fee" style="color: #35C9FF;">$55<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');" class="class-card-arrow" aria-label="View Details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Digital Class 2 -->
+        <div class="class-card card-theme-blue">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-blue class-category-badge">Animation</span>
+            <img src="assets/images/artwork/art-4.svg" alt="2D Animation">
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 9–14</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 90 Mins</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');">2D Frame-by-Frame Animation</a></h3>
+            <p class="class-card-desc">Discover the 12 principles of animation: squash & stretch, keyframes, timing loops, and animated GIFs.</p>
+            <div class="class-card-footer">
+              <span class="class-fee" style="color: #35C9FF;">$60<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');" class="class-card-arrow" aria-label="View Details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Digital Class 3 -->
+        <div class="class-card card-theme-pink">
+          <div class="class-card-image">
+            <span class="badge-sticker badge-pink class-category-badge">Game Art</span>
+            <img src="assets/images/artwork/art-6.svg" alt="Game Sprite Art">
+          </div>
+          <div class="class-card-content">
+            <div class="class-meta-info">
+              <span><i data-lucide="users" style="width: 14px;"></i> Ages 10–16</span>
+              <span><i data-lucide="clock" style="width: 14px;"></i> 90 Mins</span>
+            </div>
+            <h3 class="class-card-title"><a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');">Pixel Art & Indie Game Sprites</a></h3>
+            <p class="class-card-desc">Draw pixel tilemaps, platformer heroes, monster animations, and prepare artwork ready for Roblox or Unity.</p>
+            <div class="class-card-footer">
+              <span class="class-fee" style="color: #35C9FF;">$58<small style="font-size: 0.8rem; color: var(--muted);">/class</small></span>
+              <a href="class-details.html?id=5" onclick="localStorage.setItem('selected_class','5');" class="class-card-arrow" aria-label="View Details"><i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creative Tools Section -->
+  <section class="section-py" style="background: var(--cyber-section-bg); transition: background 0.3s ease;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <span class="badge-sticker badge-yellow" style="margin-bottom: 1rem;">Hardware & Apps</span>
+        <h2 class="section-title">Industry Tools <span class="text-gradient-rainbow">Kid-Simplified</span></h2>
+        <p class="section-subtitle">Every station in our Future Lab is equipped with professional creative gear.</p>
+      </div>
+
+      <div class="grid grid-4 text-center">
+        <div class="admin-card" style="border: 2px solid #35C9FF;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Apple iPad Pro</h3>
+          <p style="font-size: 0.9rem; color: var(--muted);">Apple Pencil pressure-sensitive screens provided for every student.</p>
+        </div>
+        <div class="admin-card" style="border: 2px solid #FF5C8A;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎨</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Procreate Suite</h3>
+          <p style="font-size: 0.9rem; color: var(--muted);">The world's premier digital illustration software loaded with custom brushes.</p>
+        </div>
+        <div class="admin-card" style="border: 2px solid #48D597;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧊</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Blender for Kids</h3>
+          <p style="font-size: 0.9rem; color: var(--muted);">Gentle introduction to 3D sculpting, lighting, and low-poly modeling.</p>
+        </div>
+        <div class="admin-card" style="border: 2px solid #FFD93D;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">☁️</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Cloud Portfolio</h3>
+          <p style="font-size: 0.9rem; color: var(--muted);">Every student gets a private gallery link to showcase artwork to family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-py">
+    <div class="container">
+      <div class="cta-banner-wrap" style="background: linear-gradient(135deg, #1B1834, #6C63FF, #35C9FF);">
+        <h2>Ready for the Future of Creative Learning?</h2>
+        <p>Book a free 45-minute tablet discovery session at our studio lab.</p>
+        <a href="contact.html" class="btn-toy btn-yellow">Schedule Discovery Session <i data-lucide="zap"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: #fff; margin-bottom: 1.25rem;">
+            <div class="brand-icon"><i data-lucide="palette"></i></div>
+            <span>LittleCanvas</span>
+          </a>
+          <p style="color: #D1CCEC; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            A premier creative learning playground empowering kids aged 4-14 through tactile painting, drawing, sculpture, and digital storytelling.
+          </p>
+          <div class="footer-social-links" style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#FFFFFF" style="width: 18px; height: 18px; display: block;">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/15557892278" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M16.7 14.8c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5C9.4 8.7 8.8 7.3 8.5 6.7c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9 0 1.7 1.2 3.4 1.4 3.6.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.6-.4z" fill="#FFFFFF" stroke="none"/>
+                <path d="M12 21.8a9.8 9.8 0 0 1-5-1.4L2 22l1.6-4.9A9.8 9.8 0 1 1 12 21.8z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#FFFFFF" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Programs -->
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">Acrylic Painting</a></li>
+            <li><a href="classes.html">Watercolor Magic</a></li>
+            <li><a href="classes.html">Sketch & Comics</a></li>
+            <li><a href="classes.html">Digital Art Academy</a></li>
+            <li><a href="classes.html">Clay & Pottery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#instructors">Meet Faculty</a></li>
+            <li><a href="events.html">Art Exhibitions</a></li>
+            <li><a href="pricing.html">Tuition Plans</a></li>
+            <li><a href="contact.html">Studio Tours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Parenting & Art</a></li>
+            <li><a href="coming-soon.html">Summer Camps</a></li>
+            <li><a href="auth/login.html">Parent Portal</a></li>
+            <li><a href="admin/dashboard.html">Educator SaaS</a></li>
+            <li><a href="documentation/index.html">Documentation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div class="footer-col">
+          <h4>Creative Dispatch</h4>
+          <p style="color: #D1CCEC; font-size: 0.9rem; margin-bottom: 1rem;">Get monthly art prompts, coloring printables, and exhibition announcements.</p>
+          <form onsubmit="event.preventDefault(); this.reset(); window.showToast('Subscribed! Welcome to Little Canvas Club 🎨', 'success');" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email address" required style="padding: 0.7rem 1rem; border-radius: var(--radius-pill); border: 2px solid var(--border); font-size: 0.9rem; width: 100%;">
+            <button type="submit" class="btn-toy btn-pink btn-sm" style="flex-shrink: 0;">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Little Canvas Studio. All rights reserved. Crafted for ThemeForest.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/validation.js"></script>
+</body>
+</html>

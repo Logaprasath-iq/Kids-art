@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Scheduling & Capacity — Little Canvas Studio Admin</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="canonical" href="https://littlecanvas.example.com/admin/classes.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="admin-body">
+
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-logo">
+      <div class="brand-icon" style="width: 36px; height: 36px;"><i data-lucide="palette" style="width: 20px;"></i></div>
+      <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem;">Little<span class="text-gradient-pink">Studio</span></span>
+    </div>
+
+    <nav class="admin-nav-list">
+      <a href="dashboard.html" class="admin-nav-link"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a href="students.html" class="admin-nav-link"><i data-lucide="graduation-cap"></i> Students</a>
+      <a href="instructors.html" class="admin-nav-link"><i data-lucide="users"></i> Instructors</a>
+      <a href="classes.html" class="admin-nav-link active"><i data-lucide="book-open"></i> Classes</a>
+      <a href="orders.html" class="admin-nav-link"><i data-lucide="credit-card"></i> Orders & Fees</a>
+      <a href="messages.html" class="admin-nav-link"><i data-lucide="message-square"></i> Messages <span class="badge-status trial" style="margin-left: auto;">3</span></a>
+      <a href="events.html" class="admin-nav-link"><i data-lucide="calendar"></i> Events</a>
+      <a href="blog.html" class="admin-nav-link"><i data-lucide="file-text"></i> Blog Posts</a>
+      <a href="reviews.html" class="admin-nav-link"><i data-lucide="star"></i> Reviews</a>
+      <a href="analytics.html" class="admin-nav-link"><i data-lucide="bar-chart-2"></i> Analytics</a>
+      <a href="settings.html" class="admin-nav-link"><i data-lucide="settings"></i> Settings</a>
+    </nav>
+
+    <div style="padding: 1rem 1.5rem; border-top: 2px solid rgba(36, 32, 68, 0.06);">
+      <a href="../index.html" class="btn-toy btn-sm btn-white" style="width: 100%; justify-content: center;">
+        <i data-lucide="external-link" style="width: 14px;"></i> View Public Site
+      </a>
+    </div>
+  </aside>
+
+  <div class="admin-main-wrap">
+    <header class="admin-topbar">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="admin-sidebar-toggle" style="background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--text-main);">
+          <i data-lucide="menu"></i>
+        </button>
+        <h2 style="font-size: 1.25rem;">Courses & Capacity</h2>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
+        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border);">
+          <span style="font-weight: 700; font-size: 0.9rem;">Emma Wilson</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-content-area">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h1 style="font-size: 1.8rem;">Active Course Offerings</h1>
+          <p style="color: var(--muted); font-size: 0.9rem;">Monitor classroom capacity, age limits, and mentor assignments.</p>
+        </div>
+        <button class="btn-toy btn-pink btn-sm" onclick="window.showToast('Class creator opened', 'info');"><i data-lucide="plus-circle"></i> Create New Class</button>
+      </div>
+
+      <div class="admin-card">
+        <div class="table-responsive-wrapper">
+          <table class="table-custom">
+            <thead>
+              <tr>
+                <th>Class Title</th>
+                <th>Category</th>
+                <th>Ages</th>
+                <th>Lead Mentor</th>
+                <th>Capacity</th>
+                <th>Rate</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Creative Acrylic & Canvas</strong></td>
+                <td><span class="badge-sticker badge-pink" style="font-size: 0.7rem;">Painting</span></td>
+                <td>5–8 yrs</td>
+                <td>Emma Wilson</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="flex: 1; height: 8px; background: rgba(36,32,68,0.1); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 88%; height: 100%; background: var(--primary);"></div>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700;">7/8</span>
+                  </div>
+                </td>
+                <td>$45/session</td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Acrylic cohort', 'info');">Edit</button></td>
+              </tr>
+              <tr>
+                <td><strong>Storybook Sketch & Form</strong></td>
+                <td><span class="badge-sticker badge-yellow" style="font-size: 0.7rem;">Drawing</span></td>
+                <td>6–10 yrs</td>
+                <td>Elena Rostova</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="flex: 1; height: 8px; background: rgba(36,32,68,0.1); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 100%; height: 100%; background: var(--green);"></div>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700;">8/8 (Full)</span>
+                  </div>
+                </td>
+                <td>$40/session</td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Managing waiting list', 'info');">Waitlist (2)</button></td>
+              </tr>
+              <tr>
+                <td><strong>Watercolor Splash & Flow</strong></td>
+                <td><span class="badge-sticker badge-blue" style="font-size: 0.7rem;">Watercolor</span></td>
+                <td>7–12 yrs</td>
+                <td>Emma Wilson</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="flex: 1; height: 8px; background: rgba(36,32,68,0.1); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 75%; height: 100%; background: var(--blue);"></div>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700;">6/8</span>
+                  </div>
+                </td>
+                <td>$48/session</td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Watercolor cohort', 'info');">Edit</button></td>
+              </tr>
+              <tr>
+                <td><strong>Digital Illustration & Procreate</strong></td>
+                <td><span class="badge-sticker badge-purple" style="font-size: 0.7rem; color: #fff;">Digital</span></td>
+                <td>9–14 yrs</td>
+                <td>Daniel Lee</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="flex: 1; height: 8px; background: rgba(36,32,68,0.1); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 100%; height: 100%; background: var(--green);"></div>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700;">8/8 (Full)</span>
+                  </div>
+                </td>
+                <td>$55/session</td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Managing waiting list', 'info');">Waitlist (4)</button></td>
+              </tr>
+              <tr>
+                <td><strong>Ceramic Handbuilding & Clay</strong></td>
+                <td><span class="badge-sticker badge-yellow" style="font-size: 0.7rem;">Clay</span></td>
+                <td>6–12 yrs</td>
+                <td>Marcus Chen</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="flex: 1; height: 8px; background: rgba(36,32,68,0.1); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 62%; height: 100%; background: var(--orange);"></div>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700;">5/8</span>
+                  </div>
+                </td>
+                <td>$50/session</td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Clay cohort', 'info');">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/validation.js"></script>
+</body>
+</html>

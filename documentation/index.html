@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Canvas — Documentation & Customization Guide</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .docs-container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
+    }
+    .docs-sidebar {
+      background: #FFFFFF;
+      border-right: 2px solid rgba(36,32,68,0.08);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+    }
+    [data-theme="dark"] .docs-sidebar {
+      background: #1B1834;
+      border-color: rgba(255,255,255,0.08);
+    }
+    .docs-nav-link {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+      transition: all 0.2s ease;
+    }
+    .docs-nav-link:hover, .docs-nav-link.active {
+      background: rgba(255,92,138,0.1);
+      color: var(--primary);
+    }
+    .docs-content {
+      padding: 3rem 4rem;
+      max-width: 900px;
+    }
+    .code-block {
+      background: #242044;
+      color: #F8F9FD;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin: 1.25rem 0 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="docs-container">
+    <!-- Sidebar -->
+    <aside class="docs-sidebar">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2rem;">
+        <div class="brand-icon" style="width: 36px; height: 36px;"><i data-lucide="palette" style="width: 20px;"></i></div>
+        <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.2rem;">Docs Guide</span>
+      </div>
+
+      <nav>
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 0.75rem;">Getting Started</div>
+        <a href="#intro" class="docs-nav-link active">Introduction</a>
+        <a href="#folder-structure" class="docs-nav-link">Folder Structure</a>
+        <a href="#quickstart" class="docs-nav-link">Quick Start</a>
+
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--muted); font-weight: 800; margin: 1.5rem 0 0.75rem 0;">Design & Style</div>
+        <a href="#colors" class="docs-nav-link">Changing Colors</a>
+        <a href="#typography" class="docs-nav-link">Changing Fonts</a>
+        <a href="#dark-mode" class="docs-nav-link">Dark Mode</a>
+        <a href="#rtl" class="docs-nav-link">RTL Support</a>
+
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--muted); font-weight: 800; margin: 1.5rem 0 0.75rem 0;">JavaScript Features</div>
+        <a href="#threejs" class="docs-nav-link">Three.js 3D Hero</a>
+        <a href="#animations" class="docs-nav-link">GSAP Animations</a>
+        <a href="#charts" class="docs-nav-link">Chart.js Analytics</a>
+        <a href="#forms" class="docs-nav-link">Forms & Toasts</a>
+      </nav>
+
+      <div style="margin-top: 3rem;">
+        <a href="../index.html" class="btn-toy btn-sm btn-pink" style="width: 100%; justify-content: center;">
+          <i data-lucide="arrow-left" style="width: 14px;"></i> Back to Website
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Docs Content -->
+    <main class="docs-content">
+      <section id="intro" style="margin-bottom: 3.5rem;">
+        <span class="badge-sticker badge-pink" style="margin-bottom: 1rem;">Documentation v1.0</span>
+        <h1 style="font-size: 2.8rem; margin-bottom: 1rem;">Little Canvas Documentation</h1>
+        <p style="font-size: 1.15rem; color: var(--muted); line-height: 1.7;">
+          Welcome to the official developer and customization documentation for <strong>Little Canvas — Kids Art & Painting Classes / Creative Learning Studio</strong>. This premium multi-page HTML5 template is designed for commercial marketplaces, education studios, art academies, and creative workshops.
+        </p>
+      </section>
+
+      <section id="folder-structure" style="margin-bottom: 3.5rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Folder Structure</h2>
+        <div class="code-block">
+├── index.html                  # Home 1: Creative Art School
+├── home-2.html                 # Home 2: Digital Art Academy (Future Creative Lab)
+├── about.html                  # Studio Story, Philosophy & Milestones
+├── classes.html                # Filterable Classes Grid
+├── class-details.html          # Curriculum, FAQs & Registration
+├── instructors.html            # Faculty Team Grid & Bios
+├── events.html                 # Events, Exhibitions & Timeline
+├── pricing.html                # Monthly/Yearly Tuition Plans
+├── blog.html                   # Editorial Blog with Real-time Search
+├── blog-details.html           # Full Blog Article & Comments
+├── contact.html                # Studio Contact & Validated Inquiry Form
+├── 404.html                    # Artistic 404 Error Page
+├── coming-soon.html            # Launch Countdown & VIP Subscribe
+├── maintenance.html            # Makeover Page with Animated Roller
+│
+├── auth/
+│   ├── login.html              # Split-screen Parent Login
+│   └── register.html           # Register with Password Strength Meter
+│
+├── admin/
+│   ├── dashboard.html          # Modern SaaS Analytics Dashboard
+│   ├── students.html           # Student Roster & Filters
+│   ├── instructors.html        # Faculty & Schedule Manager
+│   ├── classes.html            # Course Capacity Monitor
+│   ├── orders.html             # Billing & Invoices Ledger
+│   ├── messages.html           # Parent Communication Inbox
+│   ├── events.html             # Exhibition Planner
+│   ├── blog.html               # Article Publishing CMS
+│   ├── reviews.html            # Parent Feedback Moderation
+│   ├── analytics.html          # Growth & Retention Charts
+│   └── settings.html           # Profile, Dark Mode & RTL Controls
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css           # Core Design Tokens & Components
+│   │   ├── responsive.css      # Breakpoints & Mobile Nav
+│   │   └── rtl.css             # Right-to-Left Layout Overrides
+│   ├── js/
+│   │   ├── main.js             # Nav, Theme, RTL, Pricing Toggle
+│   │   ├── animations.js       # Three.js 3D Hero & GSAP Timelines
+│   │   ├── filters.js          # Live Category & Blog Search
+│   │   ├── validation.js       # Form Validation & Toast Alerts
+│   │   └── dashboard.js        # Admin Charts & Inbox Logic
+│   └── images/                 # Optimized SVGs & Student Artwork
+        </div>
+      </section>
+
+      <section id="colors" style="margin-bottom: 3.5rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Customizing Color Tokens</h2>
+        <p style="color: var(--muted); margin-bottom: 1rem;">
+          All colors are defined as CSS Custom Properties in <code>assets/css/style.css</code>. Modify the root tokens to re-brand the template instantly:
+        </p>
+        <div class="code-block">
+:root {
+  --primary: #FF5C8A;    /* Primary Coral Pink */
+  --secondary: #6C63FF;  /* Royal Studio Purple */
+  --blue: #35C9FF;       /* Sky Blue */
+  --yellow: #FFD93D;     /* Bright Sun Yellow */
+  --orange: #FF8A3D;     /* Clay Orange */
+  --green: #48D597;      /* Mint Green */
+  --cream: #FFF9E9;      /* Warm Studio Canvas */
+  --dark: #242044;       /* Deep Navy Border/Text */
+}
+        </div>
+      </section>
+
+      <section id="threejs" style="margin-bottom: 3.5rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Three.js 3D Hero Customization</h2>
+        <p style="color: var(--muted); line-height: 1.6;">
+          The interactive 3D hero playground on Home 1 is defined in <code>assets/js/animations.js</code> inside <code>initThreeScene()</code>. It includes a custom extruded paint palette, floating paint brush, 3D pencil, and color spheres that respond smoothly to mouse parallax. It also includes an automatic fallback for mobile devices and non-WebGL environments.
+        </p>
+      </section>
+
+      <section id="rtl" style="margin-bottom: 3.5rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Enabling RTL Mode</h2>
+        <p style="color: var(--muted); line-height: 1.6;">
+          To enable Right-to-Left (RTL) mode for Arabic or Hebrew languages, simply set <code>dir="rtl"</code> on the root <code>&lt;html&gt;</code> element:
+        </p>
+        <div class="code-block">
+&lt;html lang="ar" dir="rtl"&gt;
+        </div>
+        <p style="color: var(--muted); line-height: 1.6;">
+          The template includes a persistent toggle button in the navbar that remembers the user's preference using <code>localStorage</code>.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+</body>
+</html>

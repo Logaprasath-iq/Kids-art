@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog CMS Posts Manager — Little Canvas Studio Admin</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="canonical" href="https://littlecanvas.example.com/admin/blog.html">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="admin-body">
+
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-logo">
+      <div class="brand-icon" style="width: 36px; height: 36px;"><i data-lucide="palette" style="width: 20px;"></i></div>
+      <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem;">Little<span class="text-gradient-pink">Studio</span></span>
+    </div>
+
+    <nav class="admin-nav-list">
+      <a href="dashboard.html" class="admin-nav-link"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a href="students.html" class="admin-nav-link"><i data-lucide="graduation-cap"></i> Students</a>
+      <a href="instructors.html" class="admin-nav-link"><i data-lucide="users"></i> Instructors</a>
+      <a href="classes.html" class="admin-nav-link"><i data-lucide="book-open"></i> Classes</a>
+      <a href="orders.html" class="admin-nav-link"><i data-lucide="credit-card"></i> Orders & Fees</a>
+      <a href="messages.html" class="admin-nav-link"><i data-lucide="message-square"></i> Messages <span class="badge-status trial" style="margin-left: auto;">3</span></a>
+      <a href="events.html" class="admin-nav-link"><i data-lucide="calendar"></i> Events</a>
+      <a href="blog.html" class="admin-nav-link active"><i data-lucide="file-text"></i> Blog Posts</a>
+      <a href="reviews.html" class="admin-nav-link"><i data-lucide="star"></i> Reviews</a>
+      <a href="analytics.html" class="admin-nav-link"><i data-lucide="bar-chart-2"></i> Analytics</a>
+      <a href="settings.html" class="admin-nav-link"><i data-lucide="settings"></i> Settings</a>
+    </nav>
+
+    <div style="padding: 1rem 1.5rem; border-top: 2px solid rgba(36, 32, 68, 0.06);">
+      <a href="../index.html" class="btn-toy btn-sm btn-white" style="width: 100%; justify-content: center;">
+        <i data-lucide="external-link" style="width: 14px;"></i> View Public Site
+      </a>
+    </div>
+  </aside>
+
+  <div class="admin-main-wrap">
+    <header class="admin-topbar">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="admin-sidebar-toggle" style="background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--text-main);">
+          <i data-lucide="menu"></i>
+        </button>
+        <h2 style="font-size: 1.25rem;">Blog Publishing CMS</h2>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
+        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3 4 7l4 4"/>
+          <path d="M4 7h16"/>
+          <path d="m16 21 4-4-4-4"/>
+          <path d="M20 17H4"/>
+        </svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border);">
+          <span style="font-weight: 700; font-size: 0.9rem;">Emma Wilson</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-content-area">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h1 style="font-size: 1.8rem;">Editorial Articles (6)</h1>
+          <p style="color: var(--muted); font-size: 0.9rem;">Draft, schedule, and optimize parenting and art education resources.</p>
+        </div>
+        <button class="btn-toy btn-pink btn-sm" onclick="window.showToast('Article editor opened', 'info');"><i data-lucide="edit"></i> Write New Article</button>
+      </div>
+
+      <div class="admin-card">
+        <div class="table-responsive-wrapper">
+          <table class="table-custom">
+            <thead>
+              <tr>
+                <th>Article Title</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Views</th>
+                <th>Comments</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Why Imperfection Is the Greatest Superpower</strong></td>
+                <td><span class="badge-sticker badge-pink" style="font-size: 0.7rem;">Creativity</span></td>
+                <td>Emma Wilson</td>
+                <td>1,842</td>
+                <td>3</td>
+                <td><span class="badge-status active">Published</span></td>
+                <td>Sep 04, 2026</td>
+                <td><a href="../blog-details.html" class="btn-toy btn-sm btn-white">View</a></td>
+              </tr>
+              <tr>
+                <td><strong>Watercolor vs Acrylic: Choosing the First Medium</strong></td>
+                <td><span class="badge-sticker badge-blue" style="font-size: 0.7rem;">Art Education</span></td>
+                <td>Daniel Lee</td>
+                <td>2,110</td>
+                <td>8</td>
+                <td><span class="badge-status active">Published</span></td>
+                <td>Aug 27, 2026</td>
+                <td><a href="../blog-details.html" class="btn-toy btn-sm btn-white">View</a></td>
+              </tr>
+              <tr>
+                <td><strong>Why Messy Hands Boost Brain Power</strong></td>
+                <td><span class="badge-sticker badge-green" style="font-size: 0.7rem;">Parenting</span></td>
+                <td>Aisha Khan</td>
+                <td>3,450</td>
+                <td>14</td>
+                <td><span class="badge-status active">Published</span></td>
+                <td>Aug 14, 2026</td>
+                <td><a href="../blog-details.html" class="btn-toy btn-sm btn-white">View</a></td>
+              </tr>
+              <tr>
+                <td><strong>5 Rainy-Day Papercraft Adventures</strong></td>
+                <td><span class="badge-sticker badge-yellow" style="font-size: 0.7rem;">Activities</span></td>
+                <td>Marcus Chen</td>
+                <td>980</td>
+                <td>2</td>
+                <td><span class="badge-status active">Published</span></td>
+                <td>Aug 03, 2026</td>
+                <td><a href="../blog-details.html" class="btn-toy btn-sm btn-white">View</a></td>
+              </tr>
+              <tr>
+                <td><strong>Pottery Kiln Glazes for Toddlers: Safety Guide</strong></td>
+                <td><span class="badge-sticker badge-purple" style="font-size: 0.7rem; color: #fff;">Ceramics</span></td>
+                <td>Marcus Chen</td>
+                <td>—</td>
+                <td>0</td>
+                <td><span class="badge-status trial">Draft</span></td>
+                <td>Scheduled</td>
+                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing draft', 'info');">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/validation.js"></script>
+</body>
+</html>

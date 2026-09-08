@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Little Canvas | Our Story & Philosophy</title>
+  <meta name="description" content="Learn about Little Canvas's journey since 2018. Discover our mission to inspire creative confidence in children through hands-on art education.">
+  <link rel="canonical" href="https://littlecanvas.example.com/about.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="header-main" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"><i data-lucide="palette"></i></div>
+        <span>Little<span class="text-gradient-pink">Canvas</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <div class="nav-dropdown-wrapper">
+          <a href="#" class="nav-link nav-dropdown-toggle">
+            Home <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+          </a>
+          <div class="dropdown-menu-custom">
+            <div class="dropdown-preview-grid">
+              <a href="index.html" class="dropdown-item-card">
+                <div class="dropdown-thumbnail"><img src="assets/images/preview-home-1.svg" alt="Playful Studio"></div>
+                <div class="dropdown-card-title">01. Playful Playground</div>
+                <div class="dropdown-card-desc">Interactive 3D brushes & tactile cards</div>
+              </a>
+              <a href="home-2.html" class="dropdown-item-card">
+                <div class="dropdown-thumbnail"><img src="assets/images/preview-home-2.svg" alt="Digital Academy"></div>
+                <div class="dropdown-card-title">02. Digital Art Academy</div>
+                <div class="dropdown-card-desc">iPad Pro illustration & game animation</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      
+        <div class="mobile-nav-cta" style="display: none; flex-direction: column; gap: 0.75rem; width: 100%; margin-top: 1rem; padding-top: 1rem; border-top: 2px dashed var(--border-light);">
+          <div style="display: flex; gap: 0.5rem; width: 100%;">
+            <a href="auth/login.html" class="btn-toy btn-white btn-sm" style="flex: 1; text-align: center;">Login</a>
+            <a href="auth/register.html" class="btn-toy btn-yellow btn-sm" style="flex: 1; text-align: center;">Sign Up</a>
+          </div>
+          <a href="contact.html" class="btn-toy btn-pink btn-sm" style="width: 100%; text-align: center;">Free Trial</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
+        <button class="rtl-toggle-btn" aria-label="Toggle Right-To-Left Layout" title="Toggle RTL">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3 4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="m16 21 4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+        <a href="auth/login.html" class="btn-toy btn-white btn-sm nav-auth-btn">Login</a>
+        <a href="auth/register.html" class="btn-toy btn-yellow btn-sm nav-auth-btn">Sign Up</a>
+        <a href="contact.html" class="btn-toy btn-pink btn-sm d-none d-md-flex">Free Trial</a>
+        <button class="mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <div class="hamburger-box">
+            <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Background Illustration -->
+  <section class="page-hero page-hero-about">
+    <div class="page-hero-bg" style="background-image: url('assets/images/about-hero.jpg');"></div>
+    <!-- Ambient Blobs -->
+    <div class="blob blob-pink" style="top: -80px; left: -100px; width: 340px; height: 340px;"></div>
+    <div class="blob blob-blue" style="top: 15%; right: -60px; width: 300px; height: 300px;"></div>
+    <div class="blob blob-yellow" style="bottom: -50px; left: 35%; width: 280px; height: 280px;"></div>
+
+    <div class="container">
+      <div class="page-hero-breadcrumb">
+        <a href="index.html">Home</a>
+        <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
+        <span>About Us</span>
+      </div>
+      <div style="margin-bottom: 1.25rem;">
+        <span class="badge-sticker badge-yellow">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> Our Creative Story
+        </span>
+      </div>
+      <h1 class="page-hero-title">
+        Where Messy Hands Build <br><span class="text-gradient-rainbow">Confident Hearts</span>.
+      </h1>
+      <p class="page-hero-desc">
+        Little Canvas was founded on a simple belief: every single child is born an artist. Our role isn't to force perfection, but to fan the flames of wonder and creative exploration.
+      </p>
+      <div class="page-hero-badges">
+        <span class="badge-sticker badge-pink"><i data-lucide="shield-check" style="width: 14px; height: 14px;"></i> 100% Non-Toxic Supplies</span>
+        <span class="badge-sticker badge-blue"><i data-lucide="users" style="width: 14px; height: 14px;"></i> 8:1 Student-Teacher Ratio</span>
+        <span class="badge-sticker badge-green"><i data-lucide="award" style="width: 14px; height: 14px;"></i> 500+ Proud Little Graduates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story & Vision -->
+  <section class="section-py" style="background: var(--white);">
+    <div class="container">
+      <div class="grid grid-2 items-center" style="gap: 4rem;">
+        <div>
+          <span class="badge-sticker badge-pink" style="margin-bottom: 1rem;">Since 2018</span>
+          <h2 class="section-title">From a Small Kitchen Table to a Thriving Studio</h2>
+          <p style="color: var(--muted); margin-bottom: 1.25rem; font-size: 1.05rem; line-height: 1.7;">
+            In 2018, artist and early childhood educator Emma Wilson hosted the very first Saturday morning art sessions for six neighborhood kids around her kitchen table. The giggles, spilled paints, and uninhibited creativity revealed a profound need: children wanted a space free from the pressure of letter grades.
+          </p>
+          <p style="color: var(--muted); margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.7;">
+            Today, Little Canvas has welcomed over 500 young creators, expanded into digital illustration labs, and hosted four city-wide children's exhibitions.
+          </p>
+
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <div>
+              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--primary);">100%</div>
+              <div style="color: var(--muted); font-weight: 700; font-size: 0.9rem;">Safe Non-Toxic Materials</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--secondary);">8:1</div>
+              <div style="color: var(--muted); font-weight: 700; font-size: 0.9rem;">Student-Teacher Ratio</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--green);">500+</div>
+              <div style="color: var(--muted); font-weight: 700; font-size: 0.9rem;">Proud Graduates</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collage-wrap">
+          <div class="collage-main-img">
+            <img src="assets/images/about1.jpg" alt="Our Studio">
+          </div>
+          <div class="collage-sub-img">
+            <img src="assets/images/about2.jpg" alt="Studio Workshop">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Timeline -->
+  <section class="section-py" style="background: var(--cream);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <span class="badge-sticker badge-blue" style="margin-bottom: 1rem;">Milestones</span>
+        <h2 class="section-title">Our Creative <span class="text-gradient-sun">Milestones</span></h2>
+        <p class="section-subtitle">How Little Canvas grew into a beloved creative haven for families.</p>
+      </div>
+
+      <div class="timeline-event-list">
+        <div class="timeline-event-card">
+          <div class="event-date-badge" style="background: var(--yellow);">
+            <div class="event-date-month">FOUNDED</div>
+            <div class="event-date-day">2018</div>
+          </div>
+          <div class="event-body">
+            <h3 class="event-title">The First Saturday Morning Workshop</h3>
+            <p class="event-location">Emma Wilson begins weekend acrylic sessions for 6 curious neighborhood children.</p>
+          </div>
+        </div>
+
+        <div class="timeline-event-card">
+          <div class="event-date-badge" style="background: var(--pink); color: #fff;">
+            <div class="event-date-month" style="color: #fff;">STUDIO</div>
+            <div class="event-date-day" style="color: #fff;">2020</div>
+          </div>
+          <div class="event-body">
+            <h3 class="event-title">First 100 Enrolled Students</h3>
+            <p class="event-location">Opening our dedicated 2,500 sq.ft sunlit studio with kiln ceramics and watercolor stations.</p>
+          </div>
+        </div>
+
+        <div class="timeline-event-card">
+          <div class="event-date-badge" style="background: var(--blue);">
+            <div class="event-date-month">TECH</div>
+            <div class="event-date-day" style="color: var(--secondary);">2022</div>
+          </div>
+          <div class="event-body">
+            <h3 class="event-title">Digital Art & Animation Program Launch</h3>
+            <p class="event-location">Introducing iPad Pro illustration labs and frame-by-frame 2D animation courses for older kids.</p>
+          </div>
+        </div>
+
+        <div class="timeline-event-card">
+          <div class="event-date-badge" style="background: var(--green);">
+            <div class="event-date-month">EXPAND</div>
+            <div class="event-date-day" style="color: var(--dark);">2024</div>
+          </div>
+          <div class="event-body">
+            <h3 class="event-title">Future Creative Lab Addition</h3>
+            <p class="event-location">Addition of a 3D low-poly modeling lab, papercraft studio, and student exhibition hall.</p>
+          </div>
+        </div>
+
+        <div class="timeline-event-card">
+          <div class="event-date-badge" style="background: var(--purple); color: #fff;">
+            <div class="event-date-month" style="color: #fff;">TODAY</div>
+            <div class="event-date-day" style="color: #fff;">2026</div>
+          </div>
+          <div class="event-body">
+            <h3 class="event-title">500+ Active Artists & Annual Civic Exhibition</h3>
+            <p class="event-location">Inspiring kids from across the city, hosting family festivals, and celebrating creative confidence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructors Section (Integrated into About Page) -->
+  <section class="section-py" id="instructors" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <span class="badge-sticker badge-purple" style="margin-bottom: 1rem;">
+          <i data-lucide="palette" style="width: 14px; height: 14px;"></i> Expert Faculty
+        </span>
+        <h2 class="section-title">Meet Our Inspiring <span class="text-gradient-sun">Art Instructors</span></h2>
+        <p class="section-subtitle">Our certified art mentors combine fine arts mastery with joyful, child-centered encouragement.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Instructor 1 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar-wrap">
+            <img src="assets/images/avatars/instructor-1.jpg" alt="Emma Wilson Portrait">
+          </div>
+          <h3 class="instructor-name">Emma Wilson</h3>
+          <div class="instructor-role">Founder & Watercolor Lead</div>
+          <div class="instructor-exp">8 Years Teaching Experience</div>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Specializing in nature illustration, botanical washes, and empowering early expressive confidence in ages 4-8.
+          </p>
+          <div class="instructor-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Instructor 2 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar-wrap">
+            <img src="assets/images/avatars/instructor-2.jpg" alt="Daniel Lee Portrait">
+          </div>
+          <h3 class="instructor-name">Daniel Lee</h3>
+          <div class="instructor-role">Digital Art & 2D Animation</div>
+          <div class="instructor-exp">6 Years Experience</div>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Former video game concept artist teaching Procreate character design, sprite sheet animation, and storytelling.
+          </p>
+          <div class="instructor-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Instructor 3 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar-wrap">
+            <img src="assets/images/avatars/instructor-3.jpg" alt="Aisha Khan Portrait">
+          </div>
+          <h3 class="instructor-name">Aisha Khan</h3>
+          <div class="instructor-role">Collage & Mixed Media</div>
+          <div class="instructor-exp">7 Years Experience</div>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Textile designer helping young students craft tactile paper sculptures, origami mobiles, and sensory art tapestries.
+          </p>
+          <div class="instructor-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Instructor 4 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar-wrap">
+            <img src="assets/images/avatars/instructor-4.jpg" alt="Marcus Chen Portrait">
+          </div>
+          <h3 class="instructor-name">Marcus Chen</h3>
+          <div class="instructor-role">Ceramics & Clay Sculpting</div>
+          <div class="instructor-exp">9 Years Experience</div>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Ceramicist and studio potter who guides kids through pinch-pots, coil building, character busts, and kiln glazes.
+          </p>
+          <div class="instructor-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Instructor 5 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar-wrap">
+            <img src="assets/images/avatars/instructor-5.jpg" alt="Elena Rostova Portrait">
+          </div>
+          <h3 class="instructor-name">Elena Rostova</h3>
+          <div class="instructor-role">Sketch & Classical Drawing</div>
+          <div class="instructor-exp">11 Years Experience</div>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Master illustrator teaching proportion, light-shadow transitions, foreshortening, and comic book penciling.
+          </p>
+          <div class="instructor-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Instructor 6 -->
+        <div class="instructor-card">
+          <div class="instructor-avatar-wrap">
+            <img src="assets/images/avatars/instructor-6.jpg" alt="Julian Brooks Portrait">
+          </div>
+          <h3 class="instructor-name">Julian Brooks</h3>
+          <div class="instructor-role">Sensory Art & Early Play</div>
+          <div class="instructor-exp">5 Years Experience</div>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Specialist in toddler motor skills, sensory dough, finger textures, and playful discovery for ages 3-5.
+          </p>
+          <div class="instructor-socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentorship Pillars -->
+  <section class="section-py" style="background: var(--cream);">
+    <div class="container text-center" style="max-width: 960px;">
+      <span class="badge-sticker badge-green" style="margin-bottom: 1rem;">Our Teaching Code</span>
+      <h2 class="section-title">The Three Pillars of Our <span class="text-gradient-sun">Mentorship</span></h2>
+      <p class="section-subtitle">How every instructor guides young artists toward genuine self-expression.</p>
+      <div class="grid grid-3" style="margin-top: 3rem; text-align: left;">
+        <div class="admin-card" style="border: 3px solid var(--border); box-shadow: 0 6px 0 var(--border);">
+          <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">👂</div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-family: var(--font-display);">We Listen First</h4>
+          <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">We ask kids what their painting means to them before offering a single brush suggestion.</p>
+        </div>
+        <div class="admin-card" style="border: 3px solid var(--border); box-shadow: 0 6px 0 var(--border);">
+          <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">💖</div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-family: var(--font-display);">Celebrate Quirks</h4>
+          <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">If a child wants a purple sun or a five-legged dog, we explore that imagination with absolute delight.</p>
+        </div>
+        <div class="admin-card" style="border: 3px solid var(--border); box-shadow: 0 6px 0 var(--border);">
+          <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🌱</div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-family: var(--font-display);">Real Techniques</h4>
+          <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">We teach genuine artistic vocabulary—pigment tones, composition, foreshortening, and texture techniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-py">
+    <div class="container">
+      <div class="cta-banner-wrap">
+        <h2>Come Tour the Little Canvas Studio</h2>
+        <p>Drop in for a warm cup of tea, meet our instructors, and let your child explore our tactile maker tables.</p>
+        <a href="contact.html" class="btn-toy btn-white">Schedule a Free Visit <i data-lucide="calendar"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: #fff; margin-bottom: 1.25rem;">
+            <div class="brand-icon"><i data-lucide="palette"></i></div>
+            <span>LittleCanvas</span>
+          </a>
+          <p style="color: #D1CCEC; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            A premier creative learning playground empowering kids aged 4-14 through tactile painting, drawing, sculpture, and digital storytelling.
+          </p>
+          <div class="footer-social-links" style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#FFFFFF" style="width: 18px; height: 18px; display: block;">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/15557892278" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M16.7 14.8c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5C9.4 8.7 8.8 7.3 8.5 6.7c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9 0 1.7 1.2 3.4 1.4 3.6.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.6-.4z" fill="#FFFFFF" stroke="none"/>
+                <path d="M12 21.8a9.8 9.8 0 0 1-5-1.4L2 22l1.6-4.9A9.8 9.8 0 1 1 12 21.8z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; display: block;">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#FFFFFF" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Programs -->
+        <div class="footer-col">
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="classes.html">Acrylic Painting</a></li>
+            <li><a href="classes.html">Watercolor Magic</a></li>
+            <li><a href="classes.html">Sketch & Comics</a></li>
+            <li><a href="classes.html">Digital Art Academy</a></li>
+            <li><a href="classes.html">Clay & Pottery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#instructors">Meet Faculty</a></li>
+            <li><a href="events.html">Art Exhibitions</a></li>
+            <li><a href="pricing.html">Tuition Plans</a></li>
+            <li><a href="contact.html">Studio Tours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Parenting & Art</a></li>
+            <li><a href="coming-soon.html">Summer Camps</a></li>
+            <li><a href="auth/login.html">Parent Portal</a></li>
+            <li><a href="admin/dashboard.html">Educator SaaS</a></li>
+            <li><a href="documentation/index.html">Documentation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div class="footer-col">
+          <h4>Creative Dispatch</h4>
+          <p style="color: #D1CCEC; font-size: 0.9rem; margin-bottom: 1rem;">Get monthly art prompts, coloring printables, and exhibition announcements.</p>
+          <form onsubmit="event.preventDefault(); this.reset(); window.showToast('Subscribed! Welcome to Little Canvas Club 🎨', 'success');" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email address" required style="padding: 0.7rem 1rem; border-radius: var(--radius-pill); border: 2px solid var(--border); font-size: 0.9rem; width: 100%;">
+            <button type="submit" class="btn-toy btn-pink btn-sm" style="flex-shrink: 0;">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Little Canvas Studio. All rights reserved. Crafted for ThemeForest.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/validation.js"></script>
+</body>
+</html>
