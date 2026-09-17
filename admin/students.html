@@ -52,13 +52,14 @@
 
       <div style="display: flex; align-items: center; gap: 1.25rem;">
         <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
-        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+        <button class="rtl-toggle-btn" style="height: 36px; padding: 0 0.65rem;" aria-label="Toggle RTL" title="Toggle RTL">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 3 4 7l4 4"/>
-          <path d="M4 7h16"/>
-          <path d="m16 21 4-4-4-4"/>
-          <path d="M20 17H4"/>
-        </svg>
+            <path d="M8 3 4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="m16 21 4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+          <span class="rtl-btn-text">RTL</span>
         </button>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border);">
@@ -113,80 +114,80 @@
             </thead>
             <tbody>
               <tr class="filterable-table-row" data-status="active">
-                <td><strong>Mia Thorne</strong></td>
-                <td>Rachel Green</td>
-                <td>7</td>
-                <td>Watercolor Splash & Flow</td>
+                <td><strong class="student-name">Mia Thorne</strong></td>
+                <td class="parent-name">Rachel Green</td>
+                <td class="student-age">7</td>
+                <td class="class-track">Watercolor Splash & Flow</td>
                 <td><span class="badge-status active">Active</span></td>
                 <td>Sep 02, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Mia record', 'info');">Edit</button>
+                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="active">
-                <td><strong>Arjun Patel</strong></td>
-                <td>Priya Patel</td>
-                <td>9</td>
-                <td>Creative Acrylic & Canvas</td>
+                <td><strong class="student-name">Arjun Patel</strong></td>
+                <td class="parent-name">Priya Patel</td>
+                <td class="student-age">9</td>
+                <td class="class-track">Creative Acrylic & Canvas</td>
                 <td><span class="badge-status active">Active</span></td>
                 <td>Aug 28, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Arjun record', 'info');">Edit</button>
+                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="trial">
-                <td><strong>Sara Brooks</strong></td>
-                <td>Julian Brooks</td>
-                <td>6</td>
-                <td>Paper Craft & Collage</td>
+                <td><strong class="student-name">Sara Brooks</strong></td>
+                <td class="parent-name">Julian Brooks</td>
+                <td class="student-age">6</td>
+                <td class="class-track">Paper Craft & Collage</td>
                 <td><span class="badge-status trial">Trial</span></td>
                 <td>Sep 04, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Sara completed trial class!', 'success');">Convert</button>
+                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="active">
-                <td><strong>Leo Zhang</strong></td>
-                <td>Wei Zhang</td>
-                <td>10</td>
-                <td>Digital Illustration & Procreate</td>
+                <td><strong class="student-name">Leo Zhang</strong></td>
+                <td class="parent-name">Wei Zhang</td>
+                <td class="student-age">10</td>
+                <td class="class-track">Digital Illustration & Procreate</td>
                 <td><span class="badge-status active">Active</span></td>
                 <td>Aug 15, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Leo record', 'info');">Edit</button>
+                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="inactive">
-                <td><strong>Chloe Miller</strong></td>
-                <td>David Miller</td>
-                <td>8</td>
-                <td>Ceramic Handbuilding & Clay</td>
+                <td><strong class="student-name">Chloe Miller</strong></td>
+                <td class="parent-name">David Miller</td>
+                <td class="student-age">8</td>
+                <td class="class-track">Ceramic Handbuilding & Clay</td>
                 <td><span class="badge-status inactive">Inactive</span></td>
                 <td>Jul 10, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Reactivated Chloe membership', 'success');">Resume</button>
+                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="active">
-                <td><strong>Lucas Jenkins</strong></td>
-                <td>Sarah Jenkins</td>
-                <td>5</td>
-                <td>Sensory Art & Color Play</td>
+                <td><strong class="student-name">Lucas Jenkins</strong></td>
+                <td class="parent-name">Sarah Jenkins</td>
+                <td class="student-age">5</td>
+                <td class="class-track">Sensory Art & Color Play</td>
                 <td><span class="badge-status active">Active</span></td>
                 <td>Jun 18, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Editing Lucas record', 'info');">Edit</button>
+                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="trial">
-                <td><strong>Maya Lin</strong></td>
-                <td>Kenneth Lin</td>
-                <td>8</td>
-                <td>Storybook Sketch & Form</td>
+                <td><strong class="student-name">Maya Lin</strong></td>
+                <td class="parent-name">Kenneth Lin</td>
+                <td class="student-age">8</td>
+                <td class="class-track">Storybook Sketch & Form</td>
                 <td><span class="badge-status trial">Trial</span></td>
                 <td>Sep 05, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white" onclick="window.showToast('Maya trial booked for Saturday', 'info');">Schedule</button>
+                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
                 </td>
               </tr>
             </tbody>
@@ -194,6 +195,53 @@
         </div>
       </div>
     </main>
+  </div>
+
+  <!-- Edit Student Modal -->
+  <div class="modal-backdrop" id="editStudentModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="user-pen" style="color: var(--primary);"></i>
+          <h3>Edit Student Record</h3>
+        </div>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close modal">&times;</button>
+      </div>
+      <form id="editStudentForm">
+        <div class="modal-body">
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="edit-student-name" style="font-weight: 700;">Student Name *</label>
+            <input type="text" id="edit-student-name" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="edit-parent-name" style="font-weight: 700;">Parent / Guardian Name *</label>
+            <input type="text" id="edit-parent-name" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="grid grid-2" style="gap: 1rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label class="form-label" for="edit-student-age" style="font-weight: 700;">Age</label>
+              <input type="number" id="edit-student-age" class="form-control" min="3" max="18" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-student-status" style="font-weight: 700;">Membership Status</label>
+              <select id="edit-student-status" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);">
+                <option value="active">Active</option>
+                <option value="trial">Trial</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-student-track" style="font-weight: 700;">Class Track</label>
+            <input type="text" id="edit-student-track" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-toy btn-white btn-sm" data-modal-close>Cancel</button>
+          <button type="submit" class="btn-toy btn-pink btn-sm"><i data-lucide="check"></i> Save Changes</button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script src="../assets/js/main.js"></script>

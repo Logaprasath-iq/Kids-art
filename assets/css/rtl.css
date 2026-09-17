@@ -8,6 +8,20 @@
   direction: rtl;
 }
 
+/* 1. Alignment Preservation */
+[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+[dir="rtl"] .text-center * {
+  text-align: center;
+}
+[dir="rtl"] .section-title,
+[dir="rtl"] .section-subtitle,
+[dir="rtl"] .hero-title {
+  letter-spacing: 0.01em;
+}
+
+/* 2. Navigation & Header */
 [dir="rtl"] .nav-menu {
   right: auto;
   left: 0;
@@ -18,13 +32,37 @@
   right: 0;
 }
 
-[dir="rtl"] .tape-strip {
-  transform: translateX(50%) rotate(2deg);
-}
-
 [dir="rtl"] .nav-link::after {
   left: auto;
   right: 0;
+}
+
+[dir="rtl"] .nav-actions {
+  flex-direction: row;
+}
+
+/* 3. Directional Icons & Arrows */
+[dir="rtl"] [data-lucide="arrow-right"],
+[dir="rtl"] [data-lucide="arrow-up-right"],
+[dir="rtl"] [data-lucide="chevron-right"],
+[dir="rtl"] svg.lucide-arrow-right,
+[dir="rtl"] svg.lucide-arrow-up-right,
+[dir="rtl"] svg.lucide-chevron-right,
+[dir="rtl"] .btn-toy [data-lucide="arrow-right"],
+[dir="rtl"] .btn-toy svg.lucide-arrow-right {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] [data-lucide="arrow-left"],
+[dir="rtl"] [data-lucide="chevron-left"],
+[dir="rtl"] svg.lucide-arrow-left,
+[dir="rtl"] svg.lucide-chevron-left {
+  transform: scaleX(-1);
+}
+
+/* 4. Visual Components & Badges */
+[dir="rtl"] .tape-strip {
+  transform: translateX(50%) rotate(-2deg);
 }
 
 [dir="rtl"] .class-category-badge {
@@ -52,6 +90,25 @@
   transform: translateX(-4px);
 }
 
+/* 5. Form Elements & Inputs */
+[dir="rtl"] input:not([type="checkbox"]):not([type="radio"]),
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .input-group-icon {
+  left: auto;
+  right: 16px;
+}
+
+[dir="rtl"] .input-group-with-icon input {
+  padding-left: 1rem;
+  padding-right: 2.75rem;
+}
+
+/* 6. Toast Notifications */
 [dir="rtl"] .toast-container {
   right: auto;
   left: 24px;
@@ -75,7 +132,21 @@
   border-right: 10px solid var(--primary);
 }
 
-/* Admin Dashboard RTL */
+[dir="rtl"] .toast-info {
+  border-left: 3px solid var(--border);
+  border-right: 10px solid var(--secondary);
+}
+
+/* 7. Modal Dialogs in RTL */
+[dir="rtl"] .modal-header {
+  flex-direction: row;
+}
+
+[dir="rtl"] .modal-footer {
+  justify-content: flex-start;
+}
+
+/* 8. Admin Dashboard RTL */
 [dir="rtl"] .admin-sidebar {
   border-right: none;
   border-left: 2px solid rgba(36, 32, 68, 0.08);
@@ -84,10 +155,20 @@
   border-left-color: rgba(255, 255, 255, 0.08);
 }
 
-[dir="rtl"] .table-custom th {
+[dir="rtl"] .table-custom th,
+[dir="rtl"] .table-custom td {
   text-align: right;
 }
 
+[dir="rtl"] .admin-header {
+  flex-direction: row;
+}
+
+[dir="rtl"] .inbox-message-row {
+  text-align: right;
+}
+
+/* 9. Mobile Breakpoints */
 @media (max-width: 991px) {
   [dir="rtl"] .nav-menu {
     right: auto;
@@ -100,6 +181,10 @@
 
   [dir="rtl"] .nav-menu.open {
     transform: translateX(0);
+  }
+
+  [dir="rtl"] .mobile-nav-header {
+    flex-direction: row;
   }
 
   [dir="rtl"] .admin-sidebar {

@@ -73,13 +73,14 @@
       <div class="nav-actions">
         <button class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
         <button class="rtl-toggle-btn" aria-label="Toggle Right-To-Left Layout" title="Toggle RTL">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 3 4 7l4 4"/>
-          <path d="M4 7h16"/>
-          <path d="m16 21 4-4-4-4"/>
-          <path d="M20 17H4"/>
-        </svg>
-      </button>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3 4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="m16 21 4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+          <span class="rtl-btn-text">RTL</span>
+        </button>
         <a href="auth/login.html" class="btn-toy btn-white btn-sm nav-auth-btn">Login</a>
         <a href="auth/register.html" class="btn-toy btn-yellow btn-sm nav-auth-btn">Sign Up</a>
         <a href="contact.html" class="btn-toy btn-pink btn-sm d-none d-md-flex">Free Trial</a>
@@ -152,8 +153,8 @@
             <div class="grid grid-2" style="gap: 1rem; margin-bottom: 1rem;">
               <div class="form-group">
                 <label class="form-label" for="contact-phone">Phone Number *</label>
-                <input type="tel" id="contact-phone" class="form-control" placeholder="(555) 234-5678" required>
-                <div class="error-message">Please enter your phone number.</div>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="(555) 234-5678" pattern="[\+]?[0-9\-\(\)\s]{7,16}" required>
+                <div class="error-message">Please enter a valid phone number (digits only, min 7 digits, no alphabets).</div>
               </div>
               <div class="form-group">
                 <label class="form-label" for="contact-age">Child's Age *</label>

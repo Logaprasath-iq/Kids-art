@@ -61,13 +61,14 @@
 
       <div style="display: flex; align-items: center; gap: 1.25rem;">
         <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
-        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+        <button class="rtl-toggle-btn" style="height: 36px; padding: 0 0.65rem;" aria-label="Toggle RTL" title="Toggle RTL">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 3 4 7l4 4"/>
-          <path d="M4 7h16"/>
-          <path d="m16 21 4-4-4-4"/>
-          <path d="M20 17H4"/>
-        </svg>
+            <path d="M8 3 4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="m16 21 4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+          <span class="rtl-btn-text">RTL</span>
         </button>
         
         <div style="position: relative; cursor: pointer;" onclick="window.showToast('You have 3 unread parent messages', 'info');">

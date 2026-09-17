@@ -52,13 +52,14 @@
 
       <div style="display: flex; align-items: center; gap: 1.25rem;">
         <button class="theme-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle Theme"><i data-lucide="moon" style="width: 16px;"></i></button>
-        <button class="rtl-toggle-btn" style="width: 36px; height: 36px;" aria-label="Toggle RTL" title="Toggle RTL">
+        <button class="rtl-toggle-btn" style="height: 36px; padding: 0 0.65rem;" aria-label="Toggle RTL" title="Toggle RTL">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 3 4 7l4 4"/>
-          <path d="M4 7h16"/>
-          <path d="m16 21 4-4-4-4"/>
-          <path d="M20 17H4"/>
-        </svg>
+            <path d="M8 3 4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="m16 21 4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+          <span class="rtl-btn-text">RTL</span>
         </button>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
           <img src="../assets/images/avatars/instructor-1.svg" alt="Emma Wilson" style="width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border);">
@@ -92,61 +93,153 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><strong>#INV-2026-881</strong></td>
-                <td>Rachel Green</td>
-                <td>Creative Kids (Monthly)</td>
-                <td><strong>$49.00</strong></td>
-                <td>Visa •••• 4242</td>
-                <td><span class="badge-status active">Paid</span></td>
-                <td>Sep 01, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Generating PDF receipt for #881', 'info');">View</button></td>
+              <tr class="order-table-row">
+                <td class="order-inv"><strong>#INV-2026-881</strong></td>
+                <td class="order-parent">Rachel Green</td>
+                <td class="order-item">Creative Kids (Monthly)</td>
+                <td class="order-amount"><strong>$49.00</strong></td>
+                <td class="order-method">Visa •••• 4242</td>
+                <td><span class="badge-status active order-status">Paid</span></td>
+                <td class="order-date">Sep 01, 2026</td>
+                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
               </tr>
-              <tr>
-                <td><strong>#INV-2026-880</strong></td>
-                <td>Wei Zhang</td>
-                <td>Artist Pro (Monthly)</td>
-                <td><strong>$89.00</strong></td>
-                <td>Apple Pay</td>
-                <td><span class="badge-status active">Paid</span></td>
-                <td>Sep 01, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Generating PDF receipt for #880', 'info');">View</button></td>
+              <tr class="order-table-row">
+                <td class="order-inv"><strong>#INV-2026-880</strong></td>
+                <td class="order-parent">Wei Zhang</td>
+                <td class="order-item">Artist Pro (Monthly)</td>
+                <td class="order-amount"><strong>$89.00</strong></td>
+                <td class="order-method">Apple Pay</td>
+                <td><span class="badge-status active order-status">Paid</span></td>
+                <td class="order-date">Sep 01, 2026</td>
+                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
               </tr>
-              <tr>
-                <td><strong>#INV-2026-879</strong></td>
-                <td>Priya Patel</td>
-                <td>Creative Kids (Annual)</td>
-                <td><strong>$468.00</strong></td>
-                <td>MasterCard •••• 1092</td>
-                <td><span class="badge-status active">Paid</span></td>
-                <td>Aug 30, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Generating PDF receipt for #879', 'info');">View</button></td>
+              <tr class="order-table-row">
+                <td class="order-inv"><strong>#INV-2026-879</strong></td>
+                <td class="order-parent">Priya Patel</td>
+                <td class="order-item">Creative Kids (Annual)</td>
+                <td class="order-amount"><strong>$468.00</strong></td>
+                <td class="order-method">MasterCard •••• 1092</td>
+                <td><span class="badge-status active order-status">Paid</span></td>
+                <td class="order-date">Aug 30, 2026</td>
+                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
               </tr>
-              <tr>
-                <td><strong>#INV-2026-878</strong></td>
-                <td>Julian Brooks</td>
-                <td>Clay Workshop Pack</td>
-                <td><strong>$120.00</strong></td>
-                <td>Google Pay</td>
-                <td><span class="badge-status active">Paid</span></td>
-                <td>Aug 29, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Generating PDF receipt for #878', 'info');">View</button></td>
+              <tr class="order-table-row">
+                <td class="order-inv"><strong>#INV-2026-878</strong></td>
+                <td class="order-parent">Julian Brooks</td>
+                <td class="order-item">Clay Workshop Pack</td>
+                <td class="order-amount"><strong>$120.00</strong></td>
+                <td class="order-method">Google Pay</td>
+                <td><span class="badge-status active order-status">Paid</span></td>
+                <td class="order-date">Aug 29, 2026</td>
+                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
               </tr>
-              <tr>
-                <td><strong>#INV-2026-877</strong></td>
-                <td>Kenneth Lin</td>
-                <td>Acrylic Weekend Pass</td>
-                <td><strong>$45.00</strong></td>
-                <td>Visa •••• 8831</td>
-                <td><span class="badge-status trial">Pending</span></td>
-                <td>Aug 29, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white" onclick="window.showToast('Resent payment reminder to Kenneth', 'success');">Retry</button></td>
+              <tr class="order-table-row">
+                <td class="order-inv"><strong>#INV-2026-877</strong></td>
+                <td class="order-parent">Kenneth Lin</td>
+                <td class="order-item">Acrylic Weekend Pass</td>
+                <td class="order-amount"><strong>$45.00</strong></td>
+                <td class="order-method">Visa •••• 8831</td>
+                <td><span class="badge-status trial order-status">Pending</span></td>
+                <td class="order-date">Aug 29, 2026</td>
+                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </main>
+  </div>
+
+  <!-- Receipt View Modal -->
+  <div class="modal-backdrop" id="receiptModal">
+    <div class="modal-dialog" style="max-width: 640px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <div class="brand-icon" style="width: 32px; height: 32px;"><i data-lucide="palette" style="width: 18px; height: 18px;"></i></div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin: 0;">Payment Receipt & Tax Invoice</h3>
+            <span style="font-size: 0.8rem; color: var(--muted);" id="receipt-modal-inv">#INV-2026-881</span>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close receipt">&times;</button>
+      </div>
+      <div class="modal-body" id="receipt-printable-area">
+        <!-- Studio & Meta Header -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px dashed rgba(36,32,68,0.15); padding-bottom: 1.25rem; margin-bottom: 1.25rem;">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--text-main);">Little Canvas Studio</div>
+            <div style="font-size: 0.85rem; color: var(--muted); line-height: 1.4;">
+              142 Art Haven Way, Studio 4B<br>
+              Creativity City, CA 90210<br>
+              VAT / Tax ID: #LC-948271
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <div id="receipt-modal-status" class="badge-status active" style="font-size: 0.85rem; padding: 0.35rem 0.85rem; display: inline-block; margin-bottom: 0.5rem;">Paid</div>
+            <div style="font-size: 0.82rem; color: var(--muted);">Date: <strong id="receipt-modal-date" style="color: var(--text-main);">Sep 01, 2026</strong></div>
+          </div>
+        </div>
+
+        <!-- Parent Info -->
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 0.9rem;">
+          <div>
+            <div style="color: var(--muted); font-size: 0.8rem; text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Billed To:</div>
+            <strong id="receipt-modal-parent" style="font-size: 1rem; color: var(--text-main);">Rachel Green</strong>
+            <div style="color: var(--muted); font-size: 0.85rem;">Family Membership Account</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="color: var(--muted); font-size: 0.8rem; text-transform: uppercase; font-weight: 700; margin-bottom: 0.25rem;">Payment Method:</div>
+            <strong id="receipt-modal-method" style="font-size: 0.95rem; color: var(--text-main);">Visa •••• 4242</strong>
+            <div style="color: var(--green); font-size: 0.85rem; font-weight: 700;">Transaction Verified</div>
+          </div>
+        </div>
+
+        <!-- Itemized Line Table -->
+        <div style="background: rgba(36,32,68,0.03); border: 1px solid rgba(36,32,68,0.08); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid rgba(36,32,68,0.1); text-align: left; color: var(--muted); font-size: 0.8rem; text-transform: uppercase;">
+                <th style="padding-bottom: 0.5rem;">Item / Course Program</th>
+                <th style="padding-bottom: 0.5rem; text-align: center;">Qty</th>
+                <th style="padding-bottom: 0.5rem; text-align: right;">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 0.75rem 0;" id="receipt-modal-item-name">Creative Kids (Monthly)</td>
+                <td style="padding: 0.75rem 0; text-align: center;">1</td>
+                <td style="padding: 0.75rem 0; text-align: right;" id="receipt-modal-item-price">$49.00</td>
+              </tr>
+              <tr style="border-top: 1px solid rgba(36,32,68,0.08); color: var(--muted);">
+                <td style="padding: 0.5rem 0;">Subtotal</td>
+                <td style="text-align: center;">-</td>
+                <td style="text-align: right;" id="receipt-modal-subtotal">$49.00</td>
+              </tr>
+              <tr style="color: var(--muted);">
+                <td style="padding: 0.25rem 0;">Studio Tax (0%)</td>
+                <td style="text-align: center;">-</td>
+                <td style="text-align: right;">$0.00</td>
+              </tr>
+              <tr style="border-top: 2px solid var(--border); font-size: 1.05rem; font-weight: 800; color: var(--primary);">
+                <td style="padding: 0.75rem 0;">Total Paid</td>
+                <td style="text-align: center;">-</td>
+                <td style="text-align: right;" id="receipt-modal-total">$49.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="font-size: 0.82rem; color: var(--muted); text-align: center; line-height: 1.5;">
+          🎨 Thank you for nurturing your child's creativity at Little Canvas!<br>
+          Questions about this invoice? Email us at <strong style="color: var(--text-main);">billing@littlecanvas.example.com</strong>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-toy btn-white btn-sm" data-modal-close>Close</button>
+        <button type="button" class="btn-toy btn-pink btn-sm" onclick="window.print();"><i data-lucide="printer"></i> Print / PDF Receipt</button>
+      </div>
+    </div>
   </div>
 
   <script src="../assets/js/main.js"></script>

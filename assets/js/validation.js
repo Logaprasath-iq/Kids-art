@@ -36,33 +36,54 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 1. CONTACT FORM VALIDATION ---
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
+    const name = contactForm.querySelector('#contact-name');
+    const email = contactForm.querySelector('#contact-email');
+    const phone = contactForm.querySelector('#contact-phone');
+    const age = contactForm.querySelector('#contact-age');
+    const course = contactForm.querySelector('#contact-course');
+    const message = contactForm.querySelector('#contact-message');
+
+    // Strict phone validator: rejects alphabetic letters, spaces-only, requires valid phone symbols and 7-15 digits
+    const isPhoneValid = (val) => {
+      const trimmed = (val || '').trim();
+      if (!trimmed) return false;
+      if (/[a-zA-Z]/.test(trimmed)) return false;
+      if (!/^[\+]?[(]?[0-9]{1,4}[)]?[-\s\./0-9]{5,15}$/.test(trimmed)) return false;
+      const digits = trimmed.replace(/\D/g, '');
+      return digits.length >= 7 && digits.length <= 15;
+    };
+
+    // Helper validator
+    const validateField = (input, condition) => {
+      if (!condition) {
+        input.classList.add('is-invalid');
+        return false;
+      } else {
+        input.classList.remove('is-invalid');
+        return true;
+      }
+    };
+
+    if (phone) {
+      phone.addEventListener('input', () => {
+        if (phone.value.trim().length > 0) {
+          validateField(phone, isPhoneValid(phone.value));
+        } else {
+          phone.classList.remove('is-invalid');
+        }
+      });
+    }
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       let isValid = true;
 
-      const name = contactForm.querySelector('#contact-name');
-      const email = contactForm.querySelector('#contact-email');
-      const phone = contactForm.querySelector('#contact-phone');
-      const age = contactForm.querySelector('#contact-age');
-      const course = contactForm.querySelector('#contact-course');
-      const message = contactForm.querySelector('#contact-message');
-
-      // Helper validator
-      const validateField = (input, condition) => {
-        if (!condition) {
-          input.classList.add('is-invalid');
-          isValid = false;
-        } else {
-          input.classList.remove('is-invalid');
-        }
-      };
-
-      if (name) validateField(name, name.value.trim().length >= 2);
-      if (email) validateField(email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
-      if (phone) validateField(phone, phone.value.trim().length >= 7);
-      if (age) validateField(age, age.value.trim() !== '');
-      if (course) validateField(course, course.value.trim() !== '');
-      if (message) validateField(message, message.value.trim().length >= 5);
+      if (name && !validateField(name, name.value.trim().length >= 2)) isValid = false;
+      if (email && !validateField(email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()))) isValid = false;
+      if (phone && !validateField(phone, isPhoneValid(phone.value))) isValid = false;
+      if (age && !validateField(age, age.value.trim() !== '')) isValid = false;
+      if (course && !validateField(course, course.value.trim() !== '')) isValid = false;
+      if (message && !validateField(message, message.value.trim().length >= 5)) isValid = false;
 
       if (isValid) {
         contactForm.reset();
@@ -73,37 +94,93 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 2. AUTHENTICATION FORMS VALIDATION ---
+  // --- 2. AUTHENTICATION FORMS VALIDATION (REGISTER & LOGIN WITH PASSWORD MATCHING) ---
+  const defaultDemoAccounts = {
+    'sarah@example.com': 'Password123',
+    'parent@example.com': 'Password123'
+  };
+
+  const getRegisteredUsers = () => {
+    try {
+      return JSON.parse(localStorage.getItem('littleCanvasUsers') || '{}');
+    } catch (e) {
+      return {};
+    }
+  };
+
+  const saveRegisteredUser = (user) => {
+    const users = getRegisteredUsers();
+    users[user.email.toLowerCase()] = user;
+    localStorage.setItem('littleCanvasUsers', JSON.stringify(users));
+    localStorage.setItem('littleCanvasLastRegisteredEmail', user.email.toLowerCase());
+  };
+
   const loginForm = document.getElementById('login-form');
   if (loginForm) {
+    const loginEmailInput = loginForm.querySelector('#login-email');
+    const lastEmail = localStorage.getItem('littleCanvasLastRegisteredEmail');
+    if (lastEmail && loginEmailInput && !loginEmailInput.value) {
+      loginEmailInput.value = lastEmail;
+    }
+
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = loginForm.querySelector('#login-email');
       const password = loginForm.querySelector('#login-password');
       let isValid = true;
 
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      const emailVal = email ? email.value.trim().toLowerCase() : '';
+      const passVal = password ? password.value : '';
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
         email?.classList.add('is-invalid');
         isValid = false;
       } else {
         email?.classList.remove('is-invalid');
       }
 
-      if (!password || password.value.length < 6) {
+      if (!password || passVal.length < 6) {
         password?.classList.add('is-invalid');
         isValid = false;
       } else {
         password?.classList.remove('is-invalid');
       }
 
-      if (isValid) {
-        window.showToast('Welcome back to Little Canvas! Redirecting...', 'success');
-        setTimeout(() => {
-          window.location.href = '../admin/dashboard.html';
-        }, 1200);
-      } else {
-        window.showToast('Invalid email or password. Please try again.', 'error');
+      if (!isValid) {
+        window.showToast('Please enter a valid email and password (min 6 characters).', 'error');
+        return;
       }
+
+      // Strict account & password verification
+      const registeredUsers = getRegisteredUsers();
+      let expectedPassword = null;
+      let userName = 'Parent';
+
+      if (registeredUsers[emailVal]) {
+        expectedPassword = registeredUsers[emailVal].password;
+        userName = registeredUsers[emailVal].name || 'Parent';
+      } else if (defaultDemoAccounts[emailVal]) {
+        expectedPassword = defaultDemoAccounts[emailVal];
+        userName = 'Sarah Jenkins';
+      }
+
+      if (!expectedPassword) {
+        email?.classList.add('is-invalid');
+        window.showToast('No account found with this email. Please sign up first.', 'error');
+        return;
+      }
+
+      if (passVal !== expectedPassword) {
+        password?.classList.add('is-invalid');
+        window.showToast('Incorrect password! Please enter the password you registered with.', 'error');
+        return;
+      }
+
+      // Password matches successfully!
+      window.showToast(`Welcome back, ${userName}! Redirecting to studio overview...`, 'success');
+      setTimeout(() => {
+        window.location.href = '../admin/dashboard.html';
+      }, 1000);
     });
   }
 
@@ -146,6 +223,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (isValid) {
+        saveRegisteredUser({
+          name: name.value.trim(),
+          email: email.value.trim(),
+          password: pass.value
+        });
         window.showToast('Account created successfully! Welcome aboard 🎨', 'success');
         setTimeout(() => {
           window.location.href = 'login.html';
@@ -199,7 +281,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 4. MODALS HELPER ---
+  // --- 4. BLOG STUDIO PROMPTS NEWSLETTER VALIDATION ---
+  const promptsForm = document.getElementById('studio-prompts-form');
+  if (promptsForm) {
+    const emailInput = promptsForm.querySelector('#prompts-email');
+    const errorMsg = promptsForm.querySelector('#prompts-email-error');
+
+    promptsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = emailInput ? emailInput.value.trim() : '';
+      const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
+
+      if (!val || !val.includes('@') || !emailPattern.test(val)) {
+        if (emailInput) emailInput.classList.add('is-invalid');
+        if (errorMsg) errorMsg.style.display = 'block';
+        window.showToast('Please enter a valid email address with "@" and domain.', 'error');
+        return;
+      }
+
+      if (emailInput) emailInput.classList.remove('is-invalid');
+      if (errorMsg) errorMsg.style.display = 'none';
+      promptsForm.reset();
+      window.showToast('🎉 Subscribed! Friday art prompts sent to ' + val.toLowerCase(), 'success');
+    });
+
+    if (emailInput) {
+      emailInput.addEventListener('input', () => {
+        if (errorMsg && errorMsg.style.display === 'block') {
+          errorMsg.style.display = 'none';
+          emailInput.classList.remove('is-invalid');
+        }
+      });
+    }
+  }
+
+  // --- 5. MODALS HELPER ---
   const modalTriggers = document.querySelectorAll('[data-modal-target]');
   const modalCloses = document.querySelectorAll('[data-modal-close]');
 
@@ -216,5 +332,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const modal = btn.closest('.modal-backdrop');
       if (modal) modal.style.display = 'none';
     });
+  });
+
+  // Close modals on clicking backdrop background
+  const modalBackdrops = document.querySelectorAll('.modal-backdrop');
+  modalBackdrops.forEach(backdrop => {
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) {
+        backdrop.style.display = 'none';
+      }
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modalBackdrops.forEach(m => {
+        m.style.display = 'none';
+      });
+    }
   });
 });

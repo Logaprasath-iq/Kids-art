@@ -146,8 +146,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const rtlToggleBtns = document.querySelectorAll('.rtl-toggle-btn');
   const currentDir = localStorage.getItem('littleCanvasDir') || 'ltr';
 
+  const updateRtlButtons = (isRtl) => {
+    rtlToggleBtns.forEach(btn => {
+      const textSpan = btn.querySelector('.rtl-btn-text') || btn.querySelector('span');
+      if (textSpan) {
+        textSpan.textContent = isRtl ? 'LTR' : 'RTL';
+      }
+      btn.setAttribute('title', isRtl ? 'Switch to Left-to-Right' : 'Switch to Right-to-Left');
+      btn.setAttribute('aria-label', isRtl ? 'Switch to Left-to-Right' : 'Switch to Right-to-Left');
+    });
+  };
+
   if (currentDir === 'rtl') {
     document.documentElement.setAttribute('dir', 'rtl');
+    updateRtlButtons(true);
+  } else {
+    updateRtlButtons(false);
   }
 
   rtlToggleBtns.forEach(btn => {
@@ -156,9 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isRtl) {
         document.documentElement.removeAttribute('dir');
         localStorage.setItem('littleCanvasDir', 'ltr');
+        updateRtlButtons(false);
       } else {
         document.documentElement.setAttribute('dir', 'rtl');
         localStorage.setItem('littleCanvasDir', 'rtl');
+        updateRtlButtons(true);
       }
     });
   });

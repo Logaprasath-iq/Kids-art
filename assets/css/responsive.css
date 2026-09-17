@@ -352,9 +352,16 @@ html, body {
     gap: 0.45rem;
   }
 
-  .theme-toggle-btn, .rtl-toggle-btn {
+  .theme-toggle-btn {
     width: 38px;
     height: 38px;
+  }
+
+  .rtl-toggle-btn {
+    height: 38px;
+    padding: 0 0.65rem;
+    font-size: 0.82rem;
+    gap: 0.35rem;
   }
 
   .hero-title {
@@ -570,14 +577,21 @@ html, body {
     gap: 0.35rem;
   }
 
-  .theme-toggle-btn, .rtl-toggle-btn {
+  .theme-toggle-btn {
     width: 32px;
     height: 32px;
   }
 
+  .rtl-toggle-btn {
+    height: 32px;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+    gap: 0.3rem;
+  }
+
   .theme-toggle-btn i, .rtl-toggle-btn svg {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
   }
 
   .mobile-toggle-btn {
