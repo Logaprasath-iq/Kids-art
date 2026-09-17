@@ -65,7 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     if (phone) {
+      // 1. Block alphabetic and disallowed keys on keypress
+      phone.addEventListener('keypress', (e) => {
+        if (e.ctrlKey || e.altKey || e.metaKey) return;
+        if (!/[0-9\+\-\(\)\s]/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+
+      // 2. Strip any alphabetic characters immediately on input / paste
       phone.addEventListener('input', () => {
+        const clean = phone.value.replace(/[^0-9\+\-\(\)\s]/g, '');
+        if (phone.value !== clean) {
+          phone.value = clean;
+        }
+
         if (phone.value.trim().length > 0) {
           validateField(phone, isPhoneValid(phone.value));
         } else {

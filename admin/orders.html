@@ -69,12 +69,15 @@
     </header>
 
     <main class="admin-content-area">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h1 style="font-size: 1.8rem;">Studio Billing & Transactions</h1>
           <p style="color: var(--muted); font-size: 0.9rem;">Review automated Stripe monthly memberships and workshop invoices.</p>
         </div>
-        <button class="btn-toy btn-pink btn-sm" onclick="window.showToast('Exporting CSV transaction ledger...', 'info');"><i data-lucide="download"></i> Download CSV</button>
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button type="button" class="btn-toy btn-purple btn-sm" id="btn-open-create-order"><i data-lucide="plus-circle"></i> Create Invoice</button>
+          <button type="button" class="btn-toy btn-pink btn-sm" onclick="window.showToast('Exporting CSV transaction ledger...', 'info');"><i data-lucide="download"></i> Download CSV</button>
+        </div>
       </div>
 
       <div class="admin-card">
@@ -89,7 +92,7 @@
                 <th>Method</th>
                 <th>Status</th>
                 <th>Date</th>
-                <th>Receipt</th>
+                <th style="min-width: 230px;">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -101,7 +104,14 @@
                 <td class="order-method">Visa •••• 4242</td>
                 <td><span class="badge-status active order-status">Paid</span></td>
                 <td class="order-date">Sep 01, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
+                <td>
+                  <div style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" class="btn-toy btn-sm btn-white view-receipt-btn" title="View Receipt" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="receipt" style="width: 13px;"></i> View</button>
+                    <button type="button" class="btn-toy btn-sm btn-blue download-invoice-btn" title="Download Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="download" style="width: 13px;"></i> DL</button>
+                    <button type="button" class="btn-toy btn-sm btn-white edit-order-btn" title="Edit Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="edit-3" style="width: 13px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-order-btn" title="Delete Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem; color: #FF5C5C;"><i data-lucide="trash-2" style="width: 13px;"></i></button>
+                  </div>
+                </td>
               </tr>
               <tr class="order-table-row">
                 <td class="order-inv"><strong>#INV-2026-880</strong></td>
@@ -111,7 +121,14 @@
                 <td class="order-method">Apple Pay</td>
                 <td><span class="badge-status active order-status">Paid</span></td>
                 <td class="order-date">Sep 01, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
+                <td>
+                  <div style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" class="btn-toy btn-sm btn-white view-receipt-btn" title="View Receipt" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="receipt" style="width: 13px;"></i> View</button>
+                    <button type="button" class="btn-toy btn-sm btn-blue download-invoice-btn" title="Download Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="download" style="width: 13px;"></i> DL</button>
+                    <button type="button" class="btn-toy btn-sm btn-white edit-order-btn" title="Edit Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="edit-3" style="width: 13px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-order-btn" title="Delete Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem; color: #FF5C5C;"><i data-lucide="trash-2" style="width: 13px;"></i></button>
+                  </div>
+                </td>
               </tr>
               <tr class="order-table-row">
                 <td class="order-inv"><strong>#INV-2026-879</strong></td>
@@ -121,7 +138,14 @@
                 <td class="order-method">MasterCard •••• 1092</td>
                 <td><span class="badge-status active order-status">Paid</span></td>
                 <td class="order-date">Aug 30, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
+                <td>
+                  <div style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" class="btn-toy btn-sm btn-white view-receipt-btn" title="View Receipt" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="receipt" style="width: 13px;"></i> View</button>
+                    <button type="button" class="btn-toy btn-sm btn-blue download-invoice-btn" title="Download Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="download" style="width: 13px;"></i> DL</button>
+                    <button type="button" class="btn-toy btn-sm btn-white edit-order-btn" title="Edit Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="edit-3" style="width: 13px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-order-btn" title="Delete Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem; color: #FF5C5C;"><i data-lucide="trash-2" style="width: 13px;"></i></button>
+                  </div>
+                </td>
               </tr>
               <tr class="order-table-row">
                 <td class="order-inv"><strong>#INV-2026-878</strong></td>
@@ -131,7 +155,14 @@
                 <td class="order-method">Google Pay</td>
                 <td><span class="badge-status active order-status">Paid</span></td>
                 <td class="order-date">Aug 29, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
+                <td>
+                  <div style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" class="btn-toy btn-sm btn-white view-receipt-btn" title="View Receipt" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="receipt" style="width: 13px;"></i> View</button>
+                    <button type="button" class="btn-toy btn-sm btn-blue download-invoice-btn" title="Download Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="download" style="width: 13px;"></i> DL</button>
+                    <button type="button" class="btn-toy btn-sm btn-white edit-order-btn" title="Edit Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="edit-3" style="width: 13px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-order-btn" title="Delete Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem; color: #FF5C5C;"><i data-lucide="trash-2" style="width: 13px;"></i></button>
+                  </div>
+                </td>
               </tr>
               <tr class="order-table-row">
                 <td class="order-inv"><strong>#INV-2026-877</strong></td>
@@ -141,7 +172,14 @@
                 <td class="order-method">Visa •••• 8831</td>
                 <td><span class="badge-status trial order-status">Pending</span></td>
                 <td class="order-date">Aug 29, 2026</td>
-                <td><button class="btn-toy btn-sm btn-white view-receipt-btn" data-modal-target="receiptModal"><i data-lucide="receipt" style="width: 14px;"></i> View</button></td>
+                <td>
+                  <div style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" class="btn-toy btn-sm btn-white view-receipt-btn" title="View Receipt" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="receipt" style="width: 13px;"></i> View</button>
+                    <button type="button" class="btn-toy btn-sm btn-blue download-invoice-btn" title="Download Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="download" style="width: 13px;"></i> DL</button>
+                    <button type="button" class="btn-toy btn-sm btn-white edit-order-btn" title="Edit Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem;"><i data-lucide="edit-3" style="width: 13px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-order-btn" title="Delete Invoice" style="padding: 0.35rem 0.65rem; font-size: 0.8rem; gap: 0.3rem; color: #FF5C5C;"><i data-lucide="trash-2" style="width: 13px;"></i></button>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -237,8 +275,117 @@
 
       <div class="modal-footer">
         <button type="button" class="btn-toy btn-white btn-sm" data-modal-close>Close</button>
+        <button type="button" class="btn-toy btn-blue btn-sm" id="receipt-modal-download-btn"><i data-lucide="download"></i> Download Invoice</button>
         <button type="button" class="btn-toy btn-pink btn-sm" onclick="window.print();"><i data-lucide="printer"></i> Print / PDF Receipt</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Create Order Modal -->
+  <div class="modal-backdrop" id="createOrderModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="file-plus" style="color: var(--secondary);"></i>
+          <h3>Create New Invoice</h3>
+        </div>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close modal">&times;</button>
+      </div>
+      <form id="createOrderForm">
+        <div class="modal-body">
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="create-order-parent" style="font-weight: 700;">Parent / Billed To *</label>
+            <input type="text" id="create-order-parent" class="form-control" placeholder="e.g. Eleanor Vance" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="create-order-program" style="font-weight: 700;">Program / Course *</label>
+            <input type="text" id="create-order-program" class="form-control" placeholder="e.g. Creative Kids (Monthly)" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="grid grid-2" style="gap: 1rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label class="form-label" for="create-order-amount" style="font-weight: 700;">Amount ($) *</label>
+              <input type="number" step="0.01" min="1" id="create-order-amount" class="form-control" placeholder="49.00" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="create-order-method" style="font-weight: 700;">Payment Method</label>
+              <select id="create-order-method" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);">
+                <option value="Visa •••• 4242">Visa •••• 4242</option>
+                <option value="MasterCard •••• 1092">MasterCard •••• 1092</option>
+                <option value="Apple Pay">Apple Pay</option>
+                <option value="Google Pay">Google Pay</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="create-order-status" style="font-weight: 700;">Status</label>
+            <select id="create-order-status" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);">
+              <option value="Paid">Paid</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-toy btn-white btn-sm" data-modal-close>Cancel</button>
+          <button type="submit" class="btn-toy btn-purple btn-sm"><i data-lucide="check"></i> Create Invoice</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Order Modal -->
+  <div class="modal-backdrop" id="editOrderModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="edit-3" style="color: var(--primary);"></i>
+          <h3>Edit Invoice Details</h3>
+        </div>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close modal">&times;</button>
+      </div>
+      <form id="editOrderForm">
+        <div class="modal-body">
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="edit-order-inv" style="font-weight: 700;">Invoice #</label>
+            <input type="text" id="edit-order-inv" class="form-control" readonly style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border); background: rgba(36,32,68,0.05); cursor: not-allowed;">
+          </div>
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="edit-order-parent" style="font-weight: 700;">Parent / Billed To *</label>
+            <input type="text" id="edit-order-parent" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="edit-order-program" style="font-weight: 700;">Program / Course *</label>
+            <input type="text" id="edit-order-program" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="grid grid-2" style="gap: 1rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label class="form-label" for="edit-order-amount" style="font-weight: 700;">Amount ($) *</label>
+              <input type="number" step="0.01" min="1" id="edit-order-amount" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-order-method" style="font-weight: 700;">Payment Method</label>
+              <select id="edit-order-method" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);">
+                <option value="Visa •••• 4242">Visa •••• 4242</option>
+                <option value="MasterCard •••• 1092">MasterCard •••• 1092</option>
+                <option value="Apple Pay">Apple Pay</option>
+                <option value="Google Pay">Google Pay</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-order-status" style="font-weight: 700;">Status</label>
+            <select id="edit-order-status" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);">
+              <option value="Paid">Paid</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-toy btn-white btn-sm" data-modal-close>Cancel</button>
+          <button type="submit" class="btn-toy btn-pink btn-sm"><i data-lucide="check"></i> Save Changes</button>
+        </div>
+      </form>
     </div>
   </div>
 

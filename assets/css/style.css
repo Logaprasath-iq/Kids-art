@@ -136,62 +136,65 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--text-main);
-  line-height: 1.15;
-  letter-spacing: 0.01em;
+  line-height: 1.18;
+  letter-spacing: 0.04em;
+  word-spacing: 0.06em;
+}
+
+.text-gradient-rainbow,
+.text-gradient-pink,
+.text-gradient-blue,
+.text-gradient-sun,
+.text-gradient-green,
+.text-gradient-purple {
+  display: inline-block;
+  letter-spacing: 0.08em !important;
+  word-spacing: 0.08em;
+  padding: 0 0.06em;
+  font-feature-settings: "kern" 1;
 }
 
 .text-gradient-rainbow {
   background: var(--gradient-rainbow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  letter-spacing: 0.02em;
-  padding: 0 0.04em;
 }
 
 .text-gradient-pink {
   background: var(--gradient-pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  letter-spacing: 0.02em;
-  padding: 0 0.04em;
 }
 
 .text-gradient-blue {
   background: var(--gradient-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  letter-spacing: 0.02em;
-  padding: 0 0.04em;
 }
 
 .text-gradient-sun {
   background: var(--gradient-sun);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  letter-spacing: 0.02em;
-  padding: 0 0.04em;
 }
 
 .hero-title {
   font-size: clamp(2.5rem, 5vw + 1rem, 4.8rem);
   text-transform: uppercase;
-  font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: 0.015em;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  word-spacing: 0.08em;
   margin-bottom: 1.5rem;
 }
 
 .section-title {
   font-size: clamp(2rem, 3.5vw + 0.5rem, 3.2rem);
   text-transform: uppercase;
-  font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  word-spacing: 0.05em;
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0.08em;
+  word-spacing: 0.08em;
   margin-bottom: 1rem;
 }
 
@@ -845,7 +848,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: clamp(2.2rem, 4vw + 0.8rem, 3.8rem);
   max-width: 860px;
   margin: 0 auto 1.25rem auto;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0.06em;
+  word-spacing: 0.06em;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
 }
 
@@ -2016,6 +2022,38 @@ body.theme-cyber-lab[data-theme="dark"] {
 }
 .form-control.is-invalid ~ .error-message {
   display: block;
+}
+
+.form-control::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #A5A0C2;
+  opacity: 0.9;
+}
+
+/* Studio Prompts Newsletter Email input - always crisp dark navy on white */
+#prompts-email {
+  background: #FFFFFF !important;
+  color: #242044 !important;
+  font-weight: 600 !important;
+}
+
+#prompts-email::placeholder {
+  color: #716C88 !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] #prompts-email {
+  background: #FFFFFF !important;
+  color: #242044 !important;
+}
+
+[data-theme="dark"] #prompts-email::placeholder {
+  color: #716C88 !important;
+  opacity: 1 !important;
 }
 
 /* Password Strength Indicator */

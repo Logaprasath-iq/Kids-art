@@ -74,7 +74,7 @@
           <h1 style="font-size: 1.8rem;">Enrolled Students (512)</h1>
           <p style="color: var(--muted); font-size: 0.9rem;">Manage active student memberships, trial cohorts, and medical notes.</p>
         </div>
-        <button class="btn-toy btn-pink btn-sm" onclick="window.showToast('Student enrollment modal opened', 'info');"><i data-lucide="user-plus"></i> Enroll New Student</button>
+        <button type="button" class="btn-toy btn-pink btn-sm" id="btn-open-enroll-student"><i data-lucide="user-plus"></i> Enroll New Student</button>
       </div>
 
       <!-- Filters & Search Toolbar -->
@@ -121,7 +121,10 @@
                 <td><span class="badge-status active">Active</span></td>
                 <td>Sep 02, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button type="button" class="btn-toy btn-sm btn-white edit-student-btn" title="Edit Student"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-student-btn" title="Delete Student" style="color: #FF5C5C;"><i data-lucide="trash-2" style="width: 14px;"></i></button>
+                  </div>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="active">
@@ -132,7 +135,10 @@
                 <td><span class="badge-status active">Active</span></td>
                 <td>Aug 28, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button type="button" class="btn-toy btn-sm btn-white edit-student-btn" title="Edit Student"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-student-btn" title="Delete Student" style="color: #FF5C5C;"><i data-lucide="trash-2" style="width: 14px;"></i></button>
+                  </div>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="trial">
@@ -143,7 +149,10 @@
                 <td><span class="badge-status trial">Trial</span></td>
                 <td>Sep 04, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button type="button" class="btn-toy btn-sm btn-white edit-student-btn" title="Edit Student"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-student-btn" title="Delete Student" style="color: #FF5C5C;"><i data-lucide="trash-2" style="width: 14px;"></i></button>
+                  </div>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="active">
@@ -154,7 +163,10 @@
                 <td><span class="badge-status active">Active</span></td>
                 <td>Aug 15, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button type="button" class="btn-toy btn-sm btn-white edit-student-btn" title="Edit Student"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-student-btn" title="Delete Student" style="color: #FF5C5C;"><i data-lucide="trash-2" style="width: 14px;"></i></button>
+                  </div>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="inactive">
@@ -165,7 +177,10 @@
                 <td><span class="badge-status inactive">Inactive</span></td>
                 <td>Jul 10, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button type="button" class="btn-toy btn-sm btn-white edit-student-btn" title="Edit Student"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-student-btn" title="Delete Student" style="color: #FF5C5C;"><i data-lucide="trash-2" style="width: 14px;"></i></button>
+                  </div>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="active">
@@ -176,7 +191,10 @@
                 <td><span class="badge-status active">Active</span></td>
                 <td>Jun 18, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button type="button" class="btn-toy btn-sm btn-white edit-student-btn" title="Edit Student"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-student-btn" title="Delete Student" style="color: #FF5C5C;"><i data-lucide="trash-2" style="width: 14px;"></i></button>
+                  </div>
                 </td>
               </tr>
               <tr class="filterable-table-row" data-status="trial">
@@ -187,7 +205,10 @@
                 <td><span class="badge-status trial">Trial</span></td>
                 <td>Sep 05, 2026</td>
                 <td>
-                  <button class="btn-toy btn-sm btn-white edit-student-btn" data-modal-target="editStudentModal"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                  <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <button type="button" class="btn-toy btn-sm btn-white edit-student-btn" title="Edit Student"><i data-lucide="edit-3" style="width: 14px;"></i> Edit</button>
+                    <button type="button" class="btn-toy btn-sm btn-white delete-student-btn" title="Delete Student" style="color: #FF5C5C;"><i data-lucide="trash-2" style="width: 14px;"></i></button>
+                  </div>
                 </td>
               </tr>
             </tbody>
@@ -195,6 +216,53 @@
         </div>
       </div>
     </main>
+  </div>
+
+  <!-- Enroll Student Modal -->
+  <div class="modal-backdrop" id="enrollStudentModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="user-plus" style="color: var(--primary);"></i>
+          <h3>Enroll New Student</h3>
+        </div>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close modal">&times;</button>
+      </div>
+      <form id="enrollStudentForm">
+        <div class="modal-body">
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="enroll-student-name" style="font-weight: 700;">Student Name *</label>
+            <input type="text" id="enroll-student-name" class="form-control" placeholder="e.g. Oliver Queen" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="enroll-parent-name" style="font-weight: 700;">Parent / Guardian Name *</label>
+            <input type="text" id="enroll-parent-name" class="form-control" placeholder="e.g. Robert Queen" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+          <div class="grid grid-2" style="gap: 1rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label class="form-label" for="enroll-student-age" style="font-weight: 700;">Age</label>
+              <input type="number" id="enroll-student-age" class="form-control" min="3" max="18" value="7" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="enroll-student-status" style="font-weight: 700;">Membership Status</label>
+              <select id="enroll-student-status" class="form-control" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);">
+                <option value="active">Active</option>
+                <option value="trial">Trial</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="enroll-student-track" style="font-weight: 700;">Class Track *</label>
+            <input type="text" id="enroll-student-track" class="form-control" placeholder="e.g. Watercolor Splash & Flow" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 2px solid var(--border);" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-toy btn-white btn-sm" data-modal-close>Cancel</button>
+          <button type="submit" class="btn-toy btn-pink btn-sm"><i data-lucide="check"></i> Enroll Student</button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <!-- Edit Student Modal -->
