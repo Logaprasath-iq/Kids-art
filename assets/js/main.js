@@ -255,7 +255,51 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
   }
 
-  // 9. Initialize Lucide Icons
+  // 9. Auto-separate 'I' and 'V' in 'Creative' across headings to prevent Fredoka glyph overlap
+  const fixCreativeKerning = () => {
+    const selector = 'h1, h2, h3, h4, .hero-title, .section-title, .page-hero-title, .event-title, .class-card-title, .blog-card-title, .text-gradient-rainbow, .text-gradient-sun, .text-gradient-pink, .text-gradient-blue, .text-gradient-green, .text-gradient-purple';
+    document.querySelectorAll(selector).forEach(el => {
+      if (el.querySelector('.iv-sep') || el.querySelector('input, textarea, select')) return;
+
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+      const textNodes = [];
+      let node;
+      while ((node = walker.nextNode())) {
+        if (/creat(i)(v)/i.test(node.nodeValue)) {
+          textNodes.push(node);
+        }
+      }
+
+      textNodes.forEach(tn => {
+        const parent = tn.parentNode;
+        if (!parent) return;
+        const text = tn.nodeValue;
+        const frag = document.createDocumentFragment();
+        let lastIndex = 0;
+        const regex = /(creat)(i)(v[a-z]*)/gi;
+        let m;
+        while ((m = regex.exec(text)) !== null) {
+          if (m.index > lastIndex) {
+            frag.appendChild(document.createTextNode(text.substring(lastIndex, m.index)));
+          }
+          frag.appendChild(document.createTextNode(m[1])); // Creat
+          const span = document.createElement('span');
+          span.className = 'iv-sep';
+          span.textContent = m[2]; // i / I
+          frag.appendChild(span);
+          frag.appendChild(document.createTextNode(m[3])); // ve / VE...
+          lastIndex = regex.lastIndex;
+        }
+        if (lastIndex < text.length) {
+          frag.appendChild(document.createTextNode(text.substring(lastIndex)));
+        }
+        parent.replaceChild(frag, tn);
+      });
+    });
+  };
+  fixCreativeKerning();
+
+  // 10. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }

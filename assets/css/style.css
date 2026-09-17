@@ -139,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.18;
   letter-spacing: 0.04em;
   word-spacing: 0.06em;
+  font-kerning: none;
 }
 
 .text-gradient-rainbow,
@@ -148,10 +149,16 @@ h1, h2, h3, h4, h5, h6 {
 .text-gradient-green,
 .text-gradient-purple {
   display: inline-block;
-  letter-spacing: 0.08em !important;
+  letter-spacing: 0.10em !important;
   word-spacing: 0.08em;
   padding: 0 0.06em;
-  font-feature-settings: "kern" 1;
+  font-kerning: none;
+}
+
+/* Dedicated spacing to guarantee 'I' and 'V' never merge in 'Creative' */
+.iv-sep {
+  letter-spacing: 0.22em !important;
+  display: inline !important;
 }
 
 .text-gradient-rainbow {
@@ -183,9 +190,10 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.10em;
   word-spacing: 0.08em;
   margin-bottom: 1.5rem;
+  font-kerning: none;
 }
 
 .section-title {
@@ -193,9 +201,10 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.28;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.10em;
   word-spacing: 0.08em;
   margin-bottom: 1rem;
+  font-kerning: none;
 }
 
 .section-subtitle {
@@ -850,9 +859,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto 1.25rem auto;
   font-weight: 700;
   line-height: 1.22;
-  letter-spacing: 0.06em;
-  word-spacing: 0.06em;
+  letter-spacing: 0.10em;
+  word-spacing: 0.08em;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+  font-kerning: none;
 }
 
 [data-theme="dark"] .page-hero-title {
