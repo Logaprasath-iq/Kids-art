@@ -140,61 +140,27 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = loginForm.querySelector('#login-email');
-      const password = loginForm.querySelector('#login-password');
-      let isValid = true;
+      const emailVal = email ? email.value.trim() : '';
 
-      const emailVal = email ? email.value.trim().toLowerCase() : '';
-      const passVal = password ? password.value : '';
-
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-        email?.classList.add('is-invalid');
-        isValid = false;
-      } else {
-        email?.classList.remove('is-invalid');
-      }
-
-      if (!password || passVal.length < 6) {
-        password?.classList.add('is-invalid');
-        isValid = false;
-      } else {
-        password?.classList.remove('is-invalid');
-      }
-
-      if (!isValid) {
-        window.showToast('Please enter a valid email and password (min 6 characters).', 'error');
-        return;
-      }
-
-      // Strict account & password verification
-      const registeredUsers = getRegisteredUsers();
-      let expectedPassword = null;
+      // Dummy login: friendly greeting and redirect directly to home page
       let userName = 'Parent';
-
-      if (registeredUsers[emailVal]) {
-        expectedPassword = registeredUsers[emailVal].password;
-        userName = registeredUsers[emailVal].name || 'Parent';
-      } else if (defaultDemoAccounts[emailVal]) {
-        expectedPassword = defaultDemoAccounts[emailVal];
-        userName = 'Sarah Jenkins';
+      if (emailVal) {
+        const registeredUsers = getRegisteredUsers();
+        const lowerEmail = emailVal.toLowerCase();
+        if (registeredUsers[lowerEmail] && registeredUsers[lowerEmail].name) {
+          userName = registeredUsers[lowerEmail].name;
+        } else if (emailVal.includes('@')) {
+          const prefix = emailVal.split('@')[0];
+          userName = prefix.charAt(0).toUpperCase() + prefix.slice(1);
+        } else {
+          userName = emailVal;
+        }
       }
 
-      if (!expectedPassword) {
-        email?.classList.add('is-invalid');
-        window.showToast('No account found with this email. Please sign up first.', 'error');
-        return;
-      }
-
-      if (passVal !== expectedPassword) {
-        password?.classList.add('is-invalid');
-        window.showToast('Incorrect password! Please enter the password you registered with.', 'error');
-        return;
-      }
-
-      // Password matches successfully!
-      window.showToast(`Welcome back, ${userName}! Redirecting to studio overview...`, 'success');
+      window.showToast(`Login successful! Welcome back, ${userName}. Redirecting to home page...`, 'success');
       setTimeout(() => {
-        window.location.href = '../admin/dashboard.html';
-      }, 1000);
+        window.location.href = '../index.html';
+      }, 800);
     });
   }
 
