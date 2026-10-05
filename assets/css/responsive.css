@@ -19,18 +19,34 @@ html, body {
 
 /* --- MID DESKTOPS (992px to 1280px) --- */
 @media (min-width: 992px) and (max-width: 1280px) {
+  .navbar-container {
+    gap: 0.75rem;
+  }
   .nav-menu {
-    gap: 1.15rem;
+    gap: 0.75rem;
   }
   .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
+    padding: 0.4rem 0.25rem;
   }
   .nav-actions {
-    gap: 0.5rem;
+    gap: 0.4rem;
+  }
+  .nav-actions .btn-toy.d-none.d-md-flex {
+    display: none !important; /* Prevents action button collision with 7 nav links at 1024px */
   }
   .nav-auth-btn {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.85rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.82rem;
+  }
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .rtl-toggle-btn {
+    height: 36px;
+    padding: 0 0.55rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -333,6 +349,26 @@ html, body {
   .admin-sidebar.mobile-open {
     left: 0;
   }
+
+  /* Pricing Cards Grid at 768px-991px (Fix Responsiveness 4) */
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 480px;
+    margin: 0 auto;
+    gap: 2.5rem !important;
+  }
+  .pricing-card.popular {
+    transform: none !important;
+  }
+
+  /* Contact layout at <= 991px (Fix Responsiveness 2) */
+  .contact-layout-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .contact-form-card {
+    padding: 2rem !important;
+  }
 }
 
 /* --- MOBILE PHONES (<= 767px) --- */
@@ -559,6 +595,57 @@ html, body {
   .table-responsive-wrapper {
     overflow-x: auto;
   }
+
+  /* Auth Grid Card Responsive Stacking (Fix Responsiveness 3) */
+  .auth-grid-card {
+    grid-template-columns: 1fr !important;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .auth-card-sidebar {
+    border-right: none !important;
+    border-bottom: 3px solid var(--border) !important;
+    padding: 2rem 1.5rem !important;
+  }
+  .auth-card-sidebar img {
+    max-height: 180px !important;
+  }
+  .auth-card-main {
+    padding: 2rem 1.5rem !important;
+  }
+
+  /* Pricing Card Mobile Padding */
+  .pricing-card {
+    padding: 2.25rem 1.5rem !important;
+  }
+
+  /* Contact Form Mobile Padding */
+  .contact-form-card {
+    padding: 1.5rem !important;
+  }
+}
+
+/* --- SMALL PHONES (<= 576px) --- */
+@media (max-width: 576px) {
+  .contact-inputs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .contact-form-card {
+    padding: 1.25rem !important;
+    box-shadow: 0 8px 0 var(--border) !important;
+  }
+  .digital-tablet-frame {
+    padding: 1rem !important;
+    border-radius: 24px !important;
+    border-width: 3px !important;
+  }
+  .tablet-tool-palette {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+    padding: 0.6rem !important;
+  }
 }
 
 /* --- ULTRA SMALL PHONES (<= 400px) --- */
@@ -665,5 +752,51 @@ html, body {
     font-size: 0.7rem !important;
     padding: 0.55rem 0.15rem !important;
     letter-spacing: 0;
+  }
+
+  /* Digital Tablet Frame on 360px (Fix Responsiveness 1) */
+  .digital-tablet-frame {
+    padding: 0.75rem !important;
+    border-radius: 18px !important;
+    border-width: 2px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .tablet-tool-palette {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4rem !important;
+    padding: 0.5rem !important;
+  }
+  .tablet-tool-palette .btn-toy {
+    width: 100% !important;
+    padding: 0.4rem 0.2rem !important;
+    font-size: 0.72rem !important;
+    justify-content: center !important;
+  }
+  .theme-cyber-lab .digital-tablet-screen img {
+    height: 180px !important;
+  }
+
+  /* Auth Card on 360px (Fix Responsiveness 3) */
+  .auth-card-sidebar {
+    padding: 1.25rem 0.85rem !important;
+  }
+  .auth-card-sidebar img {
+    max-height: 130px !important;
+  }
+  .auth-card-main {
+    padding: 1.25rem 0.85rem !important;
+  }
+  .auth-grid-card {
+    border-radius: 18px !important;
+    box-shadow: 0 8px 0 var(--border) !important;
+  }
+
+  /* Contact Form on 360px (Fix Responsiveness 2) */
+  .contact-form-card {
+    padding: 1rem 0.75rem !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 0 var(--border) !important;
   }
 }

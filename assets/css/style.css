@@ -780,10 +780,10 @@ h1, h2, h3, h4, h5, h6 {
   filter: brightness(0.95) contrast(1.05);
 }
 
-/* Specific Hero Image Backgrounds */
+/* Specific Hero Image Backgrounds - Balanced for High Contrast (Issue 9) */
 .page-hero-about .page-hero-bg {
   background-image: url('../images/about-hero.jpg');
-  opacity: 0.35;
+  opacity: 0.16;
 }
 
 [data-theme="dark"] .page-hero-about .page-hero-bg {
@@ -792,7 +792,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-hero-classes .page-hero-bg {
   background-image: url('../images/class-hero.jpg');
-  opacity: 0.35;
+  opacity: 0.16;
 }
 
 [data-theme="dark"] .page-hero-classes .page-hero-bg {
@@ -801,7 +801,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-hero-events .page-hero-bg {
   background-image: url('../images/event-hero.jpg');
-  opacity: 0.35;
+  opacity: 0.16;
 }
 
 [data-theme="dark"] .page-hero-events .page-hero-bg {
@@ -810,7 +810,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-hero-pricing .page-hero-bg {
   background-image: url('../images/pricing-hero.jpg');
-  opacity: 0.35;
+  opacity: 0.16;
 }
 
 [data-theme="dark"] .page-hero-pricing .page-hero-bg {
@@ -819,7 +819,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-hero-blog .page-hero-bg {
   background-image: url('../images/blog-hero.jpg');
-  opacity: 0.35;
+  opacity: 0.16;
 }
 
 [data-theme="dark"] .page-hero-blog .page-hero-bg {
@@ -828,7 +828,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-hero-contact .page-hero-bg {
   background-image: url('../images/contact-hero.jpg');
-  opacity: 0.35;
+  opacity: 0.16;
 }
 
 [data-theme="dark"] .page-hero-contact .page-hero-bg {
@@ -844,14 +844,14 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--muted);
   background: var(--card-bg);
-  padding: 0.4rem 1.25rem;
+  padding: 0.45rem 1.35rem;
   border-radius: var(--radius-pill);
   border: 2px solid var(--border);
-  box-shadow: 0 3px 0 var(--border);
+  box-shadow: 0 4px 0 var(--border);
   margin-bottom: 1.25rem;
 }
 
@@ -867,34 +867,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-hero-breadcrumb span {
   color: var(--dark);
+  font-weight: 800;
 }
 
+/* Issue 10: All pages remove heading in the hero section */
 .page-hero-title {
-  font-size: clamp(2.2rem, 4vw + 0.8rem, 3.8rem);
-  max-width: 860px;
-  margin: 0 auto 1.25rem auto;
-  font-weight: 700;
-  line-height: 1.22;
-  letter-spacing: 0.10em;
-  word-spacing: 0.08em;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
-  font-kerning: none;
-}
-
-[data-theme="dark"] .page-hero-title {
-  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.5));
+  display: none !important;
 }
 
 .page-hero-desc {
-  font-size: 1.15rem;
-  color: var(--muted);
-  max-width: 680px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1F1B3A; /* High-contrast readable dark tone for light mode (Issue 9) */
+  max-width: 720px;
   margin: 0 auto 2rem auto;
-  line-height: 1.6;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
 }
 
 [data-theme="dark"] .page-hero-desc {
+  color: #E2DEFB;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
@@ -2741,5 +2732,45 @@ body.theme-cyber-lab[data-theme="dark"] {
   justify-content: flex-end;
   gap: 0.75rem;
   background: rgba(36, 32, 68, 0.02);
+}
+
+/* --- Auth Card Layout Base --- */
+.auth-grid-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  width: 100%;
+}
+
+.auth-card-sidebar {
+  border-right: 3px solid var(--border);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auth-card-main {
+  padding: 3.5rem 3rem;
+}
+
+/* --- Contact Form Layout Base --- */
+.contact-layout-grid {
+  gap: 4rem;
+}
+
+.contact-form-card {
+  padding: 2.5rem;
+}
+
+/* --- Home 2 Digital Tablet Palette Base --- */
+.tablet-tool-palette {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.tablet-tool-palette .btn-toy {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.8rem;
 }
 
