@@ -391,11 +391,17 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.badge-yellow { background: var(--yellow); color: var(--dark); }
+.badge-yellow { background: var(--yellow); color: #242044; }
 .badge-pink { background: var(--pink); color: #FFF; }
-.badge-blue { background: var(--blue); color: var(--dark); }
-.badge-green { background: var(--green); color: var(--dark); }
+.badge-blue { background: var(--blue); color: #242044; }
+.badge-green { background: var(--green); color: #242044; }
 .badge-purple { background: var(--purple); color: #FFF; }
+
+[data-theme="dark"] .badge-yellow,
+[data-theme="dark"] .badge-blue,
+[data-theme="dark"] .badge-green {
+  color: #242044 !important;
+}
 
 /* --- 6. DECORATIONS: BLOBS, SPLASHES, DOODLES & TAPES --- */
 .blob {
@@ -973,6 +979,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid var(--border);
   box-shadow: var(--shadow-xs);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #242044;
 }
 
 .audience-tag:hover {
@@ -982,17 +989,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .tag-tots {
   background: #FFF9D2;
-  color: var(--dark);
+  color: #242044;
 }
 
 .tag-juniors {
   background: #FFE3EC;
-  color: var(--dark);
+  color: #242044;
 }
 
 .tag-teens {
   background: #E0F2FE;
-  color: var(--dark);
+  color: #242044;
+}
+
+[data-theme="dark"] .audience-tag,
+[data-theme="dark"] .audience-tag.tag-tots,
+[data-theme="dark"] .audience-tag.tag-juniors,
+[data-theme="dark"] .audience-tag.tag-teens {
+  color: #242044 !important;
+}
+
+[data-theme="dark"] .audience-tag i,
+[data-theme="dark"] .audience-tag svg {
+  color: #242044 !important;
+  stroke: #242044 !important;
 }
 
 /* --- Target Student Age Tracks Section (Issue 1 & 3) --- */
