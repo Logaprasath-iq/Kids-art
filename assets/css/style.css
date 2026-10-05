@@ -212,6 +212,15 @@ h1, h2, h3, h4, h5, h6 {
   font-kerning: none;
 }
 
+.hero-ampersand {
+  display: block;
+  text-align: center;
+  font-size: 0.88em;
+  line-height: 1.1;
+  color: var(--primary);
+  margin: 0.15rem auto;
+}
+
 .section-title {
   font-size: clamp(2rem, 3.5vw + 0.5rem, 3.2rem);
   text-transform: uppercase;
@@ -769,70 +778,68 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.20;
-  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.9) 65%, rgba(0,0,0,1) 100%);
-  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.9) 65%, rgba(0,0,0,1) 100%);
+  opacity: 0.82; /* Clearly visible, vivid illustrations in light mode (Fixes Image 4) */
   transition: opacity 0.3s ease;
 }
 
 [data-theme="dark"] .page-hero-bg {
-  opacity: 0.24;
-  filter: brightness(0.95) contrast(1.05);
+  opacity: 0.38;
+  filter: brightness(0.85) contrast(1.15);
 }
 
-/* Specific Hero Image Backgrounds - Balanced for High Contrast (Issue 9) */
+/* Specific Hero Image Backgrounds - Clearly visible in Light Mode (Image 4) */
 .page-hero-about .page-hero-bg {
   background-image: url('../images/about-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.82;
 }
 
 [data-theme="dark"] .page-hero-about .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.38;
 }
 
 .page-hero-classes .page-hero-bg {
   background-image: url('../images/class-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.82;
 }
 
 [data-theme="dark"] .page-hero-classes .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.38;
 }
 
 .page-hero-events .page-hero-bg {
   background-image: url('../images/event-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.82;
 }
 
 [data-theme="dark"] .page-hero-events .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.38;
 }
 
 .page-hero-pricing .page-hero-bg {
   background-image: url('../images/pricing-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.82;
 }
 
 [data-theme="dark"] .page-hero-pricing .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.38;
 }
 
 .page-hero-blog .page-hero-bg {
   background-image: url('../images/blog-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.82;
 }
 
 [data-theme="dark"] .page-hero-blog .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.38;
 }
 
 .page-hero-contact .page-hero-bg {
   background-image: url('../images/contact-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.82;
 }
 
 [data-theme="dark"] .page-hero-contact .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.38;
 }
 
 .page-hero .container {
@@ -840,53 +847,37 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
 }
 
+/* Issue 10 & Image 3: Breadcrumb and hero titles removed from all hero sections */
 .page-hero-breadcrumb {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--muted);
-  background: var(--card-bg);
-  padding: 0.45rem 1.35rem;
-  border-radius: var(--radius-pill);
-  border: 2px solid var(--border);
-  box-shadow: 0 4px 0 var(--border);
-  margin-bottom: 1.25rem;
+  display: none !important;
 }
 
-.page-hero-breadcrumb a {
-  color: var(--muted);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.page-hero-breadcrumb a:hover {
-  color: var(--primary);
-}
-
-.page-hero-breadcrumb span {
-  color: var(--dark);
-  font-weight: 800;
-}
-
-/* Issue 10: All pages remove heading in the hero section */
 .page-hero-title {
   display: none !important;
 }
 
 .page-hero-desc {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #1F1B3A; /* High-contrast readable dark tone for light mode (Issue 9) */
-  max-width: 720px;
-  margin: 0 auto 2rem auto;
+  color: #1F1B3A;
+  max-width: 760px;
+  margin: 0.5rem auto 2rem auto;
   line-height: 1.7;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.25rem 2rem;
+  border-radius: var(--radius-lg);
+  border: 2.5px solid var(--border);
+  box-shadow: 0 6px 0 var(--border);
+  display: inline-block;
 }
 
 [data-theme="dark"] .page-hero-desc {
-  color: #E2DEFB;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  color: #F4F1FD;
+  background: rgba(27, 24, 52, 0.92);
+  border-color: var(--border);
+  box-shadow: 0 6px 0 var(--border);
 }
 
 .page-hero-badges {
@@ -966,13 +957,24 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.45rem;
   font-family: var(--font-display);
-  font-weight: 700;
+.audience-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-display);
+  font-weight: 800;
   font-size: 0.9rem;
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-pill);
   border: 2px solid var(--border);
   box-shadow: var(--shadow-xs);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #121026 !important; /* Always high-contrast dark navy text (Fixes Image 5) */
+}
+
+.audience-tag i,
+.audience-tag svg {
+  color: #121026 !important;
 }
 
 .audience-tag:hover {
@@ -981,18 +983,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tag-tots {
-  background: #FFF9D2;
-  color: var(--dark);
+  background: #FFF38A;
+  color: #121026 !important;
 }
 
 .tag-juniors {
-  background: #FFE3EC;
-  color: var(--dark);
+  background: #FFC4D8;
+  color: #121026 !important;
 }
 
 .tag-teens {
-  background: #E0F2FE;
-  color: var(--dark);
+  background: #BBE7FE;
+  color: #121026 !important;
+}
+
+[data-theme="dark"] .audience-strip-title {
+  color: #E2DEFB;
+}
+
+[data-theme="dark"] .audience-tag {
+  color: #121026 !important;
+  border-color: #242044 !important;
+}
+
+[data-theme="dark"] .audience-tag i,
+[data-theme="dark"] .audience-tag svg {
+  color: #121026 !important;
+}
+
+[data-theme="dark"] .tag-tots {
+  background: #FFEB60 !important;
+  color: #121026 !important;
+}
+
+[data-theme="dark"] .tag-juniors {
+  background: #FFB3CE !important;
+  color: #121026 !important;
+}
+
+[data-theme="dark"] .tag-teens {
+  background: #7DD3FC !important;
+  color: #121026 !important;
 }
 
 /* --- Target Student Age Tracks Section (Issue 1 & 3) --- */
