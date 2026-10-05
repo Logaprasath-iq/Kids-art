@@ -313,6 +313,16 @@ html, body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .audience-tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .artwork-gallery-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
   .admin-sidebar {
     position: fixed;
     left: -280px;
@@ -637,8 +647,14 @@ html, body {
     transform: translateX(-65%) rotate(-3deg) !important;
   }
 
+  .artwork-gallery-row {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
   .artwork-paper-card {
-    flex: 0 0 250px;
+    flex: none;
+    width: 100%;
   }
 
   .mobile-nav-cta-buttons {

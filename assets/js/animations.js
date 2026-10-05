@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .from('.floating-card-item', { scale: 0, opacity: 0, stagger: 0.2, duration: 0.6, ease: 'back.out(1.7)' }, '-=0.3');
 
     // Scroll Reveal for Section Cards
-    const scrollCards = document.querySelectorAll('.class-card, .instructor-card, .stat-sticker-card, .timeline-event-card');
+    const scrollCards = document.querySelectorAll('.class-card, .instructor-card, .stat-sticker-card, .timeline-event-card, .track-card, .artwork-paper-card');
     if ('IntersectionObserver' in window) {
       const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
