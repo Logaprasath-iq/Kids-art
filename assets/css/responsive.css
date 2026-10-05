@@ -557,6 +557,10 @@ html, body {
 
   .btn-toy {
     width: 100%;
+    white-space: normal !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
   }
 
   /* Footer Newsletter Form Responsive Stacking */
@@ -651,8 +655,11 @@ html, body {
 /* --- ULTRA SMALL PHONES (<= 400px) --- */
 @media (max-width: 400px) {
   .container {
-    padding-left: 0.85rem;
-    padding-right: 0.85rem;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .brand-logo {
@@ -778,25 +785,75 @@ html, body {
     height: 180px !important;
   }
 
-  /* Auth Card on 360px (Fix Responsiveness 3) */
-  .auth-card-sidebar {
-    padding: 1.25rem 0.85rem !important;
-  }
-  .auth-card-sidebar img {
-    max-height: 130px !important;
-  }
-  .auth-card-main {
-    padding: 1.25rem 0.85rem !important;
+  /* Auth Pages on 360px */
+  .auth-page-body,
+  body.auth-page-body {
+    padding: 1.25rem 0.5rem !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .auth-grid-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     border-radius: 18px !important;
     box-shadow: 0 8px 0 var(--border) !important;
+    margin: 0 auto !important;
+  }
+  .auth-card-sidebar,
+  .auth-card-main {
+    padding: 1.25rem 0.85rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .auth-card-sidebar img {
+    max-height: 120px !important;
   }
 
-  /* Contact Form on 360px (Fix Responsiveness 2) */
+  /* Contact Page on 360px */
+  .contact-layout-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 1.5rem !important;
+  }
+  .contact-inputs-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 1rem !important;
+  }
   .contact-form-card {
-    padding: 1rem 0.75rem !important;
+    padding: 1.25rem 0.85rem !important;
     border-radius: 18px !important;
     box-shadow: 0 8px 0 var(--border) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Form controls and interactive buttons on 360px */
+  .form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0.75rem 0.85rem !important;
+    font-size: 0.92rem !important;
+  }
+
+  .btn-toy {
+    font-size: 0.88rem !important;
+    padding: 0.8rem 0.75rem !important;
+    gap: 0.4rem !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
