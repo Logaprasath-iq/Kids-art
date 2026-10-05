@@ -775,70 +775,68 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.20;
-  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.9) 65%, rgba(0,0,0,1) 100%);
-  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.9) 65%, rgba(0,0,0,1) 100%);
+  opacity: 0.85;
   transition: opacity 0.3s ease;
 }
 
 [data-theme="dark"] .page-hero-bg {
-  opacity: 0.24;
-  filter: brightness(0.95) contrast(1.05);
+  opacity: 0.35;
+  filter: brightness(0.85) contrast(1.15);
 }
 
-/* Specific Hero Image Backgrounds - Balanced for High Contrast (Issue 9) */
+/* Specific Hero Image Backgrounds - Clearly visible in Light Mode */
 .page-hero-about .page-hero-bg {
   background-image: url('../images/about-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.85;
 }
 
 [data-theme="dark"] .page-hero-about .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.35;
 }
 
 .page-hero-classes .page-hero-bg {
   background-image: url('../images/class-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.85;
 }
 
 [data-theme="dark"] .page-hero-classes .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.35;
 }
 
 .page-hero-events .page-hero-bg {
   background-image: url('../images/event-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.85;
 }
 
 [data-theme="dark"] .page-hero-events .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.35;
 }
 
 .page-hero-pricing .page-hero-bg {
   background-image: url('../images/pricing-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.85;
 }
 
 [data-theme="dark"] .page-hero-pricing .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.35;
 }
 
 .page-hero-blog .page-hero-bg {
   background-image: url('../images/blog-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.85;
 }
 
 [data-theme="dark"] .page-hero-blog .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.35;
 }
 
 .page-hero-contact .page-hero-bg {
   background-image: url('../images/contact-hero.jpg');
-  opacity: 0.16;
+  opacity: 0.85;
 }
 
 [data-theme="dark"] .page-hero-contact .page-hero-bg {
-  opacity: 0.28;
+  opacity: 0.35;
 }
 
 .page-hero .container {
@@ -847,33 +845,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-hero-breadcrumb {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--muted);
-  background: var(--card-bg);
-  padding: 0.45rem 1.35rem;
-  border-radius: var(--radius-pill);
-  border: 2px solid var(--border);
-  box-shadow: 0 4px 0 var(--border);
-  margin-bottom: 1.25rem;
-}
-
-.page-hero-breadcrumb a {
-  color: var(--muted);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.page-hero-breadcrumb a:hover {
-  color: var(--primary);
-}
-
-.page-hero-breadcrumb span {
-  color: var(--dark);
-  font-weight: 800;
+  display: none !important;
 }
 
 /* Issue 10: All pages remove heading in the hero section */
@@ -888,6 +860,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 720px;
   margin: 0 auto 2rem auto;
   line-height: 1.7;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 16px rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="dark"] .page-hero-desc {
