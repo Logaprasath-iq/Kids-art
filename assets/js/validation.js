@@ -132,35 +132,87 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('login-form');
   if (loginForm) {
     const loginEmailInput = loginForm.querySelector('#login-email');
+    const loginPasswordInput = loginForm.querySelector('#login-password');
     const lastEmail = localStorage.getItem('littleCanvasLastRegisteredEmail');
     if (lastEmail && loginEmailInput && !loginEmailInput.value) {
       loginEmailInput.value = lastEmail;
     }
 
+    if (loginEmailInput) {
+      loginEmailInput.addEventListener('input', () => {
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(loginEmailInput.value.trim())) {
+          loginEmailInput.classList.remove('is-invalid');
+        }
+      });
+    }
+
+    if (loginPasswordInput) {
+      loginPasswordInput.addEventListener('input', () => {
+        if (loginPasswordInput.value.length >= 6) {
+          loginPasswordInput.classList.remove('is-invalid');
+        }
+      });
+    }
+
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = loginForm.querySelector('#login-email');
-      const emailVal = email ? email.value.trim() : '';
+      const pass = loginForm.querySelector('#login-password');
+      let isValid = true;
 
-      // Dummy login: friendly greeting and redirect directly to home page
-      let userName = 'Parent';
-      if (emailVal) {
-        const registeredUsers = getRegisteredUsers();
-        const lowerEmail = emailVal.toLowerCase();
-        if (registeredUsers[lowerEmail] && registeredUsers[lowerEmail].name) {
-          userName = registeredUsers[lowerEmail].name;
-        } else if (emailVal.includes('@')) {
-          const prefix = emailVal.split('@')[0];
-          userName = prefix.charAt(0).toUpperCase() + prefix.slice(1);
+      // Validate email
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        email?.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        email?.classList.remove('is-invalid');
+      }
+
+      // Validate password (REQUIRED, min 6 characters)
+      if (!pass || pass.value.length < 6) {
+        pass?.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        pass?.classList.remove('is-invalid');
+      }
+
+      if (!isValid) {
+        if (!pass || pass.value.length === 0) {
+          window.showToast('Please enter your password to sign in.', 'error');
         } else {
-          userName = emailVal;
+          window.showToast('Please enter a valid email and password (min 6 characters).', 'error');
+        }
+        return;
+      }
+
+      const emailVal = email.value.trim();
+      let userName = 'Parent';
+      const registeredUsers = getRegisteredUsers();
+      const lowerEmail = emailVal.toLowerCase();
+
+      // Check registered user password if account exists
+      if (registeredUsers[lowerEmail] && registeredUsers[lowerEmail].password) {
+        if (registeredUsers[lowerEmail].password !== pass.value) {
+          pass.classList.add('is-invalid');
+          const errDiv = pass.parentElement.querySelector('.error-message');
+          if (errDiv) errDiv.textContent = 'Incorrect password for this account.';
+          window.showToast('Incorrect password. Please try again.', 'error');
+          return;
         }
       }
 
-      window.showToast(`Login successful! Welcome back, ${userName}. Redirecting to home page...`, 'success');
-      setTimeout(() => {
-        window.location.href = '../index.html';
-      }, 800);
+      if (registeredUsers[lowerEmail] && registeredUsers[lowerEmail].name) {
+        userName = registeredUsers[lowerEmail].name;
+      } else if (emailVal.includes('@')) {
+        const prefix = emailVal.split('@')[0];
+        userName = prefix.charAt(0).toUpperCase() + prefix.slice(1);
+      } else {
+        userName = emailVal;
+      }
+
+      // Successfully sign in and STAY on the same page
+      window.showToast(`Login successful! Welcome back, ${userName}.`, 'success');
+      if (pass) pass.value = '';
     });
   }
 
