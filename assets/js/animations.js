@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     // Header Slide Down
-    tl.from('.header-main', { y: -60, opacity: 0, duration: 0.8 })
+    tl.from('.header-main', { y: -60, opacity: 0, duration: 0.8, clearProps: 'all' })
       // Badge Fade In
       .from('.hero-badge-wrap', { scale: 0.7, opacity: 0, duration: 0.5 }, '-=0.3')
       // Headline lines reveal

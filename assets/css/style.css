@@ -94,7 +94,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
@@ -104,7 +104,7 @@ body {
   background-color: var(--cream);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -238,12 +238,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  box-sizing: border-box;
 }
 
 .container-fluid {
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
+  box-sizing: border-box;
 }
 
 .section-py {
@@ -474,11 +476,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   padding: 0.85rem 0;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: transform;
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -775,68 +774,83 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.85;
+  opacity: 0.52;
   transition: opacity 0.3s ease;
 }
 
+.page-hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 253, 247, 0.82) 0%, rgba(255, 253, 247, 0.65) 50%, rgba(255, 253, 247, 0.88) 100%);
+  pointer-events: none;
+}
+
 [data-theme="dark"] .page-hero-bg {
-  opacity: 0.35;
+  opacity: 0.3;
   filter: brightness(0.85) contrast(1.15);
 }
 
-/* Specific Hero Image Backgrounds - Clearly visible in Light Mode */
+[data-theme="dark"] .page-hero-bg::after {
+  background: linear-gradient(180deg, rgba(23, 21, 43, 0.85) 0%, rgba(23, 21, 43, 0.70) 50%, rgba(23, 21, 43, 0.92) 100%);
+}
+
+/* Specific Hero Image Backgrounds - Clearly visible with high contrast readability */
 .page-hero-about .page-hero-bg {
   background-image: url('../images/about-hero.jpg');
-  opacity: 0.85;
+  opacity: 0.52;
 }
 
 [data-theme="dark"] .page-hero-about .page-hero-bg {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .page-hero-classes .page-hero-bg {
   background-image: url('../images/class-hero.jpg');
-  opacity: 0.85;
+  opacity: 0.52;
 }
 
 [data-theme="dark"] .page-hero-classes .page-hero-bg {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .page-hero-events .page-hero-bg {
   background-image: url('../images/event-hero.jpg');
-  opacity: 0.85;
+  opacity: 0.52;
 }
 
 [data-theme="dark"] .page-hero-events .page-hero-bg {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .page-hero-pricing .page-hero-bg {
   background-image: url('../images/pricing-hero.jpg');
-  opacity: 0.85;
+  opacity: 0.52;
 }
 
 [data-theme="dark"] .page-hero-pricing .page-hero-bg {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .page-hero-blog .page-hero-bg {
   background-image: url('../images/blog-hero.jpg');
-  opacity: 0.85;
+  opacity: 0.52;
 }
 
 [data-theme="dark"] .page-hero-blog .page-hero-bg {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .page-hero-contact .page-hero-bg {
   background-image: url('../images/contact-hero.jpg');
-  opacity: 0.85;
+  opacity: 0.52;
 }
 
 [data-theme="dark"] .page-hero-contact .page-hero-bg {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .page-hero .container {
@@ -854,18 +868,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-hero-desc {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #1F1B3A; /* High-contrast readable dark tone for light mode (Issue 9) */
-  max-width: 720px;
+  color: #161233; /* High-contrast readable dark tone for light mode */
+  max-width: 740px;
   margin: 0 auto 2rem auto;
   line-height: 1.7;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 16px rgba(255, 255, 255, 0.9);
+  padding: 1rem 1.75rem;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: inline-block;
 }
 
 [data-theme="dark"] .page-hero-desc {
-  color: #E2DEFB;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  color: #F5F3FF;
+  background: rgba(26, 23, 48, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .page-hero-badges {
@@ -873,6 +896,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 0.85rem;
   flex-wrap: wrap;
+}
+
+.page-hero-badges .badge-sticker {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* --- 8. HERO — HOME 1 --- */
@@ -999,6 +1026,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: stretch;
 }
 
 .track-card {
@@ -1011,6 +1039,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
 }
 
 .track-card:hover {
@@ -1028,19 +1057,27 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-pill);
   border: 2px solid var(--border);
   margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
 .track-icon {
   font-size: 2.4rem;
   margin-bottom: 0.75rem;
   line-height: 1;
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
 }
 
 .track-card h3 {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
   color: var(--text-main);
+  min-height: 3.8rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.25;
 }
 
 .track-card p {
@@ -1048,7 +1085,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 1.25rem;
-  flex-grow: 1;
+  flex: 1 1 auto;
 }
 
 .track-features {
@@ -1060,6 +1097,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-main);
+  margin-top: auto;
 }
 
 .track-features span {
@@ -1323,6 +1361,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .class-card:hover {
@@ -1332,15 +1371,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .class-card-image {
   position: relative;
-  height: 210px;
+  height: 220px;
   overflow: hidden;
   border-bottom: 3px solid var(--border);
+  width: 100%;
+}
+
+.class-card-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .class-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.5s ease;
 }
 
@@ -1370,6 +1417,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--muted);
   margin-bottom: 0.75rem;
+  min-height: 1.5rem;
 }
 
 .class-meta-info span {
@@ -1381,13 +1429,19 @@ h1, h2, h3, h4, h5, h6 {
 .class-card-title {
   font-size: 1.45rem;
   margin-bottom: 0.75rem;
+  min-height: 3.6rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.25;
 }
 
 .class-card-desc {
   font-size: 0.95rem;
   color: var(--muted);
   margin-bottom: 1rem;
-  flex: 1;
+  min-height: 4.5rem;
+  flex: 1 1 auto;
+  line-height: 1.6;
 }
 
 /* --- Class Card Skills Tags & Badges (Issue 3: Visual Clarity) --- */
@@ -1396,6 +1450,8 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 1.25rem;
+  min-height: 2.2rem;
+  align-items: center;
 }
 
 .skill-tag {
@@ -1419,6 +1475,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   border-top: 2px dashed var(--border-light);
   padding-top: 1rem;
+  margin-top: auto;
 }
 
 .class-fee {

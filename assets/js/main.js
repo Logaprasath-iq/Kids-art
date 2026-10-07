@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) {
     let ticking = false;
     const updateHeaderScroll = () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      if (scrollY > 40) {
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (scrollY > 20) {
         if (!header.classList.contains('is-scrolled')) {
           header.classList.add('is-scrolled');
         }
